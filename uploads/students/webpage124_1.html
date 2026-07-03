@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>Sips Of Heaven</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:'Poppins',sans-serif;
+  background:linear-gradient(to bottom,#fff8f2,#f8ebe6,#f9f0ea);
+  color:#3b2a25;
+  overflow-x:hidden;
+}
+
+/* NAVBAR */
+
+nav{
+  position:fixed;
+  width:100%;
+  top:0;
+  z-index:999;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:22px 8%;
+  backdrop-filter:blur(15px);
+  background:rgba(255,255,255,0.5);
+  box-shadow:0 10px 30px rgba(0,0,0,0.05);
+}
+
+.logo{
+  font-size:38px;
+  font-family:'Playfair Display',serif;
+  font-weight:bold;
+  color:#5a3e36;
+}
+
+.nav-links{
+  display:flex;
+  gap:30px;
+}
+
+.nav-links a{
+  text-decoration:none;
+  color:#5a3e36;
+  font-weight:500;
+  transition:0.3s;
+}
+
+.nav-links a:hover{
+  color:#c08b72;
+}
+
+/* HERO */
+
+.hero{
+  min-height:100vh;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:130px 8%;
+  position:relative;
+  overflow:hidden;
+}
+
+.hero::before{
+  content:'';
+  position:absolute;
+  width:500px;
+  height:500px;
+  background:#f4d8cc;
+  border-radius:50%;
+  filter:blur(120px);
+  top:-100px;
+  left:-100px;
+  z-index:-1;
+}
+
+.hero-text{
+  flex:1;
+  animation:fadeLeft 1.5s ease;
+}
+
+.hero-text h1{
+  font-size:82px;
+  line-height:1;
+  margin-bottom:25px;
+  font-family:'Playfair Display',serif;
+}
+
+.hero-text p{
+  font-size:18px;
+  line-height:1.8;
+  max-width:600px;
+  margin-bottom:35px;
+  color:#6f5b55;
+}
+
+.hero-buttons{
+  display:flex;
+  gap:20px;
+}
+
+.btn{
+  padding:16px 35px;
+  border:none;
+  border-radius:40px;
+  cursor:pointer;
+  transition:0.4s;
+  font-weight:600;
+}
+
+.btn-primary{
+  background:#5a3e36;
+  color:white;
+}
+
+.btn-primary:hover{
+  transform:translateY(-5px);
+  background:#c08b72;
+}
+
+.btn-secondary{
+  background:white;
+  color:#5a3e36;
+}
+
+.btn-secondary:hover{
+  transform:translateY(-5px);
+}
+
+/* COFFEE ANIMATION */
+
+.coffee-scene{
+  flex:1;
+  position:relative;
+  height:600px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.cup{
+  width:250px;
+  height:170px;
+  background:white;
+  border-radius:0 0 120px 120px;
+  position:relative;
+  overflow:hidden;
+  box-shadow:0 20px 50px rgba(0,0,0,0.15);
+}
+
+.cup::before{
+  content:'';
+  position:absolute;
+  right:-55px;
+  top:40px;
+  width:80px;
+  height:80px;
+  border:15px solid white;
+  border-radius:50%;
+}
+
+.coffee{
+  position:absolute;
+  bottom:0;
+  width:100%;
+  height:0%;
+  background:#6f4e37;
+  animation:fillCoffee 6s infinite ease-in-out;
+}
+
+.pour{
+  position:absolute;
+  top:-220px;
+  width:35px;
+  height:260px;
+  background:#6f4e37;
+  border-radius:20px;
+  animation:pourCoffee 6s infinite ease-in-out;
+}
+
+.steam{
+  position:absolute;
+  width:12px;
+  height:120px;
+  background:rgba(255,255,255,0.5);
+  border-radius:50%;
+  filter:blur(8px);
+  animation:steam 3s infinite ease-in-out;
+}
+
+.steam1{
+  top:-110px;
+  left:70px;
+}
+
+.steam2{
+  top:-120px;
+  left:120px;
+  animation-delay:1s;
+}
+
+.steam3{
+  top:-100px;
+  left:170px;
+  animation-delay:2s;
+}
+
+/* FLOATING ELEMENTS */
+
+.float{
+  position:absolute;
+  animation:float 5s infinite ease-in-out;
+}
+
+.bean1{
+  top:100px;
+  right:100px;
+  font-size:50px;
+}
+
+.bean2{
+  bottom:120px;
+  left:100px;
+  font-size:40px;
+}
+
+.sparkle{
+  top:60px;
+  right:250px;
+  font-size:35px;
+}
+
+/* SECTION */
+
+section{
+  padding:100px 8%;
+}
+
+.section-title{
+  text-align:center;
+  margin-bottom:60px;
+}
+
+.section-title h2{
+  font-size:60px;
+  font-family:'Playfair Display',serif;
+  margin-bottom:10px;
+}
+
+.section-title p{
+  color:#7c6761;
+}
+
+/* PRODUCTS */
+
+.products{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:35px;
+}
+
+.card{
+  background:rgba(255,255,255,0.7);
+  backdrop-filter:blur(10px);
+  border-radius:30px;
+  overflow:hidden;
+  transition:0.5s;
+  box-shadow:0 15px 40px rgba(0,0,0,0.06);
+  position:relative;
+}
+
+.card:hover{
+  transform:translateY(-12px);
+}
+
+.card img{
+  width:100%;
+  height:320px;
+  object-fit:cover;
+}
+
+.card-content{
+  padding:25px;
+}
+
+.card-content h3{
+  font-size:30px;
+  margin-bottom:10px;
+  font-family:'Playfair Display',serif;
+}
+
+.card-content p{
+  color:#6f5b55;
+  margin-bottom:15px;
+}
+
+.price{
+  color:#c08b72;
+  font-size:24px;
+  font-weight:bold;
+  margin-bottom:20px;
+}
+
+.buy-btn{
+  width:100%;
+  padding:14px;
+  border:none;
+  border-radius:30px;
+  background:#5a3e36;
+  color:white;
+  font-weight:bold;
+  cursor:pointer;
+  transition:0.4s;
+}
+
+.buy-btn:hover{
+  background:#c08b72;
+}
+
+.wishlist{
+  position:absolute;
+  top:20px;
+  right:20px;
+  width:45px;
+  height:45px;
+  background:white;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:20px;
+  box-shadow:0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* ABOUT */
+
+.about{
+  display:flex;
+  align-items:center;
+  gap:60px;
+  flex-wrap:wrap;
+}
+
+.about img{
+  width:500px;
+  border-radius:30px;
+  box-shadow:0 20px 50px rgba(0,0,0,0.1);
+}
+
+.about-text{
+  flex:1;
+}
+
+.about-text h2{
+  font-size:60px;
+  margin-bottom:20px;
+  font-family:'Playfair Display',serif;
+}
+
+.about-text p{
+  line-height:1.9;
+  color:#6f5b55;
+  margin-bottom:20px;
+}
+
+/* TESTIMONIALS */
+
+.testimonials{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:30px;
+}
+
+.review{
+  background:white;
+  padding:35px;
+  border-radius:25px;
+  box-shadow:0 15px 35px rgba(0,0,0,0.05);
+}
+
+/* NEWSLETTER */
+
+.newsletter{
+  background:#5a3e36;
+  color:white;
+  text-align:center;
+  padding:80px;
+  border-radius:40px;
+}
+
+.newsletter h2{
+  font-size:55px;
+  margin-bottom:20px;
+  font-family:'Playfair Display',serif;
+}
+
+.newsletter input{
+  width:320px;
+  padding:16px;
+  border:none;
+  border-radius:30px;
+  margin-top:20px;
+}
+
+.newsletter button{
+  padding:16px 30px;
+  border:none;
+  border-radius:30px;
+  background:#c08b72;
+  color:white;
+  margin-left:15px;
+  cursor:pointer;
+}
+
+/* FOOTER */
+
+footer{
+  margin-top:100px;
+  background:#3b2a25;
+  color:white;
+  padding:70px 8%;
+}
+
+.footer-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:40px;
+}
+
+footer h3{
+  margin-bottom:20px;
+}
+
+footer p{
+  color:#ddd;
+  line-height:1.8;
+}
+
+/* ANIMATIONS */
+
+@keyframes fillCoffee{
+  0%{height:0%;}
+  50%{height:75%;}
+  100%{height:75%;}
+}
+
+@keyframes pourCoffee{
+  0%{opacity:1;}
+  60%{opacity:1;}
+  100%{opacity:0;}
+}
+
+@keyframes steam{
+  0%{
+    transform:translateY(0) scale(1);
+    opacity:0.4;
+  }
+  100%{
+    transform:translateY(-50px) scale(1.5);
+    opacity:0;
+  }
+}
+
+@keyframes float{
+  0%,100%{
+    transform:translateY(0px);
+  }
+  50%{
+    transform:translateY(-20px);
+  }
+}
+
+@keyframes fadeLeft{
+  from{
+    opacity:0;
+    transform:translateX(-80px);
+  }
+  to{
+    opacity:1;
+    transform:translateX(0);
+  }
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+  .hero{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .hero-text h1{
+    font-size:55px;
+  }
+
+  .about{
+    flex-direction:column;
+  }
+
+  .about img{
+    width:100%;
+  }
+
+  .nav-links{
+    display:none;
+  }
+
+  .newsletter input{
+    width:100%;
+    margin-bottom:20px;
+  }
+
+  .newsletter button{
+    margin-left:0;
+  }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+
+<div class="logo">Sips Of Heaven</div>
+
+<div class="nav-links">
+<a href="#">Home</a>
+<a href="#menu">Menu</a>
+<a href="#shop">Shop</a>
+<a href="#about">About</a>
+<a href="#">Gallery</a>
+<a href="#">Cart</a>
+<a href="#">Login</a>
+</div>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-text">
+
+<h1>Sip The Taste Of Heaven</h1>
+
+<p>
+Luxury handcrafted coffee, artisan desserts,
+and heavenly bakery experiences designed
+to make every sip magical and unforgettable.
+</p>
+
+<div class="hero-buttons">
+
+<button class="btn btn-primary">
+Explore Menu
+</button>
+
+<button class="btn btn-secondary">
+Order Now
+</button>
+
+</div>
+
+</div>
+
+<!-- COFFEE ANIMATION -->
+
+<div class="coffee-scene">
+
+<div class="pour"></div>
+
+<div class="cup">
+
+<div class="coffee"></div>
+
+<div class="steam steam1"></div>
+<div class="steam steam2"></div>
+<div class="steam steam3"></div>
+
+</div>
+
+<div class="float bean1">☕</div>
+<div class="float bean2">🥐</div>
+<div class="float sparkle">✨</div>
+
+</div>
+
+</section>
+
+<!-- PRODUCTS -->
+
+<section id="shop">
+
+<div class="section-title">
+
+<h2>Our Heavenly Specials</h2>
+
+<p>Freshly baked luxury desserts and handcrafted coffee</p>
+
+</div>
+
+<div class="products">
+
+<div class="card">
+
+<div class="wishlist">♡</div>
+
+<img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?q=80&w=1200&auto=format&fit=crop">
+
+<div class="card-content">
+
+<h3>Chocolate Heaven Cake</h3>
+
+<p>
+Rich layered chocolate cake with luxury cocoa frosting.
+</p>
+
+<div class="price">₹1299</div>
+
+<button class="buy-btn">Add To Cart</button>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="wishlist">♡</div>
+
+<img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?q=80&w=1200&auto=format&fit=crop">
+
+<div class="card-content">
+
+<h3>Caramel Latte</h3>
+
+<p>
+Creamy handcrafted latte topped with caramel drizzle.
+</p>
+
+<div class="price">₹299</div>
+
+<button class="buy-btn">Add To Cart</button>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="wishlist">♡</div>
+
+<img src="https://images.unsplash.com/photo-1486427944299-d1955d23e34d?q=80&w=1200&auto=format&fit=crop">
+
+<div class="card-content">
+
+<h3>Butter Croissant</h3>
+
+<p>
+Fresh buttery flaky croissant inspired by Paris cafés.
+</p>
+
+<div class="price">₹199</div>
+
+<button class="buy-btn">Add To Cart</button>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="wishlist">♡</div>
+
+<img src="https://images.unsplash.com/photo-1519864600265-abb23847ef2c?q=80&w=1200&auto=format&fit=crop">
+
+<div class="card-content">
+
+<h3>Macaron Box</h3>
+
+<p>
+Luxury assorted macarons with dreamy pastel flavors.
+</p>
+
+<div class="price">₹799</div>
+
+<button class="buy-btn">Add To Cart</button>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="wishlist">♡</div>
+
+<img src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?q=80&w=1200&auto=format&fit=crop">
+
+<div class="card-content">
+
+<h3>Belgian Pastry</h3>
+
+<p>
+Belgian chocolate layered pastry with creamy filling.
+</p>
+
+<div class="price">₹299</div>
+
+<button class="buy-btn">Add To Cart</button>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="wishlist">♡</div>
+
+<img src="https://images.unsplash.com/photo-1608198093002-ad4e005484ec?q=80&w=1200&auto=format&fit=crop">
+
+<div class="card-content">
+
+<h3>Strawberry Dream Cake</h3>
+
+<p>
+Soft vanilla sponge layered with strawberries.
+</p>
+
+<div class="price">₹1499</div>
+
+<button class="buy-btn">Add To Cart</button>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<div class="about">
+
+<img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1200&auto=format&fit=crop">
+
+<div class="about-text">
+
+<h2>About Us</h2>
+
+<p>
+Sips Of Heaven was born to create magical café experiences
+filled with dreamy coffee moments and handcrafted desserts.
+</p>
+
+<p>
+Inspired by luxury Pinterest cafés and cinematic bakery aesthetics,
+our desserts and beverages are carefully crafted using premium ingredients.
+</p>
+
+<p>
+✨ 10K+ Happy Customers<br>
+✨ 500+ Bakery Products<br>
+✨ 25+ Signature Coffee Flavors
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- TESTIMONIALS -->
+
+<section>
+
+<div class="section-title">
+
+<h2>Customer Love</h2>
+
+<p>Sweet reviews from our happy customers</p>
+
+</div>
+
+<div class="testimonials">
+
+<div class="review">
+
+<h3>⭐⭐⭐⭐⭐</h3>
+
+<p>
+“The most beautiful bakery website and the coffee tastes heavenly.”
+</p>
+
+<br>
+
+<strong>- Priya M.</strong>
+
+</div>
+
+<div class="review">
+
+<h3>⭐⭐⭐⭐⭐</h3>
+
+<p>
+“Absolutely dreamy aesthetics and delicious desserts.”
+</p>
+
+<br>
+
+<strong>- Ayesha K.</strong>
+
+</div>
+
+<div class="review">
+
+<h3>⭐⭐⭐⭐⭐</h3>
+
+<p>
+“The ambiance and pastries feel like a luxury Paris café.”
+</p>
+
+<br>
+
+<strong>- Rohan S.</strong>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- NEWSLETTER -->
+
+<section>
+
+<div class="newsletter">
+
+<h2>Join Our Dreamy Café World</h2>
+
+<p>
+Subscribe for bakery launches, coffee specials, and sweet surprises.
+</p>
+
+<input type="email" placeholder="Enter your email">
+
+<button>Subscribe</button>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="footer-grid">
+
+<div>
+
+<h3>Sips Of Heaven</h3>
+
+<p>
+Crafted with love by Sips Of Heaven.
+Luxury bakery and coffee experiences.
+</p>
+
+</div>
+
+<div>
+
+<h3>Quick Links</h3>
+
+<p>Home</p>
+<p>Menu</p>
+<p>Shop</p>
+<p>About</p>
+
+</div>
+
+<div>
+
+<h3>Customer Care</h3>
+
+<p>Shipping</p>
+<p>Returns</p>
+<p>Support</p>
+<p>FAQ</p>
+
+</div>
+
+<div>
+
+<h3>Contact</h3>
+
+<p>Email: hello@sipsofheaven.com</p>
+<p>Phone: +91 98765 43210</p>
+<p>Mumbai, India</p>
+
+</div>
+
+</div>
+
+<br><br>
+
+<center>
+<p>© 2026 Sips Of Heaven | All Rights Reserved</p>
+</center>
+
+</footer>
+
+</body>
+</html>

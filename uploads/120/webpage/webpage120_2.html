@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Siddhi Gawade Resume</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family:'Poppins',sans-serif;
+      background: linear-gradient(135deg,#ffdde1,#ee9ca7);
+      padding:40px;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      min-height:100vh;
+    }
+
+    .resume{
+      width:850px;
+      background:#fff;
+      border-radius:20px;
+      overflow:hidden;
+      box-shadow:0 10px 30px rgba(0,0,0,0.2);
+      display:grid;
+      grid-template-columns:300px 1fr;
+    }
+
+    /* LEFT SECTION */
+
+    .left{
+      background:linear-gradient(180deg,#6a11cb,#2575fc);
+      color:white;
+      padding:40px 25px;
+      text-align:center;
+    }
+
+    .profile{
+      width:140px;
+      height:140px;
+      background:white;
+      border-radius:50%;
+      margin:auto;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:55px;
+      color:#6a11cb;
+      font-weight:bold;
+      margin-bottom:20px;
+      border:5px solid rgba(255,255,255,0.5);
+    }
+
+    .left h1{
+      font-size:28px;
+      margin-bottom:10px;
+    }
+
+    .tag{
+      background:rgba(255,255,255,0.2);
+      display:inline-block;
+      padding:8px 18px;
+      border-radius:20px;
+      margin-top:10px;
+      font-size:14px;
+    }
+
+    .section{
+      margin-top:35px;
+      text-align:left;
+    }
+
+    .section h2{
+      font-size:18px;
+      margin-bottom:15px;
+      border-left:4px solid white;
+      padding-left:10px;
+    }
+
+    .section ul{
+      list-style:none;
+    }
+
+    .section ul li{
+      margin-bottom:10px;
+      font-size:15px;
+      padding-left:15px;
+      position:relative;
+    }
+
+    .section ul li::before{
+      content:"•";
+      position:absolute;
+      left:0;
+      color:#ffd700;
+      font-size:18px;
+    }
+
+    /* RIGHT SECTION */
+
+    .right{
+      padding:40px;
+      background:#fafafa;
+    }
+
+    .right-section{
+      margin-bottom:35px;
+    }
+
+    .right-section h2{
+      color:#6a11cb;
+      margin-bottom:15px;
+      font-size:24px;
+      position:relative;
+    }
+
+    .right-section h2::after{
+      content:"";
+      width:60px;
+      height:4px;
+      background:#2575fc;
+      position:absolute;
+      left:0;
+      bottom:-6px;
+      border-radius:10px;
+    }
+
+    .right-section p{
+      margin-top:15px;
+      color:#555;
+      line-height:1.8;
+      font-size:16px;
+    }
+
+    .skill-box{
+      display:flex;
+      flex-wrap:wrap;
+      gap:15px;
+      margin-top:20px;
+    }
+
+    .skill{
+      background:linear-gradient(135deg,#6a11cb,#2575fc);
+      color:white;
+      padding:10px 18px;
+      border-radius:30px;
+      font-size:14px;
+      box-shadow:0 5px 10px rgba(0,0,0,0.1);
+    }
+
+    .project-card{
+      background:white;
+      padding:20px;
+      border-radius:15px;
+      box-shadow:0 5px 15px rgba(0,0,0,0.08);
+      margin-top:20px;
+      transition:0.3s;
+    }
+
+    .project-card:hover{
+      transform:translateY(-5px);
+    }
+
+    .project-card h3{
+      color:#2575fc;
+      margin-bottom:10px;
+    }
+
+    .project-card p{
+      margin-top:0;
+    }
+
+    @media(max-width:768px){
+      .resume{
+        grid-template-columns:1fr;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="resume">
+
+    <!-- LEFT SIDE -->
+
+    <div class="left">
+
+      <div class="profile">S</div>
+
+      <h1>Siddhi Gawade</h1>
+
+      <div class="tag">12th Pass Out Student</div>
+
+      <div class="section">
+        <h2>Languages</h2>
+        <ul>
+          <li>English</li>
+          <li>Marathi</li>
+          <li>Hindi</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>Hobbies</h2>
+        <ul>
+          <li>Reading</li>
+          <li>Learning New Things</li>
+          <li>Drawing</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>Soft Skills</h2>
+        <ul>
+          <li>Good Communication</li>
+          <li>Positive Attitude</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- RIGHT SIDE -->
+
+    <div class="right">
+
+      <div class="right-section">
+        <h2>Career Objective</h2>
+
+        <p>
+          Motivated and enthusiastic student seeking opportunities to learn, 
+          grow, and enhance professional skills. Passionate about creativity, 
+          communication, and continuous self-development.
+        </p>
+      </div>
+
+      <div class="right-section">
+        <h2>Technical Skills</h2>
+
+        <div class="skill-box">
+          <div class="skill">Computer Handling</div>
+          <div class="skill">Basic Computer Knowledge</div>
+          <div class="skill">Creative Design</div>
+        </div>
+      </div>
+
+      <div class="right-section">
+        <h2>Project</h2>
+
+        <div class="project-card">
+          <h3>Creating Cards</h3>
+
+          <p>
+            Designed and created creative greeting and decorative cards using 
+            artistic ideas and presentation skills. This project improved 
+            creativity, patience, and design thinking abilities.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+</html>

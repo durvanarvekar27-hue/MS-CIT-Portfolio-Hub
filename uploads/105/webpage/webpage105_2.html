@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PowerFit Gym</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body{
+      background:#111;
+      color:white;
+      line-height:1.6;
+    }
+
+    /* Navbar */
+    nav{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:20px 8%;
+      background:#000;
+      position:sticky;
+      top:0;
+      z-index:1000;
+    }
+
+    nav h1{
+      color:#ff3c00;
+      font-size:32px;
+    }
+
+    nav ul{
+      display:flex;
+      list-style:none;
+      gap:25px;
+    }
+
+    nav ul li a{
+      text-decoration:none;
+      color:white;
+      transition:0.3s;
+    }
+
+    nav ul li a:hover{
+      color:#ff3c00;
+    }
+
+    /* Hero Section */
+    .hero{
+      height:90vh;
+      background:url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      position:relative;
+    }
+
+    .hero::before{
+      content:'';
+      position:absolute;
+      inset:0;
+      background:rgba(0,0,0,0.6);
+    }
+
+    .hero-content{
+      position:relative;
+      z-index:2;
+      max-width:700px;
+    }
+
+    .hero h2{
+      font-size:60px;
+      margin-bottom:20px;
+    }
+
+    .hero p{
+      font-size:20px;
+      margin-bottom:30px;
+    }
+
+    .btn{
+      display:inline-block;
+      padding:15px 35px;
+      background:#ff3c00;
+      color:white;
+      text-decoration:none;
+      border-radius:5px;
+      font-weight:bold;
+      transition:0.3s;
+    }
+
+    .btn:hover{
+      background:#ff6a33;
+      transform:scale(1.05);
+    }
+
+    /* About */
+    .section{
+      padding:80px 8%;
+    }
+
+    .section-title{
+      text-align:center;
+      font-size:42px;
+      margin-bottom:50px;
+      color:#ff3c00;
+    }
+
+    .about{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:40px;
+      align-items:center;
+    }
+
+    .about img{
+      width:100%;
+      border-radius:10px;
+    }
+
+    /* Services */
+    .services{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:25px;
+    }
+
+    .card{
+      background:#1b1b1b;
+      padding:30px;
+      border-radius:10px;
+      text-align:center;
+      transition:0.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-10px);
+      background:#222;
+    }
+
+    .card h3{
+      margin:20px 0;
+      color:#ff3c00;
+    }
+
+    /* Pricing */
+    .pricing{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:25px;
+    }
+
+    .price-card{
+      background:#1b1b1b;
+      padding:40px;
+      border-radius:10px;
+      text-align:center;
+      border:2px solid transparent;
+      transition:0.3s;
+    }
+
+    .price-card:hover{
+      border-color:#ff3c00;
+      transform:scale(1.03);
+    }
+
+    .price{
+      font-size:45px;
+      color:#ff3c00;
+      margin:20px 0;
+    }
+
+    /* Contact */
+    .contact{
+      text-align:center;
+    }
+
+    .contact input,
+    .contact textarea{
+      width:100%;
+      max-width:600px;
+      padding:15px;
+      margin:10px 0;
+      border:none;
+      border-radius:5px;
+    }
+
+    .contact button{
+      border:none;
+      cursor:pointer;
+    }
+
+    footer{
+      background:#000;
+      text-align:center;
+      padding:20px;
+      margin-top:40px;
+      color:#aaa;
+    }
+
+    @media(max-width:768px){
+      .hero h2{
+        font-size:40px;
+      }
+
+      nav{
+        flex-direction:column;
+        gap:15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <h1>PowerFit</h1>
+
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Transform Your Body</h2>
+      <p>Join the best fitness gym and start your fitness journey today.</p>
+      <a href="#pricing" class="btn">Join Now</a>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="section" id="about">
+    <h2 class="section-title">About Us</h2>
+
+    <div class="about">
+      <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1200&auto=format&fit=crop" alt="Gym">
+
+      <div>
+        <h3>Why Choose PowerFit?</h3>
+        <p>
+          PowerFit Gym offers world-class equipment, certified trainers,
+          group classes, and personalized workout plans to help you
+          achieve your dream physique.
+        </p>
+
+        <br>
+
+        <p>
+          Whether you're a beginner or a professional athlete,
+          our gym environment motivates you to become stronger every day.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="section" id="services">
+    <h2 class="section-title">Our Services</h2>
+
+    <div class="services">
+
+      <div class="card">
+        <h3>Weight Training</h3>
+        <p>Modern equipment for strength and muscle building.</p>
+      </div>
+
+      <div class="card">
+        <h3>Cardio Fitness</h3>
+        <p>Improve endurance with top cardio machines.</p>
+      </div>
+
+      <div class="card">
+        <h3>Personal Trainer</h3>
+        <p>Get customized training plans from experts.</p>
+      </div>
+
+      <div class="card">
+        <h3>Yoga Classes</h3>
+        <p>Relax and improve flexibility with yoga sessions.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section class="section" id="pricing">
+    <h2 class="section-title">Membership Plans</h2>
+
+    <div class="pricing">
+
+      <div class="price-card">
+        <h3>Basic</h3>
+        <div class="price">$19</div>
+        <p>Access to gym equipment</p>
+        <br>
+        <a href="#" class="btn">Choose Plan</a>
+      </div>
+
+      <div class="price-card">
+        <h3>Standard</h3>
+        <div class="price">$39</div>
+        <p>Gym + Group Classes</p>
+        <br>
+        <a href="#" class="btn">Choose Plan</a>
+      </div>
+
+      <div class="price-card">
+        <h3>Premium</h3>
+        <div class="price">$59</div>
+        <p>All access + Personal Trainer</p>
+        <br>
+        <a href="#" class="btn">Choose Plan</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section contact" id="contact">
+    <h2 class="section-title">Contact Us</h2>
+
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <br>
+
+      <input type="email" placeholder="Your Email" required>
+      <br>
+
+      <textarea rows="5" placeholder="Your Message"></textarea>
+      <br>
+
+      <button class="btn">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 PowerFit Gym. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>

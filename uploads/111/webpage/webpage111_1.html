@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WildLife Explorer</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f5f7f5;
+    color:#333;
+}
+
+/* Header */
+header{
+    position:fixed;
+    width:100%;
+    top:0;
+    z-index:1000;
+    background:white;
+    box-shadow:0 2px 10px rgba(0,0,0,.1);
+}
+
+nav{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 20px;
+}
+
+.logo{
+    font-size:1.7rem;
+    font-weight:700;
+    color:#1b5e20;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:20px;
+}
+
+nav a{
+    text-decoration:none;
+    color:#333;
+    font-weight:500;
+}
+
+/* Hero */
+.hero{
+    height:100vh;
+    background:
+    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+    url("https://images.unsplash.com/photo-1549366021-9f761d040a94?auto=format&fit=crop&w=1600&q=80");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:white;
+    padding:20px;
+}
+
+.hero-content{
+    max-width:800px;
+}
+
+.hero h1{
+    font-size:4rem;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:1.2rem;
+    line-height:1.8;
+    margin-bottom:30px;
+}
+
+.btn{
+    display:inline-block;
+    padding:15px 35px;
+    background:#4caf50;
+    color:white;
+    text-decoration:none;
+    border-radius:30px;
+    font-weight:600;
+}
+
+/* About */
+.about{
+    max-width:1100px;
+    margin:auto;
+    padding:100px 20px;
+    text-align:center;
+}
+
+.about h2{
+    color:#1b5e20;
+    margin-bottom:20px;
+    font-size:2.5rem;
+}
+
+.about p{
+    line-height:1.8;
+    max-width:900px;
+    margin:auto;
+}
+
+/* Animal Section */
+.animals{
+    padding:80px 20px;
+    background:#eef5ee;
+}
+
+.section-title{
+    text-align:center;
+    font-size:2.7rem;
+    color:#1b5e20;
+    margin-bottom:50px;
+}
+
+.grid{
+    max-width:1300px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:20px;
+}
+
+.card h3{
+    color:#1b5e20;
+    margin-bottom:10px;
+}
+
+.card p{
+    line-height:1.6;
+    font-size:.95rem;
+}
+
+/* Footer */
+footer{
+    background:#1b5e20;
+    color:white;
+    text-align:center;
+    padding:30px;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:2.5rem;
+}
+
+.hero p{
+    font-size:1rem;
+}
+
+nav ul{
+    display:none;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<header>
+<nav>
+<div class="logo">WildLife Explorer</div>
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#animals">Animals</a></li>
+</ul>
+</nav>
+</header>
+
+<section class="hero">
+<div class="hero-content">
+<h1>Discover The Amazing Animal Kingdom</h1>
+<p>
+Explore fascinating wildlife from every corner of the world.
+Learn about incredible species, their habitats, behaviors,
+and the important role they play in maintaining Earth's ecosystems.
+</p>
+<a href="#animals" class="btn">Explore Animals</a>
+</div>
+</section>
+
+<section class="about" id="about">
+<h2>About WildLife Explorer</h2>
+<p>
+WildLife Explorer is an educational website dedicated to showcasing
+the beauty and diversity of animals across the globe. From powerful
+predators to gentle giants and marine wonders, our mission is to
+help visitors learn about wildlife and inspire conservation efforts
+for future generations.
+</p>
+</section>
+
+<section class="animals" id="animals">
+
+<h2 class="section-title">Featured Animals</h2>
+
+<div class="grid">
+
+<!-- Animal Cards -->
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1546182990-dffeafbe841d?w=800" alt="">
+<div class="card-content">
+<h3>Lion</h3>
+<p>Known as the King of the Jungle, lions live in prides and dominate African grasslands.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1557050543-4d5f4e07ef46?w=800" alt="">
+<div class="card-content">
+<h3>Elephant</h3>
+<p>The largest land mammal, famous for intelligence, memory, and strong family bonds.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1615824996195-f780bba7cfab?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8dGlnZXJ8ZW58MHx8MHx8fDA%3D" alt="">
+<div class="card-content">
+<h3>Tiger</h3>
+<p>The world's largest wild cat, identified by its striking orange coat and black stripes.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1612358405970-e1aeba9d76c2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Z2lyYWZmfGVufDB8fDB8fHww" alt="">
+<div class="card-content">
+<h3>Giraffe</h3>
+<p>The tallest land animal, using its long neck to reach leaves high in trees.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://plus.unsplash.com/premium_photo-1664303208329-58bd1b4e30c3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8d29sZnxlbnwwfHwwfHx8MA%3D%3D" alt="">
+<div class="card-content">
+<h3>Wolf</h3>
+<p>Social predators that hunt in packs and communicate through howls.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1597953601374-1ff2d5640c85?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cGFuZGF8ZW58MHx8MHx8fDA%3D" alt="">
+<div class="card-content">
+<h3>Panda</h3>
+<p>A beloved bear species known for its black-and-white fur and bamboo diet.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1526319238109-524eecb9b913?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8emVicmF8ZW58MHx8MHx8fDA%3Dalt="">
+<div class="card-content">
+<h3>Zebra</h3>
+<p>Recognized by unique black-and-white stripes that differ for every zebra.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1551969014-7d2c4cddf0b6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2hlZXRhaHxlbnwwfHwwfHx8MA%3D%3D alt="">
+<div class="card-content">
+<h3>Cheetah</h3>
+<p>The fastest land animal capable of reaching speeds over 100 km/h.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1590637144997-67abd8329d46?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cGVndWlufGVufDB8fDB8fHww" alt="">
+<div class="card-content">
+<h3>Penguin</h3>
+<p>Flightless birds adapted to cold climates and excellent swimming abilities.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1611689342806-0863700ce1e4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZWFnbGV8ZW58MHx8MHx8fDA%3D
+<h3>Koala</h3>
+<p>An Australian marsupial that spends most of its life in eucalyptus trees.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1557401622-cfc0aa5d146c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZWFnbGV8ZW58MHx8MHx8fDA%3D" alt="">
+<div class=" alt="">
+<div class=" alt="">
+<div class="card-content">
+<h3>Eagle</h3>
+<p>A powerful bird of prey known for exceptional eyesight and hunting skills.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?w=800" alt="">
+<div class="card-content">
+<h3>Dolphin</h3>
+<p>Highly intelligent marine mammals that communicate using clicks and whistles.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?w=800" alt="">
+<div class="card-content">
+<h3>Dog</h3>
+<p>One of humanity's oldest companions, valued for loyalty and intelligence.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?w=800" alt="">
+<div class="card-content">
+<h3>Cat</h3>
+<p>Popular pets known for agility, curiosity, and independent personalities.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1553264701-d138db4fd5d4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8b3dsfGVufDB8fDB8fHww alt="">
+<div class="card-content">
+<h3>Owl</h3>
+<p>Nocturnal birds with excellent hearing and vision for hunting at night.</p>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+<p>© 2026 WildLife Explorer | Inspiring Wildlife Education & Conservation</p>
+</footer>
+
+</body>
+</html>

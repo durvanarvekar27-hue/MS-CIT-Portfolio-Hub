@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shree Divine Temple</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body{
+      background:#fff8ef;
+      color:#333;
+      line-height:1.6;
+    }
+
+    /* HEADER */
+    header{
+      background:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+      url('https://images.unsplash.com/photo-1514222134-b57cbb8ce073?q=80&w=1600&auto=format&fit=crop');
+      background-size:cover;
+      background-position:center;
+      height:100vh;
+      color:white;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      padding:20px;
+    }
+
+    header h1{
+      font-size:60px;
+      margin-bottom:20px;
+    }
+
+    header p{
+      font-size:22px;
+      margin-bottom:20px;
+    }
+
+    .btn{
+      display:inline-block;
+      padding:12px 25px;
+      background:#ff9933;
+      color:white;
+      text-decoration:none;
+      border-radius:5px;
+      font-weight:bold;
+    }
+
+    .btn:hover{
+      background:#e67e22;
+    }
+
+    /* NAVIGATION */
+    nav{
+      background:#8b0000;
+      padding:15px;
+      position:sticky;
+      top:0;
+      z-index:1000;
+    }
+
+    nav ul{
+      display:flex;
+      justify-content:center;
+      list-style:none;
+      flex-wrap:wrap;
+    }
+
+    nav ul li{
+      margin:0 15px;
+    }
+
+    nav ul li a{
+      color:white;
+      text-decoration:none;
+      font-weight:bold;
+    }
+
+    /* SECTIONS */
+    section{
+      padding:70px 10%;
+    }
+
+    h2{
+      text-align:center;
+      margin-bottom:30px;
+      color:#8b0000;
+      font-size:38px;
+    }
+
+    .about{
+      text-align:center;
+      font-size:18px;
+    }
+
+    /* CARDS */
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:25px;
+    }
+
+    .card{
+      background:white;
+      padding:25px;
+      border-radius:10px;
+      box-shadow:0 4px 10px rgba(0,0,0,0.1);
+      text-align:center;
+    }
+
+    .card h3{
+      margin-bottom:15px;
+      color:#d35400;
+    }
+
+    /* GALLERY */
+    .gallery{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:20px;
+    }
+
+    .gallery img{
+      width:100%;
+      height:250px;
+      object-fit:cover;
+      border-radius:10px;
+    }
+
+    /* CONTACT */
+    .contact{
+      background:#fff0db;
+      border-radius:10px;
+      text-align:center;
+    }
+
+    /* FOOTER */
+    footer{
+      background:#8b0000;
+      color:white;
+      text-align:center;
+      padding:20px;
+    }
+
+    /* RESPONSIVE */
+    @media(max-width:768px){
+      header h1{
+        font-size:40px;
+      }
+
+      header p{
+        font-size:18px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO SECTION -->
+  <header>
+    <div>
+      <h1>🛕 Shree Divine Temple</h1>
+      <p>A Sacred Place of Peace, Devotion & Spiritual Energy</p>
+      <a href="#about" class="btn">Explore Temple</a>
+    </div>
+  </header>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#history">History</a></li>
+      <li><a href="#events">Events</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <h2>About Our Temple</h2>
+
+    <div class="about">
+      <p>
+        Shree Divine Temple is a holy spiritual destination dedicated
+        to devotion, meditation, and community service.
+        The temple welcomes devotees from all religions and backgrounds.
+      </p>
+
+      <br>
+
+      <p>
+        Our mission is to spread peace, positivity, and spiritual wisdom
+        through prayer, festivals, and charitable activities.
+      </p>
+    </div>
+  </section>
+
+  <!-- HISTORY -->
+  <section id="history">
+    <h2>Temple Background Information</h2>
+
+    <div class="cards">
+
+      <div class="card">
+        <h3>Temple Foundation</h3>
+        <p>
+          The temple was established in 1985 by spiritual leaders and
+          local devotees who wanted to create a peaceful center for worship.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Spiritual Importance</h3>
+        <p>
+          The temple is dedicated to Lord Shiva and symbolizes purity,
+          meditation, wisdom, and divine blessings.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Community Service</h3>
+        <p>
+          The temple organizes free food distribution, spiritual classes,
+          and cultural events for the community throughout the year.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- EVENTS -->
+  <section id="events">
+    <h2>Temple Activities & Events</h2>
+
+    <div class="cards">
+
+      <div class="card">
+        <h3>Morning Aarti</h3>
+        <p>Daily Prayer at 6:00 AM</p>
+      </div>
+
+      <div class="card">
+        <h3>Bhajan Evening</h3>
+        <p>Every Saturday at 7:00 PM</p>
+      </div>
+
+      <div class="card">
+        <h3>Festival Celebrations</h3>
+        <p>Grand celebrations during Diwali & Maha Shivratri</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery">
+    <h2>Temple Gallery</h2>
+
+    <div class="gallery">
+
+      <img src="https://images.unsplash.com/photo-1524499982521-1ffd58dd89ea?q=80&w=1200&auto=format&fit=crop">
+
+      <img src="https://images.unsplash.com/photo-1512632578888-169bbbc64f33?q=80&w=1200&auto=format&fit=crop">
+
+      <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop">
+
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+
+    <div class="contact">
+      <h2>Contact Us</h2>
+
+      <p><strong>📍 Address:</strong> Temple Road, Mumbai, India</p>
+      <p><strong>📞 Phone:</strong> +91 98765 43210</p>
+      <p><strong>✉ Email:</strong> info@shreedivinetemple.com</p>
+
+      <br>
+
+      <a href="#" class="btn">Donate Now</a>
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Shree Divine Temple | All Rights Reserved</p>
+  </footer>
+
+</body>
+</html>

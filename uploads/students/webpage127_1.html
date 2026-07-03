@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vaishnavi Kashiram Gawade | Creative Resume</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family:'Poppins',sans-serif;
+      background:linear-gradient(135deg,#ffecd2,#fcb69f);
+      min-height:100vh;
+      padding:40px 20px;
+      color:#333;
+    }
+
+    .resume{
+      max-width:1100px;
+      margin:auto;
+      background:#fff;
+      border-radius:25px;
+      overflow:hidden;
+      box-shadow:0 15px 40px rgba(0,0,0,0.15);
+      display:grid;
+      grid-template-columns:320px 1fr;
+    }
+
+    /* LEFT PANEL */
+
+    .left{
+      background:linear-gradient(180deg,#6a11cb,#2575fc);
+      color:white;
+      padding:40px 30px;
+      text-align:center;
+    }
+
+    .profile img{
+      width:150px;
+      height:150px;
+      border-radius:50%;
+      border:5px solid rgba(255,255,255,0.3);
+      object-fit:cover;
+      margin-bottom:20px;
+    }
+
+    .profile h1{
+      font-size:30px;
+      line-height:1.3;
+      margin-bottom:10px;
+    }
+
+    .profile p{
+      font-size:16px;
+      opacity:0.9;
+    }
+
+    .left-section{
+      margin-top:40px;
+      text-align:left;
+    }
+
+    .left-section h2{
+      font-size:20px;
+      margin-bottom:15px;
+      border-bottom:2px solid rgba(255,255,255,0.3);
+      padding-bottom:8px;
+    }
+
+    .left-section p,
+    .left-section li{
+      font-size:14px;
+      line-height:1.8;
+      margin-bottom:10px;
+      list-style:none;
+    }
+
+    .skills span{
+      display:inline-block;
+      background:rgba(255,255,255,0.2);
+      padding:8px 14px;
+      border-radius:30px;
+      margin:6px 6px 0 0;
+      font-size:13px;
+      transition:0.3s;
+    }
+
+    .skills span:hover{
+      background:white;
+      color:#2575fc;
+      transform:scale(1.05);
+    }
+
+    /* RIGHT PANEL */
+
+    .right{
+      padding:40px;
+      background:#fafafa;
+    }
+
+    .section{
+      margin-bottom:35px;
+    }
+
+    .section h2{
+      color:#6a11cb;
+      margin-bottom:20px;
+      font-size:26px;
+      position:relative;
+    }
+
+    .section h2::after{
+      content:"";
+      position:absolute;
+      left:0;
+      bottom:-8px;
+      width:70px;
+      height:4px;
+      background:#2575fc;
+      border-radius:20px;
+    }
+
+    .summary{
+      background:white;
+      padding:25px;
+      border-radius:15px;
+      line-height:1.9;
+      box-shadow:0 5px 15px rgba(0,0,0,0.05);
+    }
+
+    .card{
+      background:white;
+      padding:20px;
+      border-radius:15px;
+      margin-bottom:20px;
+      border-left:6px solid #6a11cb;
+      transition:0.3s;
+      box-shadow:0 5px 12px rgba(0,0,0,0.05);
+    }
+
+    .card:hover{
+      transform:translateY(-5px);
+      box-shadow:0 10px 20px rgba(0,0,0,0.1);
+    }
+
+    .card h3{
+      color:#2575fc;
+      margin-bottom:10px;
+    }
+
+    .card ul{
+      padding-left:20px;
+    }
+
+    .card li{
+      margin-bottom:8px;
+      line-height:1.7;
+    }
+
+    footer{
+      text-align:center;
+      margin-top:30px;
+      color:#777;
+      font-size:14px;
+    }
+
+    /* Responsive */
+
+    @media(max-width:900px){
+
+      .resume{
+        grid-template-columns:1fr;
+      }
+
+      .left{
+        text-align:center;
+      }
+
+      .left-section{
+        text-align:center;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="resume">
+
+    <!-- LEFT SIDE -->
+
+    <div class="left">
+
+      <div class="profile">
+
+        <!-- Replace image URL with your own photo -->
+        <img src="https://i.imgur.com/2WZtOD6.png" alt="Profile Photo">
+
+        <h1>Vaishnavi Kashiram Gawade</h1>
+
+        <p>B.Com Graduate</p>
+
+      </div>
+
+      <div class="left-section">
+
+        <h2>Contact</h2>
+
+        <p>📍 Sindhudurg, India</p>
+        <p>📧 yourmail@gmail.com</p>
+        <p>📞 +91-XXXXXXXXXX</p>
+
+      </div>
+
+      <div class="left-section">
+
+        <h2>Skills</h2>
+
+        <div class="skills">
+          <span>Account Handling</span>
+          <span>MS Office</span>
+          <span>Communication</span>
+          <span>Teamwork</span>
+          <span>Time Management</span>
+          <span>Computer Skills</span>
+        </div>
+
+      </div>
+
+      <div class="left-section">
+
+        <h2>Strengths</h2>
+
+        <ul>
+          <li>✔ Hardworking</li>
+          <li>✔ Positive Attitude</li>
+          <li>✔ Fast Learner</li>
+          <li>✔ Interpersonal Skills</li>
+        </ul>
+
+      </div>
+
+    </div>
+
+    <!-- RIGHT SIDE -->
+
+    <div class="right">
+
+      <div class="section">
+
+        <h2>Professional Summary</h2>
+
+        <div class="summary">
+
+          Motivated and responsible B.Com graduate with good
+          communication and account-handling skills. Quick learner
+          with practical field project experience in farm work and
+          active participation in cultural activities like dance
+          and mime performances.
+
+        </div>
+
+      </div>
+
+      <div class="section">
+
+        <h2>Education</h2>
+
+        <div class="card">
+
+          <h3>Bachelor of Commerce (B.Com)</h3>
+
+          <p>Successfully Passed</p>
+
+        </div>
+
+        <div class="card">
+
+          <h3>MSCIT Certification</h3>
+
+          <p>Certified in basic computer applications and IT skills.</p>
+
+        </div>
+
+      </div>
+
+      <div class="section">
+
+        <h2>Field Project</h2>
+
+        <div class="card">
+
+          <h3>Farm Work Project</h3>
+
+          <ul>
+            <li>Participated in agricultural field activities</li>
+            <li>Learned practical farm management</li>
+            <li>Observed farming operations and planning</li>
+          </ul>
+
+        </div>
+
+      </div>
+
+      <div class="section">
+
+        <h2>Achievements & Activities</h2>
+
+        <div class="card">
+
+          <ul>
+            <li>Participated in Dance Competitions</li>
+            <li>Participated in Mime Performances</li>
+            <li>Active in cultural & extracurricular activities</li>
+          </ul>
+
+        </div>
+
+      </div>
+
+      <footer>
+        © 2026 Vaishnavi Kashiram Gawade | Creative Resume
+      </footer>
+
+    </div>
+
+  </div>
+
+</body>
+</html>

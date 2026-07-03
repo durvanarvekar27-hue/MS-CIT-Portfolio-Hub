@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tree Plantation Drive</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body{
+      background:#f4fff4;
+      color:#2d4d2d;
+      line-height:1.6;
+    }
+
+    header{
+      background:linear-gradient(to right, #2e7d32, #66bb6a);
+      color:white;
+      text-align:center;
+      padding:60px 20px;
+    }
+
+    header h1{
+      font-size:48px;
+      margin-bottom:10px;
+    }
+
+    header p{
+      font-size:20px;
+    }
+
+    nav{
+      background:#1b5e20;
+      padding:15px;
+      text-align:center;
+    }
+
+    nav a{
+      color:white;
+      text-decoration:none;
+      margin:0 15px;
+      font-weight:bold;
+    }
+
+    section{
+      padding:50px 10%;
+    }
+
+    .about{
+      display:flex;
+      flex-wrap:wrap;
+      align-items:center;
+      gap:30px;
+    }
+
+    .about img{
+      width:400px;
+      border-radius:15px;
+    }
+
+    .content{
+      flex:1;
+    }
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
+      gap:25px;
+      margin-top:30px;
+    }
+
+    .card{
+      background:white;
+      padding:25px;
+      border-radius:15px;
+      box-shadow:0 4px 10px rgba(0,0,0,0.1);
+      text-align:center;
+      transition:0.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-5px);
+    }
+
+    .card h3{
+      margin-bottom:15px;
+      color:#2e7d32;
+    }
+
+    .cta{
+      background:#43a047;
+      color:white;
+      text-align:center;
+      padding:60px 20px;
+    }
+
+    .cta button{
+      padding:15px 30px;
+      border:none;
+      background:white;
+      color:#2e7d32;
+      font-size:18px;
+      border-radius:8px;
+      cursor:pointer;
+      margin-top:20px;
+      transition:0.3s;
+    }
+
+    .cta button:hover{
+      background:#dcedc8;
+    }
+
+    footer{
+      background:#1b5e20;
+      color:white;
+      text-align:center;
+      padding:20px;
+    }
+
+    @media(max-width:768px){
+      header h1{
+        font-size:36px;
+      }
+
+      .about{
+        flex-direction:column;
+      }
+
+      .about img{
+        width:100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Tree Plantation Drive</h1>
+    <p>Plant Trees, Save Nature, Secure the Future</p>
+  </header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Benefits</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <section class="about">
+    <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e" alt="Tree Plantation">
+
+    <div class="content">
+      <h2>Why Tree Plantation Matters</h2>
+      <p>
+        Trees are essential for life. They provide oxygen, improve air quality,
+        conserve water, preserve soil, and support wildlife. Tree plantation
+        helps reduce global warming and creates a greener environment for future generations.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <h2 style="text-align:center;">Benefits of Planting Trees</h2>
+
+    <div class="cards">
+
+      <div class="card">
+        <h3>Clean Air</h3>
+        <p>Trees absorb carbon dioxide and release fresh oxygen.</p>
+      </div>
+
+      <div class="card">
+        <h3>Climate Control</h3>
+        <p>Trees help reduce global warming and cool the environment.</p>
+      </div>
+
+      <div class="card">
+        <h3>Wildlife Support</h3>
+        <p>Forests provide shelter and food for many animals and birds.</p>
+      </div>
+
+      <div class="card">
+        <h3>Beautify Nature</h3>
+        <p>Green spaces make cities and villages healthier and more beautiful.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="cta">
+    <h2>Join the Green Mission</h2>
+    <p>Be a part of the movement to make the Earth greener and healthier.</p>
+    <button onclick="alert('Thank you for supporting Tree Plantation!')">
+      Plant a Tree
+    </button>
+  </section>
+
+  <footer>
+    <p>© 2026 Tree Plantation Initiative | Save Trees Save Earth</p>
+  </footer>
+
+</body>
+</html>

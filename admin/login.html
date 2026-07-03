@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Login - MS-CIT Portfolio</title>
+
+<link rel="stylesheet" href="../css/admin.css">
+
+<!-- Font Awesome -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+<body>
+
+<!-- ================= LOGIN SECTION ================= -->
+<section class="admin-login-section">
+
+    <div class="login-card">
+
+        <!-- Logo / Title -->
+        <div class="login-header">
+            <i class="fas fa-user-shield"></i>
+            <h2>Admin Login</h2>
+            <p>MS-CIT Portfolio Hub</p>
+        </div>
+
+        <!-- Form -->
+        <form action="dashboard.html" method="POST">
+
+            <div class="input-group">
+                <i class="fas fa-user"></i>
+                <input type="text" name="username" placeholder="Enter Username" required>
+            </div>
+
+            <div class="input-group">
+                <i class="fas fa-lock"></i>
+                <input type="password" name="password" placeholder="Enter Password" required>
+            </div>
+
+            <!-- Remember -->
+            <div class="options">
+                <label>
+                    <input type="checkbox"> Remember Me
+                </label>
+                <a href="#">Forgot Password?</a>
+            </div>
+
+            <!-- Button -->
+            <button type="submit">
+                Login
+            </button>
+
+        </form>
+
+        <!-- Footer -->
+        <div class="login-footer">
+            <p>© 2026 MS-CIT Portfolio Hub</p>
+        </div>
+
+    </div>
+
+</section>
+
+</body>
+</html>

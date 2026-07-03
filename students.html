@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MS-CIT Portfolio Hub</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<!-- ==========================
+        HEADER
+========================== -->
+
+<header>
+
+    <nav class="navbar">
+
+        <div class="logo">
+
+            <img src="images/students/logo.png" alt="Logo">
+
+            <h2>MS-CIT Portfolio Hub</h2>
+
+        </div>
+
+        <ul class="nav-links" id="navLinks">
+
+            <li><a href="index.html" >Home</a></li>
+
+            <li><a href="about.html">About</a></li>
+
+            <li><a href="students.html"class="active">Students</a></li>
+
+            <li><a href="contact.html">Contact</a></li>
+
+            <!-- <li>
+                <a href="admin/index.html" class="admin-btn">
+                    <i class="fa-solid fa-user-shield"></i>
+                    Admin
+                </a>
+            </li> -->
+
+        </ul>
+
+        <div class="menu-btn">
+
+            <i class="fa-solid fa-bars"></i>
+
+        </div>
+
+    </nav>
+
+</header>
+<!-- ===================================
+            PAGE BANNER
+=================================== -->
+
+<section class="page-banner">
+
+    <div class="container">
+
+        <h1>Our Students</h1>
+
+        <p>
+            Explore the portfolios and creative projects of our MS-CIT students.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- ===================================
+            SEARCH SECTION
+=================================== -->
+
+<section class="search-section">
+
+    <div class="container">
+
+        <div class="search-box">
+
+            <input
+    id="searchStudent"
+    type="text"
+    placeholder="Search by Student Name or Student ID">
+            <button>
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===================================
+            STUDENT LIST
+=================================== -->
+
+<section class="students-list">
+
+    <div class="container">
+
+        <div class="student-grid" id="studentGrid">
+
+            <!-- Student Cards JavaScript मधून Generate होतील -->
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ===================================
+            PAGINATION
+=================================== -->
+
+<section class="pagination-section">
+
+    <div class="container">
+
+        <div class="pagination">
+
+            <a href="#">«</a>
+
+            <a href="#" class="active-page">1</a>
+
+            <a href="#">2</a>
+
+            <a href="#">3</a>
+
+            <a href="#">»</a>
+
+        </div>
+
+    </div>
+
+</section>
+<footer>
+
+    <div class="container footer-container">
+
+        <div class="footer-about">
+
+            <h2>MS-CIT Portfolio Hub</h2>
+
+            <p>
+
+                A professional platform to showcase
+                students' projects, creativity,
+                and technical skills.
+
+            </p>
+
+        </div>
+
+        <div class="footer-links">
+
+            <h3>Quick Links</h3>
+
+            <a href="index.html">Home</a>
+
+            <a href="about.html">About</a>
+
+            <a href="students.html">Students</a>
+
+            <a href="contact.html">Contact</a>
+
+        </div>
+
+        <div class="footer-social">
+
+            <h3>Follow Us</h3>
+
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+
+            <a href="#"><i class="fab fa-instagram"></i></a>
+
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+
+            <a href="#"><i class="fab fa-youtube"></i></a>
+
+        </div>
+
+    </div>
+
+    <div class="copyright">
+
+        © 2026 MS-CIT Portfolio Hub |
+        All Rights Reserved.
+
+    </div>
+
+</footer>
+<!-- <script>
+const menuBtn = document.querySelector(".menu-btn");
+const navLinks = document.querySelector("#navLinks");
+
+menuBtn.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+});
+</script> -->
+<script src="js/main.js"></script>
+<script src="js/students.js"></script>
+<script src="js/students-page.js"></script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Settings - Admin Panel</title>
+
+<link rel="stylesheet" href="../css/admin.css">
+
+<!-- Font Awesome -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+<body>
+
+<!-- ================= SIDEBAR ================= -->
+<div class="admin-sidebar">
+
+    <h2>MS-CIT Admin</h2>
+
+    <a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a>
+    <a href="students.html"><i class="fas fa-users"></i> Students</a>
+    <a href="projects.html"><i class="fas fa-folder"></i> Projects</a>
+    <a href="upload.html"><i class="fas fa-upload"></i> Upload</a>
+    <a href="settings.html"><i class="fas fa-cog"></i> Settings</a>
+    <a href="login.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
+
+</div>
+
+<!-- ================= CONTENT ================= -->
+<div class="admin-content">
+
+    <!-- HEADER -->
+    <div class="admin-header">
+        <h2>Settings</h2>
+    </div>
+
+    <!-- SETTINGS BOX -->
+    <div class="settings-box">
+
+        <h3>Admin Profile Settings</h3>
+
+        <form>
+
+            <label>Admin Name</label>
+            <input type="text" value="Admin" placeholder="Enter name">
+
+            <label>Email</label>
+            <input type="email" value="admin@gmail.com" placeholder="Enter email">
+
+            <label>Change Password</label>
+            <input type="password" placeholder="New password">
+
+            <label>Confirm Password</label>
+            <input type="password" placeholder="Confirm password">
+
+            <button type="submit">
+                <i class="fas fa-save"></i> Save Changes
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Spice World - Online Spice Store</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#fff8f0;
+    color:#333;
+}
+
+header{
+    background:#b22222;
+    color:white;
+    padding:15px;
+    text-align:center;
+}
+
+nav{
+    background:#8b0000;
+    padding:10px;
+    text-align:center;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:15px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:yellow;
+}
+
+section{
+    padding:40px;
+    min-height:100vh;
+}
+
+.hero{
+    background:url('https://images.unsplash.com/photo-1504674900247-0877df9cc836') center/cover;
+    color:white;
+    text-align:center;
+    padding:100px 20px;
+}
+
+.hero h1{
+    font-size:50px;
+    margin-bottom:20px;
+}
+
+.btn{
+    background:orange;
+    color:white;
+    padding:12px 25px;
+    text-decoration:none;
+    border-radius:5px;
+    display:inline-block;
+    margin-top:20px;
+}
+
+.products{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+}
+
+.card{
+    background:white;
+    width:250px;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 0 10px rgba(0,0,0,0.2);
+    text-align:center;
+    padding-bottom:20px;
+}
+
+.card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+}
+
+.card h3{
+    margin:15px 0 10px;
+}
+
+.card p{
+    padding:0 10px;
+}
+
+.about{
+    background:#ffe4c4;
+    text-align:center;
+}
+
+.contact{
+    background:#f5deb3;
+}
+
+form{
+    max-width:500px;
+    margin:auto;
+}
+
+input, textarea{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+button{
+    background:#b22222;
+    color:white;
+    padding:12px 20px;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#8b0000;
+}
+
+footer{
+    background:#b22222;
+    color:white;
+    text-align:center;
+    padding:15px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Spice World</h1>
+    <p>Fresh & Organic Spices Online</p>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#products">Products</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<!-- HOME PAGE -->
+<section id="home" class="hero">
+    <h1>Welcome to Spice World</h1>
+    <p>Best quality spices from around the world</p>
+    <a href="#products" class="btn">Shop Now</a>
+</section>
+
+<!-- PRODUCTS PAGE -->
+<section id="products">
+    <h2 style="text-align:center; margin-bottom:30px;">Our Spices</h2>
+
+    <div class="products">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1518977956812-cd3dbadaaf31" alt="Turmeric">
+            <h3>Turmeric Powder</h3>
+            <p>Pure organic turmeric with rich flavor.</p>
+            <h3>₹150</h3>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d" alt="Red Chilli">
+            <h3>Red Chilli Powder</h3>
+            <p>Hot and spicy premium chilli powder.</p>
+            <h3>₹120</h3>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1502741338009-cac2772e18bc" alt="Black Pepper">
+            <h3>Black Pepper</h3>
+            <p>Fresh black pepper directly from farms.</p>
+            <h3>₹200</h3>
+        </div>
+
+    </div>
+</section>
+
+<!-- ABOUT PAGE -->
+<section id="about" class="about">
+    <h2>About Us</h2>
+    <br>
+    <p>
+        Spice World is an online spice store delivering premium quality spices 
+        to homes across India. We provide natural, fresh, and aromatic spices 
+        sourced directly from trusted farms.
+    </p>
+</section>
+
+<!-- CONTACT PAGE -->
+<section id="contact" class="contact">
+    <h2 style="text-align:center;">Contact Us</h2>
+
+    <form>
+        <input type="text" placeholder="Enter Your Name" required>
+        <input type="email" placeholder="Enter Your Email" required>
+        <textarea rows="5" placeholder="Your Message"></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+<footer>
+    <p>© 2026 Spice World | All Rights Reserved</p>
+</footer>
+
+</body>
+</html>

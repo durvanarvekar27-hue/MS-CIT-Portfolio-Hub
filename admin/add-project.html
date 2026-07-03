@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Add Project</title>
+
+<link rel="stylesheet" href="../css/admin.css">
+
+<!-- Font Awesome -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+<body>
+
+<!-- ================= SIDEBAR ================= -->
+<div class="admin-sidebar">
+
+    <h2>MS-CIT Admin</h2>
+
+    <a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a>
+    <a href="students.html"><i class="fas fa-users"></i> Students</a>
+    <a href="projects.html"><i class="fas fa-folder"></i> Projects</a>
+    <a href="upload.html"><i class="fas fa-upload"></i> Upload</a>
+    <a href="settings.html"><i class="fas fa-cog"></i> Settings</a>
+    <a href="login.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
+
+</div>
+
+<!-- ================= CONTENT ================= -->
+<div class="admin-content">
+
+    <h2>Add New Project</h2>
+
+    <div class="form-box">
+
+        <form>
+
+            <label>Project Name</label>
+            <input type="text" placeholder="Enter project name" required>
+
+            <label>Student Name</label>
+            <input type="text" placeholder="Enter student name" required>
+
+            <label>Category</label>
+<select required>
+
+    <option value="">-- Select Category --</option>
+
+    <option value="word">Word</option>
+    <option value="powerpoint">PowerPoint</option>
+    <option value="excel">Excel</option>
+    <option value="webpage">Webpage</option>
+    <option value="canva">Canva</option>
+    <option value="photoshop">Photoshop</option>
+    <option value="coreldraw">CorelDraw</option>
+
+</select>
+
+            <label>Project File</label>
+            <input type="file">
+
+            <label>Description</label>
+            <textarea rows="4" placeholder="Enter project description"></textarea>
+
+            <button type="submit">
+                <i class="fas fa-plus"></i> Add Project
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+</body>
+</html>

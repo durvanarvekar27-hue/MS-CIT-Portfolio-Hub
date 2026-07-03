@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portfolio | MS-CIT Portfolio Hub</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="images/students/logo.png" alt="Logo">
+                <h2>MS-CIT Portfolio Hub</h2>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="students.html" class="active">Students</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="menu-btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- COVER SECTION -->
+    <section class="page-banner">
+        <div class="container">
+            <h1>MS-CIT Students Portfolio Hub</h1>
+            <p>Practical skills, digital achievements & portfolios of MS-CIT students.</p>
+        </div>
+    </section>
+
+    <!-- PROFILE SECTION -->
+    <section class="profile-section">
+        <div class="container">
+            <div class="profile-card">
+                <div class="profile-image">
+                    <img id="studentPhoto" src="images/students/AyushP.jpeg" alt="Student">
+                </div>
+                <div class="profile-details">
+                    <h2 id="studentName">Student Name</h2>
+                    <span id="studentId">Student ID : 101</span>
+                    <p id="studentCourse">MS-CIT Student</p>
+                    <div class="profile-info">
+                        <div>
+                            <i class="fa-solid fa-user"></i>
+                            <span id="studentRole">Student</span>
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-graduation-cap"></i>
+                            <span id="studentCourse2">MS-CIT</span>
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-phone"></i>
+                            <span id="studentPhone"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about-student">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Me</h2>
+            </div>
+            <div class="about-card">
+                <p id="studentAbout"></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECT CATEGORIES GRID -->
+    <section class="project-categories">
+        <div class="container">
+            <div class="section-title">
+                <h2>My Projects</h2>
+                <p>Select a project category to view all projects.</p>
+            </div>
+
+            <div class="interactive-dashboard" id="dashboard">
+                <div class="dashboard-card" data-category="word">
+                    <div class="card-icon"><i class="fa-solid fa-file-word"></i></div>
+                    <h3>MS Word</h3>
+                    <p>Projects</p>
+                </div>
+
+                <div class="dashboard-card" data-category="canva">
+                    <div class="card-icon"><i class="fa-solid fa-palette"></i></div>
+                    <h3>Canva</h3>
+                    <p>Projects</p>
+                </div>
+
+                <div class="dashboard-card" data-category="webpage">
+                    <div class="card-icon"><i class="fa-solid fa-code"></i></div>
+                    <h3>Web Dev</h3>
+                    <p>Projects</p>
+                </div>
+
+                <div class="dashboard-card" data-category="ppt">
+                    <div class="card-icon"><i class="fa-solid fa-file-powerpoint"></i></div>
+                    <h3>PowerPoint</h3>
+                    <p>Projects</p>
+                </div>
+
+                <div class="dashboard-card" data-category="excel">
+                    <div class="card-icon"><i class="fa-solid fa-file-excel"></i></div>
+                    <h3>MS Excel</h3>
+                    <p>Projects</p>
+                </div>
+
+                <div class="dashboard-card" data-category="photoshop">
+                    <div class="card-icon"><i class="fa-solid fa-image"></i></div>
+                    <h3>Photoshop</h3>
+                    <p>Projects</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="skills">
+        <div class="container">
+            <div class="section-title">
+                <h2>Skills</h2>
+            </div>
+            <div class="skills-grid" id="skillsContainer"></div>
+        </div>
+    </section>
+
+    <!-- RESUME -->
+    <section class="resume-section">
+        <div class="container">
+            <div class="resume-card">
+                <h2>Resume</h2>
+                <p>View or Download Resume</p>
+                <div class="resume-buttons">
+                    <a id="viewResume" href="#" class="btn" target="_blank">View Resume</a>
+                    <a id="resumeDownload" href="#" class="btn" download>Download Resume</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-about">
+                <h2>MS-CIT Portfolio Hub</h2>
+                <p>A professional platform to showcase students' creativity, technical skills, practical assignments,
+                    and digital portfolios.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="students.html">Students</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact</h3>
+                <p><i class="fa-solid fa-location-dot"></i> Maharashtra, India</p>
+                <p><i class="fa-solid fa-envelope"></i> info@mscitportfolio.com</p>
+                <p><i class="fa-solid fa-phone"></i> +91 9876543210</p>
+            </div>
+            <div class="footer-social">
+                <h3>Follow Us</h3>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+        <div class="copyright">
+            © 2026 MS-CIT Portfolio Hub. All Rights Reserved.
+        </div>
+    </footer>
+
+    <!-- PROJECT MODAL -->
+    <div id="projectModal" class="project-modal">
+        <div class="project-modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="project-top">
+                <span id="projectCounter">1 / 1</span>
+                <a id="downloadProject" class="download-btn" href="#" download>Download</a>
+            </div>
+            <button id="prevProject" class="nav-btn prev-btn">&#10094;</button>
+            <div id="projectViewer"></div>
+            <button id="nextProject" class="nav-btn next-btn">&#10095;</button>
+        </div>
+    </div>
+
+    <!-- Script Loads -->
+    <script src="js/students.js"></script>
+    <script src="js/projects.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/student.js"></script>
+</body>
+
+</html>

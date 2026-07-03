@@ -1,0 +1,725 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>RoyalStay - Luxury Hotel Booking</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins',sans-serif;
+    }
+
+    body{
+      background:#f5f7fa;
+      color:#222;
+      overflow-x:hidden;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    /* Navbar */
+    .navbar{
+      background:rgba(0,0,0,0.7);
+      backdrop-filter:blur(10px);
+      padding:15px 30px;
+    }
+
+    .navbar-brand{
+      color:#fff !important;
+      font-size:2rem;
+      font-weight:700;
+    }
+
+    .nav-link{
+      color:white !important;
+      margin-left:15px;
+      font-weight:500;
+      transition:0.3s;
+    }
+
+    .nav-link:hover{
+      color:#ffd700 !important;
+    }
+
+    /* Hero Section */
+    .hero{
+      height:100vh;
+      background:
+      linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.6)),
+      url('https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1400&auto=format&fit=crop');
+      background-size:cover;
+      background-position:center;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      color:white;
+      padding:20px;
+    }
+
+    .hero h1{
+      font-size:4rem;
+      font-weight:700;
+      animation:fadeIn 1s ease;
+    }
+
+    .hero p{
+      font-size:1.3rem;
+      margin-top:20px;
+    }
+
+    .hero button{
+      margin-top:30px;
+      padding:15px 40px;
+      border:none;
+      border-radius:50px;
+      background:#ffd700;
+      color:black;
+      font-weight:600;
+      font-size:1rem;
+      transition:0.3s;
+    }
+
+    .hero button:hover{
+      transform:scale(1.05);
+      background:white;
+    }
+
+    @keyframes fadeIn{
+      from{
+        opacity:0;
+        transform:translateY(30px);
+      }
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+
+    /* Search Box */
+    .search-box{
+      margin-top:-70px;
+      background:white;
+      border-radius:20px;
+      padding:30px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.15);
+      position:relative;
+      z-index:10;
+    }
+
+    .search-box input,
+    .search-box select{
+      height:55px;
+      border-radius:12px;
+    }
+
+    .search-btn{
+      height:55px;
+      width:100%;
+      border:none;
+      border-radius:12px;
+      background:#111827;
+      color:white;
+      font-weight:600;
+      transition:0.3s;
+    }
+
+    .search-btn:hover{
+      background:#ffd700;
+      color:black;
+    }
+
+    /* Section Titles */
+    .section-title{
+      text-align:center;
+      margin-bottom:50px;
+    }
+
+    .section-title h2{
+      font-size:2.5rem;
+      font-weight:700;
+    }
+
+    .section-title p{
+      color:#666;
+    }
+
+    /* Hotel Cards */
+    .hotel-card{
+      background:white;
+      border-radius:20px;
+      overflow:hidden;
+      transition:0.4s;
+      box-shadow:0 8px 20px rgba(0,0,0,0.08);
+    }
+
+    .hotel-card:hover{
+      transform:translateY(-10px);
+    }
+
+    .hotel-card img{
+      width:100%;
+      height:250px;
+      object-fit:cover;
+    }
+
+    .hotel-info{
+      padding:20px;
+    }
+
+    .hotel-info h4{
+      font-weight:700;
+    }
+
+    .price{
+      color:#0d6efd;
+      font-size:1.3rem;
+      font-weight:700;
+    }
+
+    .book-btn{
+      width:100%;
+      padding:12px;
+      border:none;
+      border-radius:10px;
+      background:#111827;
+      color:white;
+      font-weight:600;
+      margin-top:15px;
+      transition:0.3s;
+    }
+
+    .book-btn:hover{
+      background:#ffd700;
+      color:black;
+    }
+
+    /* Features */
+    .feature-box{
+      background:white;
+      padding:35px;
+      border-radius:20px;
+      text-align:center;
+      transition:0.3s;
+      height:100%;
+    }
+
+    .feature-box:hover{
+      transform:translateY(-8px);
+      background:#111827;
+      color:white;
+    }
+
+    .feature-box i{
+      font-size:3rem;
+      margin-bottom:20px;
+      color:#ffd700;
+    }
+
+    /* Testimonials */
+    .testimonial{
+      background:white;
+      padding:30px;
+      border-radius:20px;
+      box-shadow:0 8px 20px rgba(0,0,0,0.08);
+    }
+
+    /* Newsletter */
+    .newsletter{
+      background:#111827;
+      color:white;
+      padding:70px 20px;
+      border-radius:30px;
+    }
+
+    .newsletter input{
+      height:55px;
+      border-radius:50px;
+      border:none;
+      padding-left:20px;
+    }
+
+    .newsletter button{
+      height:55px;
+      border:none;
+      border-radius:50px;
+      background:#ffd700;
+      font-weight:700;
+      width:100%;
+    }
+
+    /* Footer */
+    footer{
+      background:#0b1120;
+      color:white;
+      padding:60px 20px 30px;
+      margin-top:80px;
+    }
+
+    footer a{
+      color:#ccc;
+      text-decoration:none;
+    }
+
+    footer a:hover{
+      color:#ffd700;
+    }
+
+    .social-icons i{
+      font-size:1.5rem;
+      margin-right:15px;
+      transition:0.3s;
+      cursor:pointer;
+    }
+
+    .social-icons i:hover{
+      color:#ffd700;
+      transform:scale(1.2);
+    }
+
+    @media(max-width:768px){
+
+      .hero h1{
+        font-size:2.5rem;
+      }
+
+      .search-box{
+        margin-top:20px;
+      }
+
+    }
+
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">RoyalStay</a>
+
+    <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#hotels">Hotels</a></li>
+        <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+        <li class="nav-item"><a class="nav-link" href="#reviews">Reviews</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div>
+    <h1>Find Your Dream Hotel</h1>
+    <p>Luxury Rooms • Best Prices • Instant Booking</p>
+    <button onclick="document.getElementById('hotels').scrollIntoView();">
+      Explore Hotels
+    </button>
+  </div>
+</section>
+
+<!-- SEARCH BOX -->
+<div class="container">
+  <div class="search-box">
+    <div class="row g-3">
+
+      <div class="col-md-3">
+        <input type="text" class="form-control" placeholder="Destination">
+      </div>
+
+      <div class="col-md-2">
+        <input type="date" class="form-control">
+      </div>
+
+      <div class="col-md-2">
+        <input type="date" class="form-control">
+      </div>
+
+      <div class="col-md-2">
+        <select class="form-select">
+          <option>Guests</option>
+          <option>1 Guest</option>
+          <option>2 Guests</option>
+          <option>3 Guests</option>
+          <option>4+ Guests</option>
+        </select>
+      </div>
+
+      <div class="col-md-3">
+        <button class="search-btn">
+          <i class="fa-solid fa-magnifying-glass"></i> Search Hotels
+        </button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- HOTELS -->
+<section class="py-5" id="hotels">
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Popular Hotels</h2>
+      <p>Discover premium stays around the world</p>
+    </div>
+
+    <div class="row g-4">
+
+      <!-- HOTEL 1 -->
+      <div class="col-md-4">
+        <div class="hotel-card">
+
+          <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?q=80&w=1200&auto=format&fit=crop">
+
+          <div class="hotel-info">
+            <h4>Ocean Paradise Resort</h4>
+            <p><i class="fa-solid fa-location-dot"></i> Maldives</p>
+            <p>
+              Luxury beachside resort with infinity pools, spa,
+              private villas and sea views.
+            </p>
+
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="price">$299/night</span>
+              <span>⭐ 4.9</span>
+            </div>
+
+            <button class="book-btn" onclick="bookNow('Ocean Paradise Resort')">
+              Book Now
+            </button>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- HOTEL 2 -->
+      <div class="col-md-4">
+        <div class="hotel-card">
+
+          <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=1200&auto=format&fit=crop">
+
+          <div class="hotel-info">
+            <h4>Mountain View Hotel</h4>
+            <p><i class="fa-solid fa-location-dot"></i> Switzerland</p>
+            <p>
+              Enjoy breathtaking mountain scenery, skiing and
+              luxury suites.
+            </p>
+
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="price">$249/night</span>
+              <span>⭐ 4.8</span>
+            </div>
+
+            <button class="book-btn" onclick="bookNow('Mountain View Hotel')">
+              Book Now
+            </button>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- HOTEL 3 -->
+      <div class="col-md-4">
+        <div class="hotel-card">
+
+          <img src="https://images.unsplash.com/photo-1445019980597-93fa8acb246c?q=80&w=1200&auto=format&fit=crop">
+
+          <div class="hotel-info">
+            <h4>Royal Palace Suites</h4>
+            <p><i class="fa-solid fa-location-dot"></i> Dubai</p>
+            <p>
+              Premium luxury suites with skyline views and
+              world-class dining experiences.
+            </p>
+
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="price">$399/night</span>
+              <span>⭐ 5.0</span>
+            </div>
+
+            <button class="book-btn" onclick="bookNow('Royal Palace Suites')">
+              Book Now
+            </button>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="py-5 bg-light" id="features">
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Why Choose Us?</h2>
+      <p>We provide the best experience for travelers</p>
+    </div>
+
+    <div class="row g-4">
+
+      <div class="col-md-3">
+        <div class="feature-box">
+          <i class="fa-solid fa-hotel"></i>
+          <h4>5000+ Hotels</h4>
+          <p>Access luxury hotels across the globe.</p>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="feature-box">
+          <i class="fa-solid fa-money-bill-wave"></i>
+          <h4>Best Prices</h4>
+          <p>Get exclusive discounts and deals.</p>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="feature-box">
+          <i class="fa-solid fa-headset"></i>
+          <h4>24/7 Support</h4>
+          <p>Always available customer support team.</p>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="feature-box">
+          <i class="fa-solid fa-shield-heart"></i>
+          <h4>Secure Booking</h4>
+          <p>100% safe and encrypted payments.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="py-5" id="reviews">
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Guest Reviews</h2>
+      <p>What our customers say about us</p>
+    </div>
+
+    <div class="row g-4">
+
+      <div class="col-md-4">
+        <div class="testimonial">
+          <h5>⭐⭐⭐⭐⭐</h5>
+          <p>
+            "Absolutely amazing experience! The booking process was smooth
+            and the hotel was stunning."
+          </p>
+          <strong>- Sarah Johnson</strong>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="testimonial">
+          <h5>⭐⭐⭐⭐⭐</h5>
+          <p>
+            "Best hotel booking website I've ever used. Fast, beautiful
+            and easy to navigate."
+          </p>
+          <strong>- Michael Lee</strong>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="testimonial">
+          <h5>⭐⭐⭐⭐⭐</h5>
+          <p>
+            "Fantastic customer support and incredible hotel deals.
+            Highly recommended!"
+          </p>
+          <strong>- Emma Watson</strong>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="container py-5">
+
+  <div class="newsletter text-center">
+    <h2>Get Exclusive Travel Deals</h2>
+    <p class="mb-4">
+      Subscribe and receive luxury hotel offers directly to your inbox.
+    </p>
+
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="row g-2">
+          <div class="col-md-8">
+            <input type="email" class="form-control" placeholder="Enter your email">
+          </div>
+          <div class="col-md-4">
+            <button>Subscribe</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer id="contact">
+
+  <div class="container">
+
+    <div class="row">
+
+      <div class="col-md-4">
+        <h3>RoyalStay</h3>
+        <p>
+          Experience luxury and comfort with the world's
+          finest hotel booking platform.
+        </p>
+      </div>
+
+      <div class="col-md-4">
+        <h5>Quick Links</h5>
+
+        <p><a href="#">Home</a></p>
+        <p><a href="#hotels">Hotels</a></p>
+        <p><a href="#features">Features</a></p>
+        <p><a href="#reviews">Reviews</a></p>
+      </div>
+
+      <div class="col-md-4">
+        <h5>Contact</h5>
+
+        <p>Email: support@royalstay.com</p>
+        <p>Phone: +91 9876543210</p>
+
+        <div class="social-icons mt-3">
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-x-twitter"></i>
+          <i class="fa-brands fa-youtube"></i>
+        </div>
+      </div>
+
+    </div>
+
+    <hr class="bg-white">
+
+    <div class="text-center">
+      <p>© 2026 RoyalStay. All Rights Reserved.</p>
+    </div>
+
+  </div>
+
+</footer>
+
+<!-- BOOKING MODAL -->
+<div class="modal fade" id="bookingModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title">Book Hotel</h5>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+
+        <form id="bookingForm">
+
+          <div class="mb-3">
+            <label>Your Name</label>
+            <input type="text" class="form-control" required>
+          </div>
+
+          <div class="mb-3">
+            <label>Email</label>
+            <input type="email" class="form-control" required>
+          </div>
+
+          <div class="mb-3">
+            <label>Check-In Date</label>
+            <input type="date" class="form-control" required>
+          </div>
+
+          <div class="mb-3">
+            <label>Check-Out Date</label>
+            <input type="date" class="form-control" required>
+          </div>
+
+          <button class="btn btn-dark w-100">
+            Confirm Booking
+          </button>
+
+        </form>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+
+  function bookNow(hotelName){
+
+    const modal = new bootstrap.Modal(
+      document.getElementById('bookingModal')
+    );
+
+    document.querySelector('.modal-title').innerText =
+      "Book " + hotelName;
+
+    modal.show();
+  }
+
+  document.getElementById('bookingForm')
+    .addEventListener('submit', function(e){
+
+      e.preventDefault();
+
+      alert("🎉 Booking Successful!");
+
+      location.reload();
+  });
+
+</script>
+
+</body>
+</html>
+```

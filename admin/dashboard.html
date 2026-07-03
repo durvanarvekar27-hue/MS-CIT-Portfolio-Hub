@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Dashboard</title>
+
+<link rel="stylesheet" href="../css/admin.css">
+
+<!-- Font Awesome -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+<body>
+
+<!-- ================= SIDEBAR ================= -->
+<div class="admin-sidebar">
+
+    <h2>MS-CIT Admin</h2>
+
+    <a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a>
+    <a href="students.html"><i class="fas fa-users"></i> Students</a>
+    <a href="projects.html"><i class="fas fa-folder"></i> Projects</a>
+    <a href="upload.html"><i class="fas fa-upload"></i> Upload</a>
+    <a href="settings.html"><i class="fas fa-cog"></i> Settings</a>
+    <a href="login.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
+
+</div>
+
+<!-- ================= MAIN CONTENT ================= -->
+<div class="admin-content">
+
+    <!-- TOP BAR -->
+    <div class="admin-header">
+
+        <h2>Dashboard</h2>
+
+        <div class="admin-user">
+            <i class="fas fa-user-circle"></i>
+            <span>Admin</span>
+        </div>
+
+    </div>
+
+    <!-- STATS CARDS -->
+    <div class="card-container">
+
+        <div class="card">
+            <i class="fas fa-users"></i>
+            <h3>120</h3>
+            <p>Students</p>
+        </div>
+
+        <div class="card">
+            <i class="fas fa-folder"></i>
+            <h3>85</h3>
+            <p>Projects</p>
+        </div>
+
+        <div class="card">
+            <i class="fas fa-upload"></i>
+            <h3>30</h3>
+            <p>Uploads</p>
+        </div>
+
+        <div class="card">
+            <i class="fas fa-chart-line"></i>
+            <h3>95%</h3>
+            <p>Performance</p>
+        </div>
+
+    </div>
+
+    <!-- RECENT ACTIVITY -->
+    <div class="table-box">
+
+        <h3>Recent Students</h3>
+
+        <table>
+
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Course</th>
+                <th>Action</th>
+            </tr>
+
+            <tr>
+                <td>1</td>
+                <td>Rahul Patil</td>
+                <td>rahul@gmail.com</td>
+                <td>MS-CIT</td>
+                <td>
+                    <button class="edit" onclick="editStudent()">Edit</button>
+
+<button class="delete" onclick="deleteStudent()">Delete</button>
+                </td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+                <td>Priya Desai</td>
+                <td>priya@gmail.com</td>
+                <td>MS-CIT</td>
+                <td>
+                    <button class="edit" onclick="editStudent()">Edit</button>
+
+<button class="delete" onclick="deleteStudent()">Delete</button>
+                </td>
+            </tr>
+
+        </table>
+
+    </div>
+
+</div>
+<script>
+function editStudent(){
+    window.location.href = "students.html";
+}
+
+function deleteStudent(){
+    alert("Student deleted (demo only)");
+}
+</script>
+</body>
+</html>

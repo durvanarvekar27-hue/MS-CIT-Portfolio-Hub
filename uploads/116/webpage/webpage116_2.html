@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Stella Lens Studio</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      scroll-behavior:smooth;
+    }
+
+    body{
+      font-family:'Poppins',sans-serif;
+      background:#0b0b0d;
+      color:white;
+      overflow-x:hidden;
+    }
+
+    body::-webkit-scrollbar{
+      width:8px;
+    }
+
+    body::-webkit-scrollbar-thumb{
+      background:#d8b36a;
+      border-radius:20px;
+    }
+
+    nav{
+      width:100%;
+      position:fixed;
+      top:0;
+      z-index:1000;
+      background:rgba(0,0,0,0.7);
+      backdrop-filter:blur(10px);
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:18px 8%;
+      border-bottom:1px solid rgba(255,255,255,0.08);
+    }
+
+    .logo{
+      font-size:1.8rem;
+      font-family:'Playfair Display',serif;
+      color:#f7d18a;
+      font-weight:700;
+      letter-spacing:1px;
+    }
+
+    nav ul{
+      display:flex;
+      gap:30px;
+      list-style:none;
+    }
+
+    nav ul li a{
+      text-decoration:none;
+      color:white;
+      transition:0.3s;
+      font-size:0.95rem;
+    }
+
+    nav ul li a:hover{
+      color:#f7d18a;
+    }
+
+    .hero{
+      height:100vh;
+      background:
+      linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.75)),
+      url('https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=1600&auto=format&fit=crop');
+      background-size:cover;
+      background-position:center;
+      display:flex;
+      align-items:center;
+      padding:0 8%;
+    }
+
+    .hero-content{
+      max-width:700px;
+    }
+
+    .hero h1{
+      font-size:4rem;
+      line-height:1.1;
+      font-family:'Playfair Display',serif;
+      margin-bottom:20px;
+    }
+
+    .hero p{
+      color:#d7d7d7;
+      line-height:1.8;
+      margin-bottom:35px;
+    }
+
+    .btns{
+      display:flex;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+
+    .btn{
+      padding:14px 30px;
+      border-radius:40px;
+      text-decoration:none;
+      transition:0.3s;
+      font-weight:500;
+    }
+
+    .primary-btn{
+      background:linear-gradient(135deg,#f7d18a,#d8b36a);
+      color:black;
+    }
+
+    .primary-btn:hover{
+      transform:translateY(-4px);
+      box-shadow:0 10px 25px rgba(216,179,106,0.4);
+    }
+
+    .secondary-btn{
+      border:1px solid rgba(255,255,255,0.2);
+      color:white;
+    }
+
+    .secondary-btn:hover{
+      background:rgba(255,255,255,0.1);
+    }
+
+    section{
+      padding:100px 8%;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:60px;
+    }
+
+    .section-title h2{
+      font-size:2.8rem;
+      color:#f7d18a;
+      font-family:'Playfair Display',serif;
+      margin-bottom:15px;
+    }
+
+    .section-title p{
+      max-width:750px;
+      margin:auto;
+      color:#bfbfbf;
+      line-height:1.8;
+    }
+
+    .gallery{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:30px;
+    }
+
+    .card{
+      background:#15151b;
+      border-radius:20px;
+      overflow:hidden;
+      transition:0.4s;
+      border:1px solid rgba(255,255,255,0.06);
+    }
+
+    .card:hover{
+      transform:translateY(-8px);
+      box-shadow:0 20px 40px rgba(0,0,0,0.4);
+    }
+
+    .card img{
+      width:100%;
+      height:320px;
+      object-fit:cover;
+    }
+
+    .card-content{
+      padding:22px;
+    }
+
+    .card-content h3{
+      color:#f7d18a;
+      margin-bottom:12px;
+      font-size:1.3rem;
+    }
+
+    .card-content p{
+      color:#d0d0d0;
+      line-height:1.7;
+      font-size:0.95rem;
+    }
+
+    .portfolio{
+      background:linear-gradient(to bottom,#101014,#1a1a22);
+    }
+
+    .about{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:50px;
+      align-items:center;
+    }
+
+    .about img{
+      width:100%;
+      border-radius:25px;
+      height:500px;
+      object-fit:cover;
+    }
+
+    .about-text h2{
+      font-size:3rem;
+      margin-bottom:20px;
+      font-family:'Playfair Display',serif;
+      color:#f7d18a;
+    }
+
+    .about-text p{
+      color:#d4d4d4;
+      line-height:1.9;
+      margin-bottom:18px;
+    }
+
+    .stats{
+      display:flex;
+      gap:20px;
+      flex-wrap:wrap;
+      margin-top:25px;
+    }
+
+    .stat{
+      background:#1d1d24;
+      padding:20px;
+      border-radius:16px;
+      min-width:140px;
+      text-align:center;
+    }
+
+    .stat h3{
+      color:#f7d18a;
+      font-size:1.8rem;
+    }
+
+    .booking{
+      background:linear-gradient(135deg,#141419,#202028);
+    }
+
+    form{
+      max-width:900px;
+      margin:auto;
+    }
+
+    .form-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:20px;
+    }
+
+    input, textarea, select{
+      width:100%;
+      padding:16px;
+      border-radius:14px;
+      background:#121216;
+      border:1px solid rgba(255,255,255,0.08);
+      color:white;
+      outline:none;
+    }
+
+    textarea{
+      margin-top:20px;
+      min-height:150px;
+      resize:vertical;
+    }
+
+    .submit-btn{
+      width:100%;
+      margin-top:20px;
+      border:none;
+      cursor:pointer;
+      background:linear-gradient(135deg,#f7d18a,#d8b36a);
+      color:black;
+      font-weight:600;
+      padding:16px;
+      border-radius:14px;
+      transition:0.3s;
+    }
+
+    .submit-btn:hover{
+      transform:translateY(-3px);
+    }
+
+    .login-box{
+      max-width:500px;
+      margin:auto;
+      background:#18181f;
+      padding:40px;
+      border-radius:24px;
+      border:1px solid rgba(255,255,255,0.06);
+    }
+
+    footer{
+      text-align:center;
+      padding:35px;
+      background:black;
+      color:#8d8d8d;
+      border-top:1px solid rgba(255,255,255,0.08);
+    }
+
+    @media(max-width:768px){
+
+      .hero h1{
+        font-size:2.8rem;
+      }
+
+      nav ul{
+        gap:15px;
+        flex-wrap:wrap;
+      }
+
+      .about-text h2{
+        font-size:2.2rem;
+      }
+
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+
+  <nav>
+    <div class="logo">Stella Lens Studio</div>
+
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#events">Events</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#booking">Booking</a></li>
+      <li><a href="#login">Login</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+
+  <section class="hero" id="home">
+
+    <div class="hero-content">
+
+      <h1>Premium Photography That Captures Emotion & Elegance</h1>
+
+      <p>
+        Welcome to Stella Lens Studio — where every frame tells a luxurious story.
+        From weddings and birthday celebrations to fashion editorials, nature photography,
+        products, and professional portraits, Stella transforms moments into timeless art.
+      </p>
+
+      <div class="btns">
+        <a href="#booking" class="btn primary-btn">Book Session</a>
+        <a href="#portfolio" class="btn secondary-btn">View Portfolio</a>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- EVENTS -->
+
+  <section id="events">
+
+    <div class="section-title">
+      <h2>Photography Collections</h2>
+
+      <p>
+        Discover beautifully curated photography experiences designed with cinematic visuals,
+        elegant compositions, luxury aesthetics, and emotional storytelling.
+      </p>
+    </div>
+
+    <div class="gallery">
+
+      <!-- Wedding -->
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="card-content">
+          <h3>Wedding Photography</h3>
+
+          <p>
+            Romantic wedding storytelling with cinematic lighting, emotional moments,
+            bridal portraits, luxury décor shots, and unforgettable celebrations.
+          </p>
+        </div>
+      </div>
+
+      <!-- Birthday -->
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1464349153735-7db50ed83c84?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="card-content">
+          <h3>Birthday Events</h3>
+
+          <p>
+            Vibrant birthday memories featuring joyful candid moments, colorful décor,
+            emotional family captures, and lively party energy.
+          </p>
+        </div>
+      </div>
+
+      <!-- Nature -->
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="card-content">
+          <h3>Nature Photography</h3>
+
+          <p>
+            Peaceful landscapes, dreamy sunsets, forests, mountains, and cinematic
+            natural compositions inspired by adventure and emotion.
+          </p>
+        </div>
+      </div>
+
+      <!-- Product -->
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="card-content">
+          <h3>Product Photography</h3>
+
+          <p>
+            Premium product shoots with dramatic lighting, modern branding,
+            luxury textures, and high-end commercial aesthetics.
+          </p>
+        </div>
+      </div>
+
+      <!-- Models -->
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="card-content">
+          <h3>Fashion & Models</h3>
+
+          <p>
+            Editorial-style fashion photography with creative styling,
+            elegant poses, luxury tones, and magazine-inspired visuals.
+          </p>
+        </div>
+      </div>
+
+      <!-- Professional -->
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="card-content">
+          <h3>Professional Portraits</h3>
+
+          <p>
+            Sophisticated corporate headshots and professional branding sessions
+            crafted for entrepreneurs, creators, and business professionals.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- PORTFOLIO -->
+
+  <section class="portfolio" id="portfolio">
+
+    <div class="section-title">
+      <h2>Meet Stella</h2>
+
+      <p>
+        Creative storyteller, luxury portrait artist, and cinematic photographer.
+      </p>
+    </div>
+
+    <div class="about">
+
+      <img src="https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?q=80&w=1200&auto=format&fit=crop">
+
+      <div class="about-text">
+
+        <h2>Stella, Age 24</h2>
+
+        <p>
+          Stella is a premium photographer known for combining cinematic storytelling
+          with elegant modern aesthetics. Her work focuses on capturing authentic emotions,
+          luxury visuals, and timeless artistic moments.
+        </p>
+
+        <p>
+          She specializes in destination weddings, creative fashion campaigns,
+          portrait sessions, product shoots, and lifestyle photography.
+          Every project is designed with precision, creativity, and artistic vision.
+        </p>
+
+        <p>
+          Stella's editing style blends warm cinematic tones, luxury textures,
+          soft highlights, and premium visual storytelling to create unforgettable imagery.
+        </p>
+
+        <div class="stats">
+
+          <div class="stat">
+            <h3>250+</h3>
+            <p>Projects</p>
+          </div>
+
+          <div class="stat">
+            <h3>6+</h3>
+            <p>Years Experience</p>
+          </div>
+
+          <div class="stat">
+            <h3>95%</h3>
+            <p>Happy Clients</p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- BOOKING -->
+
+  <section class="booking" id="booking">
+
+    <div class="section-title">
+
+      <h2>Book a Session</h2>
+
+      <p>
+        Reserve your photography session and create timeless memories with Stella Lens Studio.
+      </p>
+
+    </div>
+
+    <form>
+
+      <div class="form-grid">
+
+        <input type="text" placeholder="Full Name">
+
+        <input type="email" placeholder="Email Address">
+
+        <input type="tel" placeholder="Phone Number">
+
+        <select>
+          <option>Select Photography Type</option>
+          <option>Wedding</option>
+          <option>Birthday Event</option>
+          <option>Nature Shoot</option>
+          <option>Product Shoot</option>
+          <option>Fashion Photography</option>
+          <option>Professional Portraits</option>
+        </select>
+
+      </div>
+
+      <textarea placeholder="Tell us about your event, preferred date, style, and vision..."></textarea>
+
+      <button class="submit-btn">Confirm Booking</button>
+
+    </form>
+
+  </section>
+
+  <!-- LOGIN -->
+
+  <section id="login">
+
+    <div class="section-title">
+
+      <h2>Client Login</h2>
+
+      <p>
+        Access your gallery, booking information, and edited photography collection.
+      </p>
+
+    </div>
+
+    <div class="login-box">
+
+      <form>
+
+        <input type="email" placeholder="Email Address" style="margin-bottom:20px;">
+
+        <input type="password" placeholder="Password" style="margin-bottom:20px;">
+
+        <button class="submit-btn">Login</button>
+
+      </form>
+
+    </div>
+
+  </section>
+
+  <!-- ABOUT -->
+
+  <section id="about">
+
+    <div class="section-title">
+
+      <h2>Why Choose Stella Lens Studio?</h2>
+
+      <p>
+        Every project is carefully designed to feel luxurious, artistic, emotional,
+        and visually unforgettable.
+      </p>
+
+    </div>
+
+    <div class="gallery">
+
+      <div class="card">
+        <div class="card-content">
+
+          <h3>Cinematic Editing</h3>
+
+          <p>
+            Professional color grading and premium cinematic tones that elevate
+            every image into timeless visual art.
+          </p>
+
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-content">
+
+          <h3>Creative Direction</h3>
+
+          <p>
+            Personalized guidance for posing, styling, lighting,
+            and visual storytelling during every shoot.
+          </p>
+
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-content">
+
+          <h3>Luxury Experience</h3>
+
+          <p>
+            From consultation to final delivery, every detail is crafted
+            for a smooth and premium client experience.
+          </p>
+
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+    © 2026 Stella Lens Studio — Premium Photography Portfolio Website
+  </footer>
+
+</body>
+</html>

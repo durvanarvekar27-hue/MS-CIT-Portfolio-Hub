@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Students - Admin Panel</title>
+
+<link rel="stylesheet" href="../css/admin.css">
+
+<!-- Font Awesome -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+<body>
+
+<!-- ================= SIDEBAR ================= -->
+<div class="admin-sidebar">
+
+    <h2>MS-CIT Admin</h2>
+
+    <a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a>
+    <a href="students.html"><i class="fas fa-users"></i> Students</a>
+    <a href="projects.html"><i class="fas fa-folder"></i> Projects</a>
+    <a href="upload.html"><i class="fas fa-upload"></i> Upload</a>
+    <a href="settings.html"><i class="fas fa-cog"></i> Settings</a>
+    <a href="login.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
+
+</div>
+
+<!-- ================= CONTENT ================= -->
+<div class="admin-content">
+
+    <!-- HEADER -->
+    <div class="admin-header">
+        <h2>Students Management</h2>
+
+        <a href="add-student.html">
+            <button style="background:#6c63ff; color:#fff; border:none; padding:10px 15px; border-radius:6px;">
+                + Add Student
+            </button>
+        </a>
+    </div>
+
+    <!-- TABLE BOX -->
+    <div class="table-box">
+
+        <table>
+
+            <tr>
+                <th>ID</th>
+                <th>Profile</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Course</th>
+                <th>Action</th>
+            </tr>
+
+            <tr>
+                <td>1</td>
+                <td><i class="fas fa-user-circle" style="font-size:30px;"></i></td>
+                <td>Rahul Patil</td>
+                <td>rahul@example.com</td>
+                <td>9876543210</td>
+                <td>MS-CIT</td>
+                <td>
+                    <a href="edit-student.html">
+                        <button class="edit">Edit</button>
+                    </a>
+                    <button class="delete" onclick="deleteStudent(this)">Delete</button>
+                </td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+                <td><i class="fas fa-user-circle" style="font-size:30px;"></i></td>
+                <td>Priya Desai</td>
+                <td>priya@example.com</td>
+                <td>9876501234</td>
+                <td>MS-CIT</td>
+                <td>
+                    <a href="edit-student.html">
+                        <button class="edit">Edit</button>
+                    </a>
+                   <button class="delete" onclick="deleteStudent(this)">Delete</button>
+                </td>
+            </tr>
+
+        </table>
+
+    </div>
+
+</div>
+<script>
+function deleteStudent(btn){
+    let row = btn.parentElement.parentElement;
+
+    let confirmDelete = confirm("Delete this student?");
+
+    if(confirmDelete){
+        row.remove();
+    }
+}
+</script>
+</body>
+</html>

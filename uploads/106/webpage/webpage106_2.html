@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sawantwadi to Shiroda Guide</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --accent: #e67e22;
+            --bg: #f4f7f6;
+        }
+        body {
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            background-color: var(--bg);
+            color: #333;
+            padding-bottom: 70px;
+        }
+        .header {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                        url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+        .container {
+            padding: 20px;
+            max-width: 500px;
+            margin: auto;
+        }
+        .card {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        h2 {
+            color: var(--primary);
+            font-size: 1.2rem;
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .itinerary-item {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 15px;
+            border-left: 2px solid var(--accent);
+            padding-left: 15px;
+        }
+        .time {
+            font-weight: bold;
+            color: var(--accent);
+            min-width: 70px;
+        }
+        .btn {
+            display: block;
+            background: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 12px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .btn:active { transform: scale(0.98); }
+        .nav-bar {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background: white;
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+        }
+        .nav-item {
+            text-align: center;
+            font-size: 0.8rem;
+            color: var(--primary);
+            text-decoration: none;
+        }
+        .nav-item i { font-size: 1.2rem; display: block; }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Shiroda Beach</h1>
+        <p>Road Trip Guide from Sawantwadi</p>
+    </div>
+
+    <div class="container">
+        <!-- Quick Stats -->
+        <div class="card">
+            <h2><i class="fas fa-car"></i> Trip Basics</h2>
+            <p><strong>Distance:</strong> 25 km</p>
+            <p><strong>Drive Time:</strong> 50 mins</p>
+            <a href="https://www.google.com/maps/dir/Sawantwadi/Shiroda+Beach" class="btn">Start Navigation</a>
+        </div>
+
+        <!-- Itinerary -->
+        <div class="card">
+            <h2><i class="fas fa-clock"></i> Timeline</h2>
+            <div class="itinerary-item">
+                <div class="time">09:30 AM</div>
+                <div>Start Drive</div>
+            </div>
+            <div class="itinerary-item">
+                <div class="time">10:30 AM</div>
+                <div>Mauli Temple & Market</div>
+            </div>
+            <div class="itinerary-item">
+                <div class="time">12:30 PM</div>
+                <div>Malvani Lunch</div>
+            </div>
+            <div class="itinerary-item">
+                <div class="time">02:00 PM</div>
+                <div>Shiroda Beach Relax</div>
+            </div>
+            <div class="itinerary-item" style="border-left-color: transparent;">
+                <div class="time">06:30 PM</div>
+                <div>Return Journey</div>
+            </div>
+        </div>
+
+        <!-- Tips -->
+        <div class="card">
+            <h2><i class="fas fa-lightbulb"></i> Driver's Notes</h2>
+            <ul>
+                <li>Narrow roads: Watch for curves</li>
+                <li>Fuel: Top up at Sawantwadi</li>
+                <li>Offline Maps: Highly Recommended</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="nav-bar">
+        <a href="#" class="nav-item"><i class="fas fa-home"></i>Home</a>
+        <a href="https://www.google.com/maps/search/restaurants+near+Shiroda+Beach" class="nav-item"><i class="fas fa-utensils"></i>Food</a>
+        <a href="tel:108" class="nav-item"><i class="fas fa-phone"></i>Emergency</a>
+    </div>
+
+</body>
+</html>

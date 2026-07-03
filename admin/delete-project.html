@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Delete Project</title>
+
+<link rel="stylesheet" href="../css/admin.css">
+
+<!-- Font Awesome -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+<body>
+
+<!-- ================= SIDEBAR ================= -->
+<div class="admin-sidebar">
+
+    <h2>MS-CIT Admin</h2>
+
+    <a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a>
+    <a href="students.html"><i class="fas fa-users"></i> Students</a>
+    <a href="projects.html"><i class="fas fa-folder"></i> Projects</a>
+    <a href="upload.html"><i class="fas fa-upload"></i> Upload</a>
+    <a href="settings.html"><i class="fas fa-cog"></i> Settings</a>
+    <a href="login.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
+
+</div>
+
+<!-- ================= CONTENT ================= -->
+<div class="admin-content">
+
+    <div class="delete-box">
+
+        <i class="fas fa-exclamation-triangle"></i>
+
+        <h2>Delete Project</h2>
+
+        <p>Are you sure you want to delete this project?</p>
+
+        <!-- Project Info -->
+        <div class="project-info">
+            <p><b>Project Name:</b> Portfolio Website</p>
+            <p><b>Student:</b> Rahul Patil</p>
+        </div>
+
+        <!-- Buttons -->
+        <div class="delete-actions">
+
+            <a href="projects.html" class="cancel-btn">
+                Cancel
+            </a>
+
+            <button class="delete" onclick="deleteProject(this)">Delete</button>
+
+        </div>
+
+    </div>
+
+</div>
+<script>
+function deleteProject(btn){
+
+    let confirmDelete = confirm("Are you sure you want to delete this project?");
+
+    if(confirmDelete){
+        // remove row from table
+        let row = btn.parentElement.parentElement;
+        row.remove();
+
+        alert("Project deleted (demo only)");
+    }
+}
+</script>
+</body>
+</html>

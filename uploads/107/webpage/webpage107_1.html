@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resume Card - Himanshu Bhushan Veer</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#1e3c72,#2a5298,#00c6ff);
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+.resume-card{
+    width:900px;
+    background:rgba(255,255,255,0.15);
+    backdrop-filter:blur(12px);
+    border-radius:25px;
+    overflow:hidden;
+    box-shadow:0 10px 35px rgba(0,0,0,0.4);
+    color:white;
+}
+
+.header{
+    background:linear-gradient(135deg,#ff9966,#ff5e62);
+    text-align:center;
+    padding:35px;
+}
+
+.header h1{
+    font-size:38px;
+    font-weight:700;
+}
+
+.header p{
+    margin-top:10px;
+    font-size:18px;
+}
+
+.content{
+    display:grid;
+    grid-template-columns:1fr 2fr;
+}
+
+.left{
+    background:rgba(0,0,0,0.2);
+    padding:25px;
+}
+
+.right{
+    padding:25px;
+}
+
+.section{
+    margin-bottom:25px;
+}
+
+.section h2{
+    font-size:22px;
+    margin-bottom:12px;
+    color:#ffe082;
+    border-bottom:2px solid rgba(255,255,255,0.3);
+    padding-bottom:5px;
+}
+
+.section p,
+.section li{
+    font-size:15px;
+    line-height:1.7;
+}
+
+ul{
+    list-style:none;
+}
+
+ul li::before{
+    content:'✔ ';
+    color:#00ffcc;
+}
+
+.icon{
+    margin-right:10px;
+    color:#ffd54f;
+}
+
+.footer{
+    text-align:center;
+    padding:18px;
+    background:rgba(0,0,0,0.2);
+    font-size:14px;
+}
+
+.badge{
+    display:inline-block;
+    background:#ffffff33;
+    padding:8px 14px;
+    border-radius:20px;
+    margin:5px;
+    font-size:14px;
+}
+
+@media(max-width:768px){
+    .content{
+        grid-template-columns:1fr;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="resume-card">
+
+    <div class="header">
+        <h1>
+            <i class="fa-solid fa-user-graduate"></i>
+            HIMANSHU BHUSHAN VEER
+        </h1>
+
+        <p>
+            Creative Learner | Student | Basic Computer Experienced
+        </p>
+    </div>
+
+    <div class="content">
+
+        <!-- LEFT SIDE -->
+
+        <div class="left">
+
+            <div class="section">
+                <h2>
+                    <i class="fa-solid fa-address-card icon"></i>
+                    Personal Info
+                </h2>
+
+                <p><strong>Age:</strong> 16 Years</p>
+                <p><strong>Std:</strong> 10th</p>
+                <p><strong>Nationality:</strong> Indian</p>
+                <p><strong>School:</strong> Divya Jyoti School, Banda</p>
+
+                <p>
+                    <strong>Location:</strong>
+                    Vaman Datta Apartment, Kaleshwadi,
+                    Banda, Maharashtra
+                </p>
+            </div>
+
+            <div class="section">
+                <h2>
+                    <i class="fa-solid fa-language icon"></i>
+                    Languages
+                </h2>
+
+                <div class="badge">English</div>
+                <div class="badge">Hindi</div>
+                <div class="badge">Marathi</div>
+            </div>
+
+            <div class="section">
+                <h2>
+                    <i class="fa-solid fa-heart icon"></i>
+                    Hobbies
+                </h2>
+
+                <ul>
+                    <li>Reading</li>
+                    <li>Collection of Stones</li>
+                    <li>Cycling</li>
+                    <li>Playing Chess</li>
+                    <li>Sketching</li>
+                    <li>Singing Songs</li>
+                    <li>Researching Information</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- RIGHT SIDE -->
+
+        <div class="right">
+
+            <div class="section">
+                <h2>
+                    <i class="fa-solid fa-user icon"></i>
+                    About Me
+                </h2>
+
+                <p>
+                    I am a creative learner with basic computer
+                    experience and strong interest in technology,
+                    design, and research. I enjoy learning new
+                    skills and working on creative projects.
+                </p>
+            </div>
+
+            <div class="section">
+                <h2>
+                    <i class="fa-solid fa-graduation-cap icon"></i>
+                    Education
+                </h2>
+
+                <p>
+                    10th Pass - Divya Jyoti School
+                </p>
+            </div>
+
+            <div class="section">
+                <h2>
+                    <i class="fa-solid fa-star icon"></i>
+                    Strengths
+                </h2>
+
+                <ul>
+                    <li>Analytical Thinking</li>
+                    <li>Attention to Detail</li>
+                    <li>Leadership</li>
+                    <li>Team Work</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>
+                    <i class="fa-solid fa-laptop-code icon"></i>
+                    Skills
+                </h2>
+
+                <div class="badge">Creative Design</div>
+                <div class="badge">PowerPoint Presentation</div>
+                <div class="badge">Microsoft Word</div>
+                <div class="badge">Using Domo AI</div>
+                <div class="badge">Basic Computer Knowledge</div>
+            </div>
+
+            <div class="section">
+                <h2>
+                    <i class="fa-solid fa-diagram-project icon"></i>
+                    Projects
+                </h2>
+
+                <ul>
+                    <li>Visiting Card Design</li>
+                    <li>Solar Car Panel Presentation</li>
+                    <li>Organic Manure Presentation</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>
+                    <i class="fa-solid fa-briefcase icon"></i>
+                    Experience
+                </h2>
+
+                <p>
+                    Basic Computer and Educational Experience
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="footer">
+        Designed with ❤️ for Himanshu Bhushan Veer
+    </div>
+
+</div>
+
+</body>
+</html>

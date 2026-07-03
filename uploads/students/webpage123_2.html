@@ -1,0 +1,381 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Srushti Gawade | Resume Website</title>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: Arial, sans-serif;
+      scroll-behavior:smooth;
+    }
+
+    body{
+      background: linear-gradient(135deg,#4f46e5,#9333ea,#ec4899);
+      color:white;
+    }
+
+    nav{
+      position:fixed;
+      top:0;
+      width:100%;
+      background:rgba(255,255,255,0.1);
+      backdrop-filter:blur(10px);
+      display:flex;
+      justify-content:center;
+      gap:30px;
+      padding:15px;
+      z-index:1000;
+    }
+
+    nav a{
+      color:white;
+      text-decoration:none;
+      font-weight:bold;
+      transition:0.3s;
+    }
+
+    nav a:hover{
+      color:#ffe066;
+    }
+
+    header{
+      height:100vh;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      padding:20px;
+    }
+
+    header h1{
+      font-size:60px;
+      margin-bottom:15px;
+      text-shadow:0 0 20px white;
+    }
+
+    header p{
+      font-size:24px;
+      margin-bottom:25px;
+    }
+
+    .btn{
+      padding:12px 28px;
+      background:white;
+      color:#6d28d9;
+      border:none;
+      border-radius:30px;
+      font-weight:bold;
+      text-decoration:none;
+      transition:0.3s;
+    }
+
+    .btn:hover{
+      transform:scale(1.1);
+      background:#f3e8ff;
+    }
+
+    section{
+      padding:80px 10%;
+    }
+
+    h2{
+      text-align:center;
+      font-size:40px;
+      margin-bottom:30px;
+    }
+
+    .glass{
+      background:rgba(255,255,255,0.12);
+      padding:30px;
+      border-radius:20px;
+      backdrop-filter:blur(10px);
+      box-shadow:0 8px 32px rgba(0,0,0,0.2);
+      transition:0.3s;
+    }
+
+    .glass:hover{
+      transform:translateY(-8px);
+    }
+
+    .skills{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:20px;
+    }
+
+    .skill-box{
+      background:rgba(255,255,255,0.15);
+      padding:20px;
+      border-radius:15px;
+      text-align:center;
+      transition:0.3s;
+    }
+
+    .skill-box:hover{
+      background:rgba(255,255,255,0.25);
+      transform:scale(1.05);
+    }
+
+    .projects{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:20px;
+    }
+
+    .project-card{
+      background:rgba(255,255,255,0.15);
+      padding:20px;
+      border-radius:20px;
+      transition:0.3s;
+    }
+
+    .project-card:hover{
+      transform:translateY(-10px);
+      background:rgba(255,255,255,0.25);
+    }
+
+    ul{
+      line-height:2;
+      padding-left:20px;
+    }
+
+    footer{
+      text-align:center;
+      padding:25px;
+      background:rgba(0,0,0,0.2);
+    }
+
+    @media(max-width:768px){
+
+      header h1{
+        font-size:40px;
+      }
+
+      header p{
+        font-size:18px;
+      }
+
+      h2{
+        font-size:32px;
+      }
+
+      nav{
+        gap:15px;
+        flex-wrap:wrap;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#education">Education</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- HERO SECTION -->
+
+  <header>
+
+    <h1>Srushti Sudhir Gawade</h1>
+
+    <p>🎓 Student | Creative Learner</p>
+
+    <a href="#contact" class="btn">Contact Me</a>
+
+  </header>
+
+  <!-- ABOUT -->
+
+  <section id="about">
+
+    <h2>About Me</h2>
+
+    <div class="glass">
+
+      <p>
+        I am a student with basic computer knowledge and creative skills.
+        I enjoy learning new things and improving my technical knowledge.
+        I am hardworking, positive, and interested in creating digital documents and designs.
+      </p>
+
+      <br>
+
+      <p><strong>Date of Birth:</strong> 20/04/2010</p>
+
+    </div>
+
+  </section>
+
+  <!-- EDUCATION -->
+
+  <section id="education">
+
+    <h2>Education</h2>
+
+    <div class="glass">
+
+      <h3>10th Pass</h3>
+
+      <p>
+        Completed secondary education and currently improving computer and technical skills.
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- SKILLS -->
+
+  <section id="skills">
+
+    <h2>Skills</h2>
+
+    <div class="skills">
+
+      <div class="skill-box">Basic Computer Knowledge</div>
+
+      <div class="skill-box">MS Word</div>
+
+      <div class="skill-box">Document Creation</div>
+
+      <div class="skill-box">Creative Design</div>
+
+    </div>
+
+  </section>
+
+  <!-- PROJECTS -->
+
+  <section id="projects">
+
+    <h2>Projects</h2>
+
+    <div class="projects">
+
+      <div class="project-card">
+
+        <h3>Resume Design</h3>
+
+        <p>
+          Created professional resumes using MS Word with attractive formatting and layouts.
+        </p>
+
+      </div>
+
+      <div class="project-card">
+
+        <h3>Head Letter Design</h3>
+
+        <p>
+          Designed creative and professional head letters for documents and school projects.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- EXPERIENCE -->
+
+  <section>
+
+    <h2>Experience</h2>
+
+    <div class="glass">
+
+      <p>
+        Study Work and Educational Activities
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- HOBBIES -->
+
+  <section>
+
+    <h2>Hobbies</h2>
+
+    <div class="glass">
+
+      <ul>
+
+        <li>Drawing</li>
+
+        <li>Singing</li>
+
+      </ul>
+
+    </div>
+
+  </section>
+
+  <!-- LANGUAGES -->
+
+  <section>
+
+    <h2>Languages</h2>
+
+    <div class="glass">
+
+      <ul>
+
+        <li>Marathi</li>
+
+        <li>English</li>
+
+        <li>Hindi</li>
+
+      </ul>
+
+    </div>
+
+  </section>
+
+  <!-- CONTACT -->
+
+  <section id="contact">
+
+    <h2>Contact</h2>
+
+    <div class="glass">
+
+      <p>📞 Phone: 8390267607</p>
+
+      <p>📍 Maharashtra, India</p>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <p>© 2026 Srushti Sudhir Gawade | Resume Website</p>
+
+  </footer>
+
+</body>
+</html>
+```

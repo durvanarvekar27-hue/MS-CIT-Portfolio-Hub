@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Ultra Animated Luxury Resume</title>
+
+  <!-- GOOGLE FONTS -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      scroll-behavior:smooth;
+    }
+
+    body{
+      font-family:'Poppins',sans-serif;
+      background:linear-gradient(135deg,#fff8fb,#f3efff,#eef9ff);
+      overflow-x:hidden;
+      color:#444;
+      position:relative;
+    }
+
+    /* =========================================
+       FLOATING BACKGROUND ANIMATION
+    ========================================== */
+
+    .floating-bg span{
+      position:absolute;
+      display:block;
+      border-radius:50%;
+      animation:floatUp 20s linear infinite;
+      bottom:-200px;
+      opacity:0.4;
+      filter:blur(2px);
+    }
+
+    .floating-bg span:nth-child(1){
+      left:10%;
+      width:90px;
+      height:90px;
+      background:#ffd9eb;
+      animation-duration:16s;
+    }
+
+    .floating-bg span:nth-child(2){
+      left:25%;
+      width:120px;
+      height:120px;
+      background:#d9c9ff;
+      animation-duration:22s;
+    }
+
+    .floating-bg span:nth-child(3){
+      left:45%;
+      width:70px;
+      height:70px;
+      background:#cde8ff;
+      animation-duration:18s;
+    }
+
+    .floating-bg span:nth-child(4){
+      left:65%;
+      width:140px;
+      height:140px;
+      background:#ffe9c9;
+      animation-duration:26s;
+    }
+
+    .floating-bg span:nth-child(5){
+      left:85%;
+      width:90px;
+      height:90px;
+      background:#f7cfff;
+      animation-duration:20s;
+    }
+
+    @keyframes floatUp{
+      0%{
+        transform:translateY(0) rotate(0deg);
+        opacity:0.4;
+      }
+
+      100%{
+        transform:translateY(-1400px) rotate(720deg);
+        opacity:0;
+      }
+    }
+
+    /* =========================================
+       RESUME CONTAINER
+    ========================================== */
+
+    .resume{
+      max-width:1050px;
+      margin:50px auto;
+      background:rgba(255,255,255,0.88);
+      backdrop-filter:blur(12px);
+      border-radius:35px;
+      overflow:hidden;
+      box-shadow:0 25px 60px rgba(0,0,0,0.12);
+      position:relative;
+      z-index:10;
+      animation:fadeIn 1.5s ease;
+    }
+
+    @keyframes fadeIn{
+      from{
+        opacity:0;
+        transform:translateY(40px);
+      }
+
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+
+    /* =========================================
+       HEADER SECTION
+    ========================================== */
+
+    .header{
+      background:linear-gradient(135deg,#dcc8ff,#ffdce8,#cfe9ff);
+      padding:80px 40px 120px;
+      text-align:center;
+      position:relative;
+      overflow:hidden;
+    }
+
+    /* Animated circles */
+
+    .header::before,
+    .header::after{
+      content:'';
+      position:absolute;
+      border-radius:50%;
+      background:rgba(255,255,255,0.18);
+      animation:pulse 6s infinite;
+    }
+
+    .header::before{
+      width:300px;
+      height:300px;
+      top:-120px;
+      left:-80px;
+    }
+
+    .header::after{
+      width:220px;
+      height:220px;
+      bottom:-100px;
+      right:-50px;
+    }
+
+    @keyframes pulse{
+      0%{
+        transform:scale(1);
+      }
+
+      50%{
+        transform:scale(1.1);
+      }
+
+      100%{
+        transform:scale(1);
+      }
+    }
+
+    /* Profile Animation */
+
+    .profile{
+      width:135px;
+      height:135px;
+      border-radius:50%;
+      background:white;
+      margin:auto;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:60px;
+      box-shadow:0 15px 30px rgba(0,0,0,0.1);
+      animation:bounce 3s infinite;
+      position:relative;
+      z-index:2;
+    }
+
+    @keyframes bounce{
+      0%,100%{
+        transform:translateY(0);
+      }
+
+      50%{
+        transform:translateY(-12px);
+      }
+    }
+
+    /* Name Animation */
+
+    .name{
+      font-family:'Playfair Display',serif;
+      font-size:48px;
+      margin-top:25px;
+      color:#2f2f2f;
+      letter-spacing:2px;
+      animation:slideDown 1.2s ease;
+      position:relative;
+      z-index:2;
+    }
+
+    @keyframes slideDown{
+      from{
+        opacity:0;
+        transform:translateY(-40px);
+      }
+
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+
+    .subtitle{
+      margin-top:12px;
+      font-size:18px;
+      color:#555;
+      animation:fadeText 2s ease;
+      position:relative;
+      z-index:2;
+    }
+
+    @keyframes fadeText{
+      from{
+        opacity:0;
+      }
+
+      to{
+        opacity:1;
+      }
+    }
+
+    /* Contact Animation */
+
+    .contact{
+      margin-top:35px;
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+      gap:15px;
+      position:relative;
+      z-index:2;
+    }
+
+    .contact div{
+      background:rgba(255,255,255,0.75);
+      padding:12px 18px;
+      border-radius:16px;
+      font-size:14px;
+      box-shadow:0 5px 15px rgba(0,0,0,0.05);
+      transition:0.4s;
+      animation:floatCard 5s ease-in-out infinite;
+    }
+
+    .contact div:hover{
+      transform:translateY(-5px) scale(1.05);
+    }
+
+    @keyframes floatCard{
+      0%,100%{
+        transform:translateY(0);
+      }
+
+      50%{
+        transform:translateY(-5px);
+      }
+    }
+
+    /* =========================================
+       CONTENT
+    ========================================== */
+
+    .content{
+      padding:60px 50px;
+    }
+
+    .section{
+      margin-bottom:60px;
+      animation:fadeUp 1.5s ease;
+    }
+
+    @keyframes fadeUp{
+      from{
+        opacity:0;
+        transform:translateY(50px);
+      }
+
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+
+    .section-title{
+      font-size:32px;
+      color:#6b52a3;
+      margin-bottom:30px;
+      position:relative;
+      display:inline-block;
+    }
+
+    .section-title::after{
+      content:'';
+      position:absolute;
+      width:70%;
+      height:5px;
+      left:0;
+      bottom:-10px;
+      border-radius:10px;
+      background:linear-gradient(to right,#d7b8ff,#ffcde0);
+      animation:lineGlow 3s infinite;
+    }
+
+    @keyframes lineGlow{
+      0%{
+        width:30%;
+      }
+
+      50%{
+        width:80%;
+      }
+
+      100%{
+        width:30%;
+      }
+    }
+
+    /* GRID */
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:25px;
+    }
+
+    /* CARDS */
+
+    .card{
+      background:linear-gradient(145deg,#fff9fc,#f4f8ff);
+      padding:28px;
+      border-radius:25px;
+      position:relative;
+      overflow:hidden;
+      box-shadow:0 10px 25px rgba(0,0,0,0.05);
+      transition:0.5s;
+      animation:cardFloat 6s ease-in-out infinite;
+    }
+
+    @keyframes cardFloat{
+      0%,100%{
+        transform:translateY(0);
+      }
+
+      50%{
+        transform:translateY(-8px);
+      }
+    }
+
+    .card::before{
+      content:'';
+      position:absolute;
+      width:160px;
+      height:160px;
+      background:rgba(221,193,255,0.15);
+      border-radius:50%;
+      top:-60px;
+      right:-60px;
+      animation:rotateCircle 10s linear infinite;
+    }
+
+    @keyframes rotateCircle{
+      from{
+        transform:rotate(0deg);
+      }
+
+      to{
+        transform:rotate(360deg);
+      }
+    }
+
+    .card:hover{
+      transform:translateY(-10px) scale(1.03);
+      box-shadow:0 20px 40px rgba(0,0,0,0.08);
+    }
+
+    .card h3{
+      margin-bottom:18px;
+      color:#444;
+      position:relative;
+      z-index:2;
+    }
+
+    ul{
+      padding-left:20px;
+      position:relative;
+      z-index:2;
+    }
+
+    ul li{
+      margin-bottom:10px;
+      line-height:1.7;
+      color:#555;
+    }
+
+    /* BADGES */
+
+    .badges{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      position:relative;
+      z-index:2;
+    }
+
+    .badge{
+      background:linear-gradient(135deg,#eadcff,#ffdbe9);
+      padding:10px 18px;
+      border-radius:30px;
+      font-size:14px;
+      font-weight:500;
+      transition:0.4s;
+      box-shadow:0 4px 12px rgba(0,0,0,0.05);
+      animation:badgeGlow 4s infinite alternate;
+    }
+
+    @keyframes badgeGlow{
+      from{
+        box-shadow:0 0 5px rgba(215,184,255,0.2);
+      }
+
+      to{
+        box-shadow:0 0 18px rgba(215,184,255,0.6);
+      }
+    }
+
+    .badge:hover{
+      transform:scale(1.08);
+    }
+
+    /* HOBBIES */
+
+    .hobbies{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:25px;
+    }
+
+    .hobby{
+      width:190px;
+      padding:30px 20px;
+      border-radius:25px;
+      background:linear-gradient(145deg,#fff1f7,#eef7ff);
+      text-align:center;
+      transition:0.4s;
+      box-shadow:0 10px 20px rgba(0,0,0,0.05);
+      animation:hobbyGlow 5s infinite alternate;
+    }
+
+    @keyframes hobbyGlow{
+      from{
+        transform:translateY(0);
+      }
+
+      to{
+        transform:translateY(-8px);
+      }
+    }
+
+    .hobby:hover{
+      transform:scale(1.06);
+    }
+
+    .hobby-icon{
+      font-size:42px;
+      margin-bottom:15px;
+      animation:spinIcon 6s linear infinite;
+    }
+
+    @keyframes spinIcon{
+      from{
+        transform:rotate(0deg);
+      }
+
+      to{
+        transform:rotate(360deg);
+      }
+    }
+
+    .hobby h4{
+      color:#555;
+      font-size:18px;
+    }
+
+    /* FOOTER */
+
+    .footer{
+      text-align:center;
+      padding:30px;
+      background:#faf7ff;
+      color:#777;
+      font-size:14px;
+      letter-spacing:1px;
+      animation:footerGlow 5s infinite alternate;
+    }
+
+    @keyframes footerGlow{
+      from{
+        background:#faf7ff;
+      }
+
+      to{
+        background:#f2ebff;
+      }
+    }
+
+    /* RESPONSIVE */
+
+    @media(max-width:768px){
+
+      body{
+        padding:15px;
+      }
+
+      .resume{
+        margin:20px auto;
+      }
+
+      .content{
+        padding:35px 20px;
+      }
+
+      .name{
+        font-size:32px;
+      }
+
+      .contact{
+        flex-direction:column;
+        align-items:center;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- FLOATING ANIMATION BACKGROUND -->
+
+  <div class="floating-bg">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- MAIN RESUME -->
+
+  <div class="resume">
+
+    <!-- HEADER -->
+
+    <div class="header">
+
+      <div class="profile">
+        👩
+      </div>
+
+      <div class="name">
+        SWARA SAMEER SATARDEKAR
+      </div>
+
+      <div class="subtitle">
+        Creative Learner • AI Enthusiast • Digital Skills Explorer
+      </div>
+
+      <div class="contact">
+
+        <div>📞 9067896252</div>
+
+        <div>📧 satardekarswara87@gmail.com</div>
+
+        <div>📍 Banda, Near Post Office</div>
+
+      </div>
+
+    </div>
+
+    <!-- CONTENT -->
+
+    <div class="content">
+
+      <!-- TECHNICAL SKILLS -->
+
+      <div class="section">
+
+        <div class="section-title">
+          Technical Skills
+        </div>
+
+        <div class="grid">
+
+          <div class="card">
+
+            <h3>🤖 AI Tools</h3>
+
+            <div class="badges">
+              <div class="badge">ChatGPT</div>
+              <div class="badge">Gemini</div>
+              <div class="badge">Microsoft Copilot</div>
+            </div>
+
+          </div>
+
+          <div class="card">
+
+            <h3>💼 Productivity Tools</h3>
+
+            <div class="badges">
+              <div class="badge">MS Word</div>
+              <div class="badge">MS Excel</div>
+              <div class="badge">PowerPoint</div>
+            </div>
+
+          </div>
+
+          <div class="card">
+
+            <h3>🌐 Communication</h3>
+
+            <div class="badges">
+              <div class="badge">Google Chrome</div>
+              <div class="badge">Gmail</div>
+              <div class="badge">Zoom</div>
+              <div class="badge">Cloud Storage</div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- HOBBIES -->
+
+      <div class="section">
+
+        <div class="section-title">
+          Hobbies & Interests
+        </div>
+
+        <div class="hobbies">
+
+          <div class="hobby">
+            <div class="hobby-icon">🎨</div>
+            <h4>Painting</h4>
+          </div>
+
+          <div class="hobby">
+            <div class="hobby-icon">📚</div>
+            <h4>Studying</h4>
+          </div>
+
+          <div class="hobby">
+            <div class="hobby-icon">💻</div>
+            <h4>Learning Tech</h4>
+          </div>
+
+          <div class="hobby">
+            <div class="hobby-icon">✨</div>
+            <h4>Creative Design</h4>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- FOOTER -->
+
+    <div class="footer">
+      ✨ Ultra Animated Luxury Resume Design ✨
+    </div>
+
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MS-CIT Portfolio Hub</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<!-- ==========================
+        HEADER
+========================== -->
+
+<header>
+
+    <nav class="navbar">
+
+        <div class="logo">
+
+            <img src="images/students/logo.png" alt="Logo">
+
+            <h2>MS-CIT Portfolio Hub</h2>
+
+        </div>
+
+        <ul class="nav-links" id="navLinks">
+
+            <li><a href="index.html" >Home</a></li>
+
+            <li><a href="about.html"class="active">About</a></li>
+
+            <li><a href="students.html">Students</a></li>
+
+            <li><a href="contact.html">Contact</a></li>
+
+            <!-- <li>
+                <a href="admin/index.html" class="admin-btn">
+                    <i class="fa-solid fa-user-shield"></i>
+                    Admin
+                </a>
+            </li> -->
+
+        </ul>
+
+        <div class="menu-btn">
+
+            <i class="fa-solid fa-bars"></i>
+
+        </div>
+
+    </nav>
+
+</header>
+
+<!--==========================
+        PAGE BANNER
+===========================-->
+
+<section class="page-banner">
+
+    <div class="container">
+
+        <h1>About MS-CIT Portfolio Hub</h1>
+
+        <p>
+
+            Showcasing creativity, practical skills and digital achievements
+            of MS-CIT students.
+
+        </p>
+
+    </div>
+
+</section>
+
+<!--==========================
+        ABOUT
+===========================-->
+
+<section class="about-page">
+
+    <div class="container">
+
+        <div class="about-grid">
+
+            <div class="about-image">
+
+                <img src="images/students/about.png" alt="About">
+
+            </div>
+
+            <div class="about-content">
+
+                <h2>What is MS-CIT Portfolio Hub?</h2>
+
+                <p>
+
+                    MS-CIT Portfolio Hub is a digital platform where students
+                    can present their practical assignments, creative designs,
+                    office documents, presentations and web development projects
+                    in one professional portfolio.
+
+                </p>
+
+                <p>
+
+                    The website is designed to help students showcase their
+                    technical skills, creativity and practical knowledge gained
+                    during the MS-CIT course.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- =========================
+     ABOUT SECTION - PART 2
+========================= -->
+
+<section class="about-details">
+
+    <div class="container">
+
+        <div class="about-grid">
+
+            <!-- Mission -->
+            <div class="about-box">
+                <i class="fas fa-bullseye"></i>
+                <h3>My Mission</h3>
+                <p>
+                    To develop creative, responsive and user-friendly websites 
+                    that help students showcase their skills and projects in a professional way.
+                </p>
+            </div>
+
+            <!-- Vision -->
+            <div class="about-box">
+                <i class="fas fa-eye"></i>
+                <h3>My Vision</h3>
+                <p>
+                    To build a strong digital portfolio system for MS-CIT students 
+                    where every student can easily manage and display their work online.
+                </p>
+            </div>
+
+            <!-- Skills -->
+            <div class="about-box">
+                <i class="fas fa-code"></i>
+                <h3>Skills</h3>
+                <ul>
+                    <li>HTML, CSS, JavaScript</li>
+                    <li>PHP & MySQL</li>
+                    <li>Responsive Web Design</li>
+                    <li>Basic UI/UX Design</li>
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- =========================
+     ABOUT SECTION - PART 4 (FINAL)
+     CTA + CONTACT + SOCIAL
+========================= -->
+<footer>
+
+    <div class="container footer-container">
+
+        <div class="footer-about">
+
+            <h2>MS-CIT Portfolio Hub</h2>
+
+            <p>
+
+                A professional platform to showcase
+                students' projects, creativity,
+                and technical skills.
+
+            </p>
+
+        </div>
+
+        <div class="footer-links">
+
+            <h3>Quick Links</h3>
+
+            <a href="index.html">Home</a>
+
+            <a href="about.html">About</a>
+
+            <a href="students.html">Students</a>
+
+            <a href="contact.html">Contact</a>
+
+        </div>
+
+        <div class="footer-social">
+
+            <h3>Follow Us</h3>
+
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+
+            <a href="#"><i class="fab fa-instagram"></i></a>
+
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+
+            <a href="#"><i class="fab fa-youtube"></i></a>
+
+        </div>
+
+    </div>
+
+    <div class="copyright">
+
+        © 2026 MS-CIT Portfolio Hub |
+        All Rights Reserved.
+
+    </div>
+
+</footer>
+<script>
+const menuBtn = document.querySelector(".menu-btn");
+const navLinks = document.querySelector("#navLinks");
+
+menuBtn.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Upload - Admin Panel</title>
+
+<link rel="stylesheet" href="../css/admin.css">
+
+<!-- Font Awesome -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+<body>
+
+<!-- ================= SIDEBAR ================= -->
+<div class="admin-sidebar">
+
+    <h2>MS-CIT Admin</h2>
+
+    <a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a>
+    <a href="students.html"><i class="fas fa-users"></i> Students</a>
+    <a href="projects.html"><i class="fas fa-folder"></i> Projects</a>
+    <a href="upload.html"><i class="fas fa-upload"></i> Upload</a>
+    <a href="settings.html"><i class="fas fa-cog"></i> Settings</a>
+    <a href="login.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
+
+</div>
+
+<!-- ================= CONTENT ================= -->
+<div class="admin-content">
+
+    <!-- HEADER -->
+    <div class="admin-header">
+        <h2>Upload Files</h2>
+    </div>
+
+    <!-- UPLOAD BOX -->
+    <div class="upload-box">
+
+        <form>
+
+            <label>File Title</label>
+            <select required>
+
+    <option value="">-- Select Category --</option>
+
+    <option value="word">Word</option>
+    <option value="powerpoint">PowerPoint</option>
+    <option value="excel">Excel</option>
+    <option value="webpage">Webpage</option>
+    <option value="canva">Canva</option>
+    <option value="photoshop">Photoshop</option>
+    <option value="coreldraw">CorelDraw</option>
+
+</select>
+
+            <label>Select Category</label>
+            <input type="text" placeholder="Enter file title">
+                
+            <label>Choose File</label>
+            <input type="file">
+
+            <!-- <label>Description</label>
+            <textarea rows="4" placeholder="Enter description"></textarea> -->
+
+            <button type="submit">
+                <i class="fas fa-upload"></i> Upload File
+            </button>
+
+        </form>
+
+    </div>
+
+    <!-- RECENT UPLOADS -->
+    <div class="table-box" style="margin-top:20px;">
+
+        <h3>Recent Uploads</h3>
+
+        <table>
+
+            <tr>
+                <th>ID</th>
+                <th>File Name</th>
+                <th>Category</th>
+                <th>Date</th>
+                <th>Action</th>
+            </tr>
+
+            <tr>
+                <td>1</td>
+                <td>portfolio.pdf</td>
+                <td>Project</td>
+                <td>2026-06-28</td>
+                <td>
+                    <button class="delete">Delete</button>
+                </td>
+            </tr>
+
+        </table>
+
+    </div>
+
+</div>
+
+</body>
+</html>

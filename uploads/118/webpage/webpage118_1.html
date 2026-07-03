@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MediCare Pharmacy</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #f4f9ff;
+      color: #333;
+    }
+
+    /* Header */
+    header {
+      background-color: #0d6efd;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 50px;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+    }
+
+    nav ul li {
+      margin-left: 20px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #dce6ff;
+    }
+
+    /* Hero Section */
+    .hero {
+      height: 80vh;
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+      url('https://images.unsplash.com/photo-1587854692152-cbe660dbde88?auto=format&fit=crop&w=1200&q=80');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+    }
+
+    .hero-text h1 {
+      font-size: 50px;
+      margin-bottom: 15px;
+    }
+
+    .hero-text p {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    .hero-text button {
+      padding: 12px 25px;
+      border: none;
+      background-color: #0d6efd;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+
+    .hero-text button:hover {
+      background-color: #084298;
+    }
+
+    /* Services */
+    .services {
+      padding: 60px 40px;
+      text-align: center;
+    }
+
+    .services h2 {
+      margin-bottom: 40px;
+      font-size: 36px;
+    }
+
+    .service-boxes {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .box {
+      background: white;
+      padding: 25px;
+      width: 300px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .box h3 {
+      margin-bottom: 15px;
+      color: #0d6efd;
+    }
+
+    /* Products */
+    .products {
+      padding: 60px 40px;
+      text-align: center;
+    }
+
+    .products h2 {
+      margin-bottom: 40px;
+      font-size: 36px;
+    }
+
+    .product-container {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+
+    .product-card {
+      background: white;
+      width: 250px;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .product-card img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .product-card h3 {
+      margin: 15px 0 10px;
+    }
+
+    .product-card p {
+      font-size: 18px;
+      color: #0d6efd;
+      margin-bottom: 15px;
+    }
+
+    .product-card button {
+      background-color: #0d6efd;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+
+    .product-card button:hover {
+      background-color: #084298;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #0d6efd;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    /* Responsive */
+    @media(max-width: 768px) {
+      header {
+        flex-direction: column;
+      }
+
+      nav ul {
+        margin-top: 10px;
+      }
+
+      .hero-text h1 {
+        font-size: 35px;
+      }
+
+      .hero-text p {
+        font-size: 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">MediCare Pharmacy</div>
+
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Medicines</a></li>
+        <li><a href="#">Health Products</a></li>
+        <li><a href="#">Offers</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Your Trusted Medical Store</h1>
+      <p>Order medicines online with fast delivery and genuine products.</p>
+      <button>Shop Now</button>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="services">
+    <h2>Our Services</h2>
+
+    <div class="service-boxes">
+
+      <div class="box">
+        <h3>Prescription Medicines</h3>
+        <p>Get all branded and generic medicines at affordable prices.</p>
+      </div>
+
+      <div class="box">
+        <h3>Healthcare Products</h3>
+        <p>Buy wellness, personal care, and health monitoring products.</p>
+      </div>
+
+      <div class="box">
+        <h3>24/7 Support</h3>
+        <p>We are available anytime to assist with your healthcare needs.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Products -->
+  <section class="products">
+    <h2>Popular Products</h2>
+
+    <div class="product-container">
+
+      <div class="product-card">
+        <img src="https://via.placeholder.com/200" alt="Medicine">
+        <h3>Paracetamol</h3>
+        <p>₹50</p>
+        <button>Buy Now</button>
+      </div>
+
+      <div class="product-card">
+        <img src="https://via.placeholder.com/200" alt="Medicine">
+        <h3>Vitamin C Tablets</h3>
+        <p>₹120</p>
+        <button>Buy Now</button>
+      </div>
+
+      <div class="product-card">
+        <img src="https://via.placeholder.com/200" alt="Medicine">
+        <h3>Hand Sanitizer</h3>
+        <p>₹80</p>
+        <button>Buy Now</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 MediCare Pharmacy | All Rights Reserved</p>
+  </footer>
+
+</body>
+</html>

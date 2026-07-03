@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>WanderVista Travel Agency</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body{
+      background:#f5f7fa;
+      color:#333;
+      line-height:1.6;
+    }
+
+    header{
+      background:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
+      height:100vh;
+      position:relative;
+      color:white;
+    }
+
+    .overlay{
+      position:absolute;
+      inset:0;
+      background:rgba(0,0,0,0.5);
+    }
+
+    nav{
+      position:relative;
+      z-index:2;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:20px 60px;
+    }
+
+    .logo{
+      font-size:30px;
+      font-weight:bold;
+      color:#fff;
+    }
+
+    nav ul{
+      display:flex;
+      list-style:none;
+      gap:25px;
+    }
+
+    nav ul li a{
+      color:white;
+      text-decoration:none;
+      font-size:16px;
+      transition:0.3s;
+    }
+
+    nav ul li a:hover{
+      color:#ffd166;
+    }
+
+    .hero{
+      position:relative;
+      z-index:2;
+      height:80vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      flex-direction:column;
+      text-align:center;
+      padding:20px;
+    }
+
+    .hero h1{
+      font-size:60px;
+      margin-bottom:20px;
+    }
+
+    .hero p{
+      font-size:22px;
+      margin-bottom:30px;
+    }
+
+    .btn{
+      background:#ff6b35;
+      color:white;
+      padding:15px 35px;
+      border:none;
+      border-radius:30px;
+      font-size:18px;
+      cursor:pointer;
+      transition:0.3s;
+      text-decoration:none;
+    }
+
+    .btn:hover{
+      background:#e85d2c;
+    }
+
+    section{
+      padding:80px 10%;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:50px;
+    }
+
+    .section-title h2{
+      font-size:40px;
+      color:#0f172a;
+    }
+
+    .destinations{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+      gap:30px;
+    }
+
+    .card{
+      background:white;
+      border-radius:15px;
+      overflow:hidden;
+      box-shadow:0 5px 15px rgba(0,0,0,0.1);
+      transition:0.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-10px);
+    }
+
+    .card img{
+      width:100%;
+      height:220px;
+      object-fit:cover;
+    }
+
+    .card-content{
+      padding:20px;
+    }
+
+    .card-content h3{
+      margin-bottom:10px;
+    }
+
+    .services{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:30px;
+      text-align:center;
+    }
+
+    .service-box{
+      background:white;
+      padding:40px 20px;
+      border-radius:15px;
+      box-shadow:0 5px 15px rgba(0,0,0,0.08);
+    }
+
+    .service-box h3{
+      margin:15px 0;
+      color:#0f172a;
+    }
+
+    .contact{
+      background:#0f172a;
+      color:white;
+      text-align:center;
+      border-radius:20px;
+      padding:60px 30px;
+    }
+
+    .contact input,
+    .contact textarea{
+      width:100%;
+      padding:15px;
+      margin-top:15px;
+      border:none;
+      border-radius:10px;
+    }
+
+    .contact button{
+      margin-top:20px;
+    }
+
+    footer{
+      background:#020617;
+      color:#cbd5e1;
+      text-align:center;
+      padding:20px;
+      margin-top:50px;
+    }
+
+    @media(max-width:768px){
+      nav{
+        flex-direction:column;
+        gap:15px;
+        padding:20px;
+      }
+
+      .hero h1{
+        font-size:40px;
+      }
+
+      .hero p{
+        font-size:18px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="overlay"></div>
+
+    <nav>
+      <div class="logo">WanderVista</div>
+
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#destinations">Destinations</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="hero">
+      <h1>Explore The World</h1>
+      <p>Your dream vacation starts here</p>
+      <a href="#destinations" class="btn">Discover Tours</a>
+    </div>
+  </header>
+
+  <section id="destinations">
+    <div class="section-title">
+      <h2>Popular Destinations</h2>
+    </div>
+
+    <div class="destinations">
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=800&q=80" alt="Paris">
+        <div class="card-content">
+          <h3>Paris, France</h3>
+          <p>Experience the city of lights, romance, and iconic landmarks.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1526481280695-3c4691f11f21?auto=format&fit=crop&w=800&q=80" alt="Bali">
+        <div class="card-content">
+          <h3>Bali, Indonesia</h3>
+          <p>Relax on tropical beaches and explore stunning landscapes.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1549693578-d683be217e58?auto=format&fit=crop&w=800&q=80" alt="Dubai">
+        <div class="card-content">
+          <h3>Dubai, UAE</h3>
+          <p>Discover luxury shopping, skyscrapers, and desert adventures.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="section-title">
+      <h2>Our Services</h2>
+    </div>
+
+    <div class="services">
+
+      <div class="service-box">
+        <h3>Flight Booking</h3>
+        <p>Best airline deals and seamless booking experience.</p>
+      </div>
+
+      <div class="service-box">
+        <h3>Hotel Reservation</h3>
+        <p>Comfortable stays from budget to luxury hotels worldwide.</p>
+      </div>
+
+      <div class="service-box">
+        <h3>Tour Packages</h3>
+        <p>Customized holiday packages designed for every traveler.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="contact">
+      <h2>Contact Us</h2>
+      <p>Plan your next adventure with us</p>
+
+      <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea rows="5" placeholder="Your Message"></textarea>
+        <button class="btn" type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 WanderVista Travel Agency | All Rights Reserved</p>
+  </footer>
+
+</body>
+</html>

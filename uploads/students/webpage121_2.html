@@ -1,0 +1,250 @@
+# Vengurla Tourism Website – HTML Template
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Explore Vengurla</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f4f9ff;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+      url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 4rem;
+      margin-bottom: 15px;
+    }
+
+    header p {
+      font-size: 1.3rem;
+      max-width: 700px;
+    }
+
+    nav {
+      background: #0077b6;
+      padding: 15px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 40px;
+      color: #0077b6;
+      font-size: 2.5rem;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 20px;
+    }
+
+    .card-content h3 {
+      color: #0077b6;
+      margin-bottom: 10px;
+    }
+
+    .about {
+      text-align: center;
+      font-size: 1.1rem;
+    }
+
+    footer {
+      background: #023e8a;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 25px;
+      background: #00b4d8;
+      color: white;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      background: #0077b6;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Welcome to Vengurla</h1>
+    <p>Discover the beauty of beaches, temples, seafood, and nature in the heart of Konkan, Maharashtra.</p>
+    <a href="#places" class="btn">Explore Now</a>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#places">Tourist Places</a>
+    <a href="#food">Food</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <h2 class="section-title">About Vengurla</h2>
+    <p class="about">
+      Vengurla is a beautiful coastal town in Sindhudurg district of Maharashtra.
+      It is famous for clean beaches, coconut trees, seafood, forts, and peaceful nature.
+      Tourists visit Vengurla to enjoy sunsets, water sports, and traditional Konkani culture.
+    </p>
+  </section>
+
+  <section id="places">
+    <h2 class="section-title">Top Tourist Places</h2>
+
+    <div class="cards">
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1493558103817-58b2924bce98" alt="Beach">
+        <div class="card-content">
+          <h3>Vengurla Beach</h3>
+          <p>Relax on the clean sandy beach and enjoy the peaceful Arabian Sea view.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" alt="Lighthouse">
+        <div class="card-content">
+          <h3>Vengurla Lighthouse</h3>
+          <p>A famous viewpoint offering breathtaking views of the sea and coastline.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e" alt="Temple">
+        <div class="card-content">
+          <h3>Shri Mauli Temple</h3>
+          <p>One of the spiritual attractions known for local culture and devotion.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="food">
+    <h2 class="section-title">Famous Food</h2>
+
+    <div class="cards">
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1559847844-5315695dadae" alt="Seafood">
+        <div class="card-content">
+          <h3>Konkani Seafood</h3>
+          <p>Enjoy fresh fish curry, prawns, crab dishes, and authentic Malvani flavors.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950" alt="Mango">
+        <div class="card-content">
+          <h3>Alphonso Mango</h3>
+          <p>Taste the world-famous Ratnagiri and Konkan Alphonso mangoes.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2 class="section-title">Contact Us</h2>
+
+    <div style="text-align:center;">
+      <p>Email: tourismvengurla@gmail.com</p>
+      <p>Phone: +91 9876543210</p>
+      <p>Location: Vengurla, Maharashtra, India</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Explore Vengurla | Designed for Tourism Promotion</p>
+  </footer>
+
+</body>
+</html>
+```
+
+## How to Run
+
+1. Copy the code above.
+2. Open Notepad or VS Code.
+3. Save the file as `index.html`.
+4. Open the file in any web browser.
+
+You can also add:
+
+* Hotel booking section
+* Photo gallery
+* Google Maps integration
+* Tourist package details
+* Marathi language support
+* Online contact form

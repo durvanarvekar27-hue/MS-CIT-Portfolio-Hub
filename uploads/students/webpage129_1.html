@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MS-CIT Student Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#0f172a,#1e293b);
+    color:#fff;
+}
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+.profile{
+    width:160px;
+    height:160px;
+    border-radius:50%;
+    border:5px solid #38bdf8;
+    overflow:hidden;
+    margin-bottom:20px;
+}
+
+.profile img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.hero h1{
+    font-size:3rem;
+    background:linear-gradient(to right,#38bdf8,#818cf8);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.hero p{
+    margin-top:10px;
+    color:#cbd5e1;
+}
+
+.btn{
+    margin-top:25px;
+    padding:12px 28px;
+    background:#38bdf8;
+    color:#fff;
+    text-decoration:none;
+    border-radius:30px;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#0ea5e9;
+    transform:translateY(-3px);
+}
+
+.container{
+    width:90%;
+    max-width:1100px;
+    margin:auto;
+}
+
+.section{
+    padding:80px 0;
+}
+
+.title{
+    text-align:center;
+    margin-bottom:40px;
+    font-size:2rem;
+    color:#38bdf8;
+}
+
+.card{
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(10px);
+    border-radius:20px;
+    padding:25px;
+    margin-bottom:20px;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.skills{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:15px;
+}
+
+.skill{
+    padding:12px 20px;
+    background:#38bdf8;
+    border-radius:30px;
+    font-weight:600;
+}
+
+.timeline{
+    display:grid;
+    gap:20px;
+}
+
+.project-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.project{
+    background:rgba(255,255,255,0.08);
+    border-radius:20px;
+    padding:20px;
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+    color:#94a3b8;
+}
+</style>
+</head>
+<body>
+
+<section class="hero">
+    <div class="profile">
+        <img src="data:image/png;base64,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" alt="Profile">
+    </div>
+
+    <h1>Vaishanavi Rupesh Rawool</h1>
+    <p>MS-CIT Student </p>
+
+    <a href="#about" class="btn">Explore My Profile</a>
+</section>
+
+<div class="container">
+
+    <section class="section" id="about">
+        <h2 class="title">About Me</h2>
+
+        <div class="card">
+            <p>
+                I am an enthusiastic MS-CIT student passionate about technology,
+                digital skills, internet applications, typing, and productivity tools.
+                I enjoy learning new computer skills and using technology to solve
+                everyday problems.
+            </p>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2 class="title">My Skills</h2>
+
+        <div class="skills">
+            <div class="skill">MS Word</div>
+            <div class="skill">MS Excel</div>
+            <div class="skill">PowerPoint</div>
+            <div class="skill">Typing</div>
+            <div class="skill">web design & programming</div>
+            <div class="skill">canva & photoshop</div>
+            </div>
+    </section>
+
+    <section class="section">
+        <h2 class="title">Learning Journey</h2>
+
+        <div class="timeline">
+            <div class="card">
+                <h3>SSC / HSC Education</h3>
+                <p>Completed academic studies with a focus on personal growth.</p>
+            </div>
+
+            <div class="card">
+                <h3>MS-CIT Course</h3>
+                <p>Learning computer fundamentals, office applications, internet and digital technologies.</p>
+            </div>
+
+            <div class="card">
+                <h3>Future Goal</h3>
+                <p>Build a successful career in IT, administration, or digital services.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2 class="title">Practical Projects</h2>
+
+        <div class="project-grid">
+
+            <div class="project">
+                <h3>📄 Resume Design</h3>
+                <p>Created professional resumes using MS Word.</p>
+            </div>
+
+            <div class="project">
+                <h3>🎤 Presentation</h3>
+                <p>Designed attractive PowerPoint presentations.</p>
+            </div>
+
+            <div class="project">
+                <h3>🌐 Internet Research</h3>
+                <p>Collected and organized information using online tools.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section">
+        <h2 class="title">Contact</h2>
+
+        <div class="card" style="text-align:center">
+            <p>📧 yourmail@gmail.com</p>
+            <p>📱 +91 XXXXX XXXXX</p>
+            <p>📍 Maharashtra, India</p>
+        </div>
+    </section>
+
+</div>
+
+<footer>
+    Made with ❤️ by an MS-CIT Student
+</footer>
+
+</body>
+</html>

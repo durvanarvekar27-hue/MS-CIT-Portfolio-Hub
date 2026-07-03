@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects - Admin Panel</title>
+
+<link rel="stylesheet" href="../css/admin.css">
+
+<!-- Font Awesome -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+<body>
+
+<!-- ================= SIDEBAR ================= -->
+<div class="admin-sidebar">
+
+    <h2>MS-CIT Admin</h2>
+
+    <a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a>
+    <a href="students.html"><i class="fas fa-users"></i> Students</a>
+    <a href="projects.html"><i class="fas fa-folder"></i> Projects</a>
+    <a href="upload.html"><i class="fas fa-upload"></i> Upload</a>
+    <a href="settings.html"><i class="fas fa-cog"></i> Settings</a>
+    <a href="login.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
+
+</div>
+
+<!-- ================= CONTENT ================= -->
+<div class="admin-content">
+
+    <!-- HEADER -->
+    <div class="admin-header">
+
+        <h2>Projects Management</h2>
+
+        <a href="add-projects.html">
+            <button>
+                + Add Project
+            </button>
+        </a>
+
+    </div>
+
+    <!-- TABLE BOX -->
+    <div class="table-box">
+
+        <table>
+
+            <tr>
+                <th>ID</th>
+                <th>Project Name</th>
+                <th>Student Name</th>
+                <th>Category</th>
+                <th>Date</th>
+                <th>Action</th>
+            </tr>
+
+            <tr>
+                <td>1</td>
+                <td>Portfolio Website</td>
+                <td>Rahul Patil</td>
+                <td>Web Design</td>
+                <td>2026-06-28</td>
+                <td>
+                    <a href="edit-projects.html">
+                        <button class="edit">Edit</button>
+                    </a>
+                    <a href="delete-projects.html">
+                    <button class="delete">Delete</button>
+                </a>
+                </td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+                <td>Calculator App</td>
+                <td>Priya Desai</td>
+                <td>JavaScript</td>
+                <td>2026-06-20</td>
+                <td>
+                    <a href="edit-projects.html">
+                        <button class="edit">Edit</button>
+                    </a>
+                    <a href="delete-projects.html">
+                    <button class="delete">Delete</button>
+                </a>
+                </td>
+            </tr>
+
+        </table>
+
+    </div>
+
+</div>
+
+</body>
+</html>

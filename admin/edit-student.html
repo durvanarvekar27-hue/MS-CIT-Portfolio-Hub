@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Edit Student</title>
+
+<link rel="stylesheet" href="../css/admin.css">
+
+<!-- Font Awesome -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+<body>
+
+<!-- ================= SIDEBAR ================= -->
+<div class="admin-sidebar">
+
+    <h2>Admin Panel</h2>
+
+    <a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a>
+    <a href="students.html"><i class="fas fa-users"></i> Students</a>
+    <a href="projects.html"><i class="fas fa-folder"></i> Projects</a>
+    <a href="upload.html"><i class="fas fa-upload"></i> Upload</a>
+    <a href="settings.html"><i class="fas fa-cog"></i> Settings</a>
+    <a href="login.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
+
+</div>
+<!-- ================= CONTENT ================= -->
+<div class="admin-content">
+
+    <h2>Edit Student</h2>
+
+    <div class="form-box">
+
+        <form>
+
+            <!-- Hidden ID (future DB use) -->
+            <input type="hidden" value="1">
+
+            <label>Student Name</label>
+            <input type="text" value="Rahul Patil" required>
+
+            <label>Email</label>
+            <input type="email" value="rahul@example.com" required>
+
+            <label>Phone</label>
+            <input type="text" value="9876543210">
+
+            <label>Course</label>
+            <input type="text" value="MS-CIT" required>
+
+            <label>Profile Image</label>
+            <input type="file">
+
+            <p style="margin-top:10px; font-size:13px; color:gray;">
+                Current Image: profile.jpg
+            </p>
+
+            <button type="submit">
+                <i class="fas fa-save"></i> Update Student
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+</body>
+</html>

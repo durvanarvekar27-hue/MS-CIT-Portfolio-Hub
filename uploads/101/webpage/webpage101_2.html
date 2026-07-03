@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Creative Resume - Ayush Sandeep Parab</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins', sans-serif;
+    }
+
+    body{
+      background:linear-gradient(135deg,#ff9a9e,#fad0c4,#fad0c4,#fbc2eb,#a18cd1);
+      min-height:100vh;
+      padding:30px;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+    }
+
+    .resume{
+      width:100%;
+      max-width:1000px;
+      background:white;
+      border-radius:25px;
+      overflow:hidden;
+      box-shadow:0 10px 30px rgba(0,0,0,0.2);
+      display:grid;
+      grid-template-columns:320px 1fr;
+    }
+
+    /* LEFT SIDE */
+
+    .left{
+      background:linear-gradient(180deg,#6a11cb,#2575fc);
+      color:white;
+      padding:40px 25px;
+      text-align:center;
+    }
+
+    .profile{
+      width:140px;
+      height:140px;
+      background:white;
+      border-radius:50%;
+      margin:auto;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:55px;
+      color:#2575fc;
+      font-weight:bold;
+      margin-bottom:20px;
+      border:6px solid rgba(255,255,255,0.4);
+    }
+
+    .left h1{
+      font-size:28px;
+      margin-bottom:10px;
+    }
+
+    .role{
+      background:rgba(255,255,255,0.2);
+      padding:10px;
+      border-radius:20px;
+      font-size:15px;
+      margin-bottom:30px;
+    }
+
+    .section-title{
+      font-size:20px;
+      margin:25px 0 15px;
+      position:relative;
+      display:inline-block;
+    }
+
+    .section-title::after{
+      content:"";
+      width:60%;
+      height:3px;
+      background:#fff;
+      position:absolute;
+      left:20%;
+      bottom:-5px;
+      border-radius:10px;
+    }
+
+    .contact p,
+    .skills span{
+      margin:10px 0;
+      font-size:15px;
+    }
+
+    .skills span{
+      display:inline-block;
+      background:rgba(255,255,255,0.2);
+      padding:8px 14px;
+      border-radius:20px;
+      margin:5px;
+      transition:0.3s;
+    }
+
+    .skills span:hover{
+      background:white;
+      color:#2575fc;
+      transform:scale(1.05);
+    }
+
+    /* RIGHT SIDE */
+
+    .right{
+      padding:40px;
+      background:#fff;
+    }
+
+    .card{
+      background:#f8f9ff;
+      padding:25px;
+      border-radius:18px;
+      margin-bottom:25px;
+      border-left:8px solid #6a11cb;
+      transition:0.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-5px);
+      box-shadow:0 10px 20px rgba(0,0,0,0.1);
+    }
+
+    .card h2{
+      color:#6a11cb;
+      margin-bottom:15px;
+      font-size:24px;
+    }
+
+    .card p{
+      line-height:1.8;
+      color:#444;
+    }
+
+    .projects ul{
+      margin-left:20px;
+    }
+
+    .projects li{
+      margin-bottom:12px;
+      font-size:16px;
+      color:#444;
+    }
+
+    .education-box{
+      background:linear-gradient(135deg,#43cea2,#185a9d);
+      color:white;
+      padding:18px;
+      border-radius:15px;
+      margin-top:15px;
+    }
+
+    footer{
+      text-align:center;
+      margin-top:20px;
+      color:#666;
+      font-size:14px;
+    }
+
+    @media(max-width:850px){
+      .resume{
+        grid-template-columns:1fr;
+      }
+
+      .left{
+        border-radius:0;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="resume">
+
+    <!-- LEFT PANEL -->
+
+    <div class="left">
+
+      <div class="profile">
+        A
+      </div>
+
+      <h1>Ayush Sandeep Parab</h1>
+
+      <div class="role">
+        10th Student | MS-CIT Student
+      </div>
+
+      <h3 class="section-title">Contact</h3>
+
+      <div class="contact">
+        <p>📞 9876543213</p>
+        <p>📍 Sawantwadi, Maharashtra</p>
+      </div>
+
+      <h3 class="section-title">Skills</h3>
+
+      <div class="skills">
+        <span>Typing</span>
+        <span>Cricket</span>
+        <span>Dancing</span>
+      </div>
+
+    </div>
+
+    <!-- RIGHT PANEL -->
+
+    <div class="right">
+
+      <div class="card">
+        <h2>About Me</h2>
+
+        <p>
+          I live in Sawantwadi and I have completed my 10th education.
+          Currently, I am learning the MS-CIT course to improve my
+          computer knowledge and technical skills. I am passionate about
+          creativity, learning new things, and improving my talents.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>Education</h2>
+
+        <div class="education-box">
+          <h3>10th Completed</h3>
+          <p>Currently Learning MS-CIT</p>
+        </div>
+
+      </div>
+
+      <div class="card projects">
+        <h2>Projects</h2>
+
+        <ul>
+          <li>🎨 Logo Design</li>
+          <li>💌 Greeting Card Design</li>
+          <li>📩 Invitation Card Design</li>
+        </ul>
+
+      </div>
+
+      <footer>
+        Creative Resume of Ayush Sandeep Parab
+      </footer>
+
+    </div>
+
+  </div>
+
+</body>
+</html>

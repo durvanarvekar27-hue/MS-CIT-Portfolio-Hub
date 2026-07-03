@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Creative Resume - Gitesh Nitin Narvekar</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: 'Segoe UI', sans-serif;
+        background: linear-gradient(120deg, #ff9a9e, #fad0c4, #a18cd1, #fbc2eb);
+        background-size: 300% 300%;
+        animation: bgMove 10s infinite alternate;
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    @keyframes bgMove {
+        0% { background-position: left; }
+        100% { background-position: right; }
+    }
+
+    .container {
+        width: 90%;
+        max-width: 900px;
+        background: white;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+    }
+
+    .header {
+        background: linear-gradient(90deg, #ff6a00, #ee0979);
+        color: white;
+        text-align: center;
+        padding: 25px;
+    }
+
+    .header img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        border: 4px solid white;
+        margin-top: 10px;
+    }
+
+    h1 {
+        margin: 10px 0 5px;
+    }
+
+    h2 {
+        color: #444;
+        border-left: 6px solid #ff4081;
+        padding-left: 10px;
+        margin-top: 20px;
+    }
+
+    .section {
+        padding: 15px 25px;
+    }
+
+    .card {
+        background: #f9f9ff;
+        padding: 15px;
+        border-radius: 12px;
+        margin: 10px 0;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        transition: 0.3s;
+    }
+
+    .card:hover {
+        transform: scale(1.02);
+        background: #fff0f6;
+    }
+
+    ul {
+        margin: 0;
+        padding-left: 20px;
+    }
+
+    .badge {
+        display: inline-block;
+        background: #ff4081;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 20px;
+        font-size: 12px;
+        margin: 3px;
+    }
+
+    progress {
+        width: 100%;
+        height: 18px;
+    }
+
+    .footer {
+        text-align: center;
+        padding: 15px;
+        background: #222;
+        color: white;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="header">
+        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Profile">
+        <h1>Gitesh Nitin Narvekar</h1>
+        <p>Student | Creative Learner | Future Developer</p>
+    </div>
+
+    <div class="section">
+
+        <h2>👤 Personal Information</h2>
+        <div class="card">
+            <p><b>Name:</b> Gitesh Nitin Narvekar</p>
+            <p><b>Standard:</b> 10th</p>
+            <p><b>Nationality:</b> Indian</p>
+        </div>
+
+        <h2>✨ About Me</h2>
+        <div class="card">
+            <p>
+                I am a passionate student who loves learning new technologies,
+                improving computer skills, and exploring creative ideas.
+            </p>
+        </div>
+
+        <h2>🎓 Education</h2>
+        <div class="card">
+            <p>Studying in 10th Standard</p>
+            <p>MS-CIT Certified</p>
+        </div>
+
+        <h2>💻 Technical Skills</h2>
+        <div class="card">
+            <span class="badge">Typing</span>
+            <span class="badge">Coding</span>
+            <span class="badge">Computer Handling</span>
+            <span class="badge">HTML & CSS</span>
+        </div>
+
+        <h2>📊 Skill Levels</h2>
+        <div class="card">
+            <p>Typing</p>
+            <progress value="90" max="100"></progress>
+
+            <p>Coding</p>
+            <progress value="75" max="100"></progress>
+
+            <p>Computer Skills</p>
+            <progress value="85" max="100"></progress>
+        </div>
+
+        <h2>📁 Project</h2>
+        <div class="card">
+            <p>Business Card Report</p>
+            <img src="https://cdn-icons-png.flaticon.com/512/1006/1006555.png" width="60">
+        </div>
+
+        <h2>🏆 Achievements</h2>
+        <div class="card">
+            <ul>
+                <li>Completed MS-CIT Course</li>
+                <li>Participated in School Activities</li>
+                <li>Improved Computer Knowledge</li>
+            </ul>
+        </div>
+
+        <h2>🎯 Hobbies</h2>
+        <div class="card">
+            <ul>
+                <li>Playing basketball</li>
+                <li>Reading Books 📚</li>
+                <li>Listening to Music 🎵</li>
+            </ul>
+        </div>
+
+        <h2>💪 Strengths</h2>
+        <div class="card">
+            <ul>
+                <li>Quick Learner</li>
+                <li>Problem Solving Ability</li>
+                <li>Creative Thinking</li>
+                <li>Positive Attitude</li>
+            </ul>
+        </div>
+
+        <h2>🌐 Languages Known</h2>
+        <div class="card">
+            <span class="badge">English</span>
+            <span class="badge">Hindi</span>
+            <span class="badge">Marathi</span>
+        </div>
+
+        <h2>🚀 Future Goal</h2>
+        <div class="card">
+            <p>
+                My goal is to become a successful Software Developer
+                and learn advanced technologies in the future.
+            </p>
+        </div>
+
+        <h2>📞 Contact</h2>
+        <div class="card">
+            <p>Email: gitesh@example.com</p>
+            <p>Phone: +91 XXXXX XXXXX</p>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        © 2026 Creative Resume Page
+    </div>
+
+</div>
+
+</body>
+</html>

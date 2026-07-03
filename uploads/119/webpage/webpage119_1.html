@@ -1,0 +1,478 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ElectroHub - Electronics Store</title>
+
+<style>
+/* =========================
+GLOBAL CSS
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f4f4f4;
+    color:#333;
+}
+
+/* HEADER */
+
+header{
+    background:#111827;
+    color:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 40px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+    color:#00d9ff;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#00d9ff;
+}
+
+/* PAGE */
+
+.page{
+    display:none;
+    padding-bottom:50px;
+}
+
+.page.active{
+    display:block;
+}
+
+/* HERO */
+
+.hero{
+    height:90vh;
+    background:
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url('https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1600');
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    color:white;
+    text-align:center;
+}
+
+.hero h1{
+    font-size:60px;
+}
+
+.hero p{
+    margin:20px 0;
+    font-size:22px;
+}
+
+.btn{
+    background:#00d9ff;
+    color:black;
+    padding:12px 25px;
+    text-decoration:none;
+    border-radius:5px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+/* FEATURES */
+
+.features{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:25px;
+    padding:60px 30px;
+}
+
+.card{
+    background:white;
+    width:300px;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    text-align:center;
+}
+
+/* PAGE TITLE */
+
+.page-title{
+    background:#e5e7eb;
+    text-align:center;
+    padding:40px;
+}
+
+.page-title h1{
+    font-size:40px;
+}
+
+/* PRODUCTS */
+
+.product-grid{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:30px;
+    padding:50px;
+}
+
+.product-card{
+    background:white;
+    width:260px;
+    padding:20px;
+    border-radius:10px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.product-card:hover{
+    transform:translateY(-8px);
+}
+
+.product-card img{
+    width:100%;
+    border-radius:10px;
+}
+
+.product-card h3{
+    margin:15px 0 10px;
+}
+
+.product-card p{
+    margin-bottom:10px;
+}
+
+.product-card button{
+    background:#111827;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.product-card button:hover{
+    background:#00d9ff;
+    color:black;
+}
+
+/* ABOUT */
+
+.about-section{
+    padding:60px;
+    text-align:center;
+}
+
+.about-section p{
+    max-width:800px;
+    margin:20px auto;
+    font-size:18px;
+    line-height:1.7;
+}
+
+/* CONTACT */
+
+.contact-section{
+    padding:60px;
+    text-align:center;
+}
+
+form{
+    max-width:500px;
+    margin:auto;
+}
+
+form input,
+form textarea{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+form button{
+    background:#111827;
+    color:white;
+    border:none;
+    padding:12px 25px;
+    cursor:pointer;
+    border-radius:5px;
+}
+
+form button:hover{
+    background:#00d9ff;
+    color:black;
+}
+
+/* FOOTER */
+
+footer{
+    background:#111827;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    header{
+        flex-direction:column;
+    }
+
+    nav{
+        margin-top:15px;
+    }
+
+    .hero h1{
+        font-size:40px;
+    }
+
+    .features{
+        flex-direction:column;
+        align-items:center;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+    <div class="logo">ElectroHub</div>
+
+    <nav>
+        <a href="#" onclick="showPage('home')">Home</a>
+        <a href="#" onclick="showPage('products')">Products</a>
+        <a href="#" onclick="showPage('sensors')">Sensors</a>
+        <a href="#" onclick="showPage('about')">About</a>
+        <a href="#" onclick="showPage('contact')">Contact</a>
+    </nav>
+</header>
+
+<!-- =========================
+HOME PAGE
+========================= -->
+
+<section id="home" class="page active">
+
+    <div class="hero">
+        <h1>Welcome to ElectroHub</h1>
+        <p>Your One Stop Electronics Store</p>
+
+        <a class="btn" onclick="showPage('products')">
+            Shop Now
+        </a>
+    </div>
+
+    <div class="features">
+
+        <div class="card">
+            <h2>Arduino Boards</h2>
+            <p>Latest development boards for projects.</p>
+        </div>
+
+        <div class="card">
+            <h2>Sensors</h2>
+            <p>Ultrasonic, Temperature, IR and Gas sensors.</p>
+        </div>
+
+        <div class="card">
+            <h2>Electronic Components</h2>
+            <p>ICs, resistors, motors and robotics kits.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================
+PRODUCTS PAGE
+========================= -->
+
+<section id="products" class="page">
+
+    <div class="page-title">
+        <h1>Electronic Products</h1>
+    </div>
+
+    <div class="product-grid">
+
+        <div class="product-card">
+            <img src="https://via.placeholder.com/250" alt="">
+            <h3>Arduino Uno</h3>
+            <p>$20</p>
+            <button>Buy Now</button>
+        </div>
+
+        <div class="product-card">
+            <img src="https://via.placeholder.com/250" alt="">
+            <h3>Raspberry Pi</h3>
+            <p>$45</p>
+            <button>Buy Now</button>
+        </div>
+
+        <div class="product-card">
+            <img src="https://via.placeholder.com/250" alt="">
+            <h3>Servo Motor</h3>
+            <p>$12</p>
+            <button>Buy Now</button>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================
+SENSORS PAGE
+========================= -->
+
+<section id="sensors" class="page">
+
+    <div class="page-title">
+        <h1>Sensor Collection</h1>
+    </div>
+
+    <div class="product-grid">
+
+        <div class="product-card">
+            <img src="https://via.placeholder.com/250" alt="">
+            <h3>Ultrasonic Sensor</h3>
+            <p>$8</p>
+            <button>Buy Now</button>
+        </div>
+
+        <div class="product-card">
+            <img src="https://via.placeholder.com/250" alt="">
+            <h3>Temperature Sensor</h3>
+            <p>$5</p>
+            <button>Buy Now</button>
+        </div>
+
+        <div class="product-card">
+            <img src="https://via.placeholder.com/250" alt="">
+            <h3>Gas Sensor MQ2</h3>
+            <p>$10</p>
+            <button>Buy Now</button>
+        </div>
+
+        <div class="product-card">
+            <img src="https://via.placeholder.com/250" alt="">
+            <h3>IR Sensor</h3>
+            <p>$4</p>
+            <button>Buy Now</button>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================
+ABOUT PAGE
+========================= -->
+
+<section id="about" class="page">
+
+    <div class="about-section">
+        <h1>About ElectroHub</h1>
+
+        <p>
+            ElectroHub is a modern electronics store providing
+            high-quality sensors, Arduino boards, Raspberry Pi,
+            robotics modules and electronic components.
+        </p>
+
+        <p>
+            Our mission is to help students, engineers and
+            electronics enthusiasts build amazing projects.
+        </p>
+    </div>
+
+</section>
+
+<!-- =========================
+CONTACT PAGE
+========================= -->
+
+<section id="contact" class="page">
+
+    <div class="contact-section">
+
+        <h1>Contact Us</h1>
+
+        <form>
+
+            <input type="text" placeholder="Your Name" required>
+
+            <input type="email" placeholder="Your Email" required>
+
+            <textarea rows="6" placeholder="Your Message"></textarea>
+
+            <button type="submit">
+                Send Message
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+    <p>© 2026 ElectroHub Electronics Store</p>
+</footer>
+
+<!-- JAVASCRIPT -->
+
+<script>
+function showPage(pageId){
+
+    let pages = document.querySelectorAll('.page');
+
+    pages.forEach(page=>{
+        page.classList.remove('active');
+    });
+
+    document.getElementById(pageId).classList.add('active');
+
+    window.scrollTo(0,0);
+}
+</script>
+
+</body>
+</html>
+```

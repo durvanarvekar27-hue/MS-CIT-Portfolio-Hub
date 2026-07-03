@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Elite Drive Rentals</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#0f172a;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* NAVBAR */
+
+header{
+    width:100%;
+    padding:20px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:fixed;
+    top:0;
+    z-index:1000;
+    background:rgba(0,0,0,0.4);
+    backdrop-filter:blur(10px);
+}
+
+.logo{
+    font-size:32px;
+    font-weight:700;
+    color:#38bdf8;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:25px;
+    transition:0.3s;
+    font-weight:500;
+}
+
+nav a:hover{
+    color:#38bdf8;
+}
+
+/* HERO SECTION */
+
+.hero{
+    width:100%;
+    height:100vh;
+    background:
+    linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.7)),
+    url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7')
+    center/cover no-repeat;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+.hero-content h1{
+    font-size:70px;
+    margin-bottom:20px;
+}
+
+.hero-content span{
+    color:#38bdf8;
+}
+
+.hero-content p{
+    font-size:22px;
+    margin-bottom:30px;
+    color:#ddd;
+}
+
+.btn{
+    display:inline-block;
+    padding:15px 35px;
+    background:#38bdf8;
+    color:#000;
+    text-decoration:none;
+    border-radius:40px;
+    font-weight:600;
+    transition:0.3s;
+    margin:10px;
+}
+
+.btn:hover{
+    background:white;
+    transform:scale(1.05);
+}
+
+/* SECTION */
+
+section{
+    padding:100px 8%;
+}
+
+.title{
+    text-align:center;
+    font-size:45px;
+    margin-bottom:50px;
+}
+
+.title span{
+    color:#38bdf8;
+}
+
+/* CARS */
+
+.cars{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:#1e293b;
+    border-radius:20px;
+    overflow:hidden;
+    transition:0.4s;
+    box-shadow:0 10px 30px rgba(0,0,0,0.4);
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:25px;
+}
+
+.card-content h3{
+    margin-bottom:10px;
+    font-size:28px;
+}
+
+.price{
+    color:#38bdf8;
+    font-size:24px;
+    margin-bottom:15px;
+}
+
+/* SERVICES */
+
+.services{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.service-box{
+    background:#1e293b;
+    padding:40px;
+    border-radius:20px;
+    text-align:center;
+    transition:0.3s;
+}
+
+.service-box:hover{
+    background:#38bdf8;
+    color:black;
+}
+
+.service-box h3{
+    margin:20px 0;
+}
+
+/* GALLERY */
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:20px;
+}
+
+.gallery img{
+    width:100%;
+    border-radius:15px;
+    transition:0.4s;
+}
+
+.gallery img:hover{
+    transform:scale(1.05);
+}
+
+/* CONTACT */
+
+.contact{
+    max-width:700px;
+    margin:auto;
+    background:#1e293b;
+    padding:40px;
+    border-radius:20px;
+}
+
+.contact input,
+.contact textarea{
+    width:100%;
+    padding:15px;
+    margin:15px 0;
+    border:none;
+    border-radius:10px;
+    outline:none;
+}
+
+.contact button{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:40px;
+    background:#38bdf8;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+/* FOOTER */
+
+footer{
+    background:black;
+    text-align:center;
+    padding:30px;
+    margin-top:50px;
+}
+
+.socials a{
+    color:#38bdf8;
+    margin:0 10px;
+    text-decoration:none;
+    font-size:20px;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+<div class="logo">EliteDrive</div>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#cars">Cars</a>
+<a href="#services">Services</a>
+<a href="#gallery">Gallery</a>
+<a href="#contact">Contact</a>
+
+<!-- EXTERNAL HYPERLINK -->
+<a href="https://www.google.com" target="_blank">Google</a>
+</nav>
+
+</header>
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+<h1>Drive Your <span>Dream Car</span></h1>
+
+<p>
+Luxury cars for daily rent, weddings, vacations, and business trips.
+</p>
+
+<a href="#cars" class="btn">Explore Cars</a>
+
+<a href="#contact" class="btn">Book Now</a>
+
+</div>
+
+</section>
+
+<!-- CARS -->
+
+<section id="cars">
+
+<h2 class="title">Our <span>Premium Cars</span></h2>
+
+<div class="cars">
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1502877338535-766e1452684a">
+
+<div class="card-content">
+
+<h3>Audi A6</h3>
+
+<p class="price">₹5,000 / Day</p>
+
+<p>Luxury Sedan • Automatic • GPS Included</p>
+
+<br>
+
+<a href="https://www.audi.in/in/web/en.html" target="_blank" class="btn">
+View Details
+</a>
+
+</div>
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7">
+
+<div class="card-content">
+
+<h3>BMW X5</h3>
+
+<p class="price">₹6,500 / Day</p>
+
+<p>Premium SUV • Luxury Interior</p>
+
+<br>
+
+<a href="https://www.bmw.in/en/index.html" target="_blank" class="btn">
+View Details
+</a>
+
+</div>
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1549924231-f129b911e442">
+
+<div class="card-content">
+
+<h3>Ford Mustang</h3>
+
+<p class="price">₹8,000 / Day</p>
+
+<p>Sports Car • Powerful Performance</p>
+
+<br>
+
+<a href="https://www.ford.com/cars/mustang/" target="_blank" class="btn">
+View Details
+</a>
+
+</div>
+</div>
+
+</div>
+
+</section>
+
+<!-- SERVICES -->
+
+<section id="services">
+
+<h2 class="title">Why Choose <span>Us</span></h2>
+
+<div class="services">
+
+<div class="service-box">
+<h1>🚘</h1>
+<h3>Luxury Cars</h3>
+<p>Choose from premium sports and luxury cars.</p>
+</div>
+
+<div class="service-box">
+<h1>⚡</h1>
+<h3>Fast Booking</h3>
+<p>Book your dream car in under 2 minutes.</p>
+</div>
+
+<div class="service-box">
+<h1>🛡️</h1>
+<h3>Safe & Secure</h3>
+<p>Verified vehicles with full insurance coverage.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- GALLERY -->
+
+<section id="gallery">
+
+<h2 class="title">Car <span>Gallery</span></h2>
+
+<div class="gallery">
+
+<img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70">
+
+<img src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c">
+
+<img src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b">
+
+<img src="https://images.unsplash.com/photo-1553440569-bcc63803a83d">
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<h2 class="title">Book <span>Now</span></h2>
+
+<div class="contact">
+
+<form>
+
+<input type="text" placeholder="Your Name" required>
+
+<input type="email" placeholder="Email Address" required>
+
+<input type="tel" placeholder="Phone Number" required>
+
+<textarea rows="5" placeholder="Enter Booking Details"></textarea>
+
+<button type="submit">Submit Booking</button>
+
+</form>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<h2>EliteDrive Rentals</h2>
+
+<br>
+
+<div class="socials">
+
+<a href="https://facebook.com" target="_blank">Facebook</a>
+
+<a href="https://instagram.com" target="_blank">Instagram</a>
+
+<a href="https://twitter.com" target="_blank">Twitter</a>
+
+<a href="https://youtube.com" target="_blank">YouTube</a>
+
+</div>
+
+<br>
+
+<p>© 2026 EliteDrive Rentals. All Rights Reserved.</p>
+
+</footer>
+
+</body>
+</html>

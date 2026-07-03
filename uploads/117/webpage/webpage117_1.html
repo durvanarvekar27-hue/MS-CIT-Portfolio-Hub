@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Chrome Plate</title>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family: Arial, sans-serif;
+      background:#f8f4ef;
+      color:#333;
+      line-height:1.6;
+    }
+
+    header{
+      background:#3b241c;
+      color:white;
+      text-align:center;
+      padding:80px 20px;
+    }
+
+    header h1{
+      font-size:65px;
+      color:#ffcc66;
+      letter-spacing:3px;
+    }
+
+    header p{
+      margin-top:10px;
+      font-size:24px;
+      color:#f5e6cc;
+    }
+
+    nav{
+      background:#5a3b2e;
+      padding:15px;
+      text-align:center;
+    }
+
+    nav a{
+      color:white;
+      text-decoration:none;
+      margin:0 18px;
+      font-size:18px;
+      transition:0.3s;
+    }
+
+    nav a:hover{
+      color:#ffcc66;
+    }
+
+    .hero{
+      height:550px;
+      background:url('https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+    }
+
+    .hero h2{
+      background:rgba(0,0,0,0.6);
+      color:white;
+      padding:20px 35px;
+      border-radius:12px;
+      font-size:48px;
+    }
+
+    section{
+      padding:70px 20px;
+      max-width:1200px;
+      margin:auto;
+    }
+
+    .section-title{
+      text-align:center;
+      font-size:42px;
+      margin-bottom:40px;
+      color:#3b241c;
+    }
+
+    .about{
+      text-align:center;
+      max-width:850px;
+      margin:auto;
+      font-size:20px;
+      color:#555;
+    }
+
+    .menu-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:25px;
+    }
+
+    .menu-card{
+      background:white;
+      padding:25px;
+      border-radius:15px;
+      box-shadow:0 5px 15px rgba(0,0,0,0.1);
+      transition:0.3s;
+    }
+
+    .menu-card:hover{
+      transform:translateY(-8px);
+    }
+
+    .menu-card h3{
+      margin-bottom:10px;
+      color:#5a3b2e;
+    }
+
+    .price{
+      font-size:20px;
+      font-weight:bold;
+      color:#d18b00;
+    }
+
+    .gallery{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:20px;
+    }
+
+    .gallery img{
+      width:100%;
+      height:250px;
+      object-fit:cover;
+      border-radius:15px;
+      box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .chef-section{
+      background:#fff7ec;
+      padding:40px;
+      border-radius:15px;
+      text-align:center;
+      margin-top:30px;
+    }
+
+    .chef-section h3{
+      color:#5a3b2e;
+      margin-bottom:15px;
+      font-size:30px;
+    }
+
+    .testimonials{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:20px;
+    }
+
+    .testimonial-card{
+      background:white;
+      padding:25px;
+      border-radius:15px;
+      box-shadow:0 5px 12px rgba(0,0,0,0.1);
+    }
+
+    .testimonial-card p{
+      font-style:italic;
+      margin-bottom:10px;
+    }
+
+    .contact{
+      text-align:center;
+      font-size:18px;
+      line-height:2;
+    }
+
+    .booking-btn{
+      display:inline-block;
+      margin-top:20px;
+      background:#d18b00;
+      color:white;
+      padding:14px 28px;
+      border-radius:8px;
+      text-decoration:none;
+      font-size:18px;
+      transition:0.3s;
+    }
+
+    .booking-btn:hover{
+      background:#a66b00;
+    }
+
+    footer{
+      background:#3b241c;
+      color:white;
+      text-align:center;
+      padding:25px;
+      margin-top:50px;
+    }
+
+    @media(max-width:768px){
+
+      header h1{
+        font-size:42px;
+      }
+
+      .hero h2{
+        font-size:30px;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>THE CHROME PLATE</h1>
+    <p>Classic American • Southern Cuisine • Tex-Mex • New England Seafood</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#menu">Menu</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#chef">Chef</a>
+    <a href="#testimonials">Testimonials</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="hero">
+    <h2>Bold Flavors. Timeless Dining.</h2>
+  </div>
+
+  <section id="about">
+    <h2 class="section-title">About Us</h2>
+
+    <div class="about">
+      <p>
+        The Chrome Plate brings together the rich flavors of classic American dining,
+        Southern comfort food, Tex-Mex favorites, and fresh New England seafood.
+        Our restaurant combines bold taste, warm hospitality, and a premium dining
+        experience designed for every food lover.
+      </p>
+    </div>
+  </section>
+
+  <section id="menu">
+
+    <h2 class="section-title">Featured Menu</h2>
+
+    <div class="menu-grid">
+
+      <div class="menu-card">
+        <h3>Big Mac Combo</h3>
+        <p>McDonald's</p>
+        <p class="price">~$9.29</p>
+      </div>
+
+      <div class="menu-card">
+        <h3>6oz Sirloin</h3>
+        <p>Texas Roadhouse</p>
+        <p class="price">~$15.99</p>
+      </div>
+
+      <div class="menu-card">
+        <h3>Footlong Sub</h3>
+        <p>Subway</p>
+        <p class="price">$11.00 – $14.00</p>
+      </div>
+
+      <div class="menu-card">
+        <h3>Whopper</h3>
+        <p>Burger King</p>
+        <p class="price">~$7.29</p>
+      </div>
+
+      <div class="menu-card">
+        <h3>Taco Supreme</h3>
+        <p>Taco Bell</p>
+        <p class="price">~$3.49</p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <section id="gallery">
+
+    <h2 class="section-title">Food Gallery</h2>
+
+    <div class="gallery">
+
+      <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=1200&auto=format&fit=crop" alt="Burger">
+
+      <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=1200&auto=format&fit=crop" alt="Pizza">
+
+      <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?q=80&w=1200&auto=format&fit=crop" alt="Plate and Spoon">
+
+    </div>
+
+  </section>
+
+  <section id="chef">
+
+    <h2 class="section-title">Meet Our Chef</h2>
+
+    <div class="chef-section">
+
+      <h3>Chef Daniel Carter</h3>
+
+      <p>
+        With years of experience in American and Southern cuisine,
+        Chef Daniel Carter blends tradition with creativity to serve
+        unforgettable dishes crafted with passion and flavor.
+      </p>
+
+    </div>
+
+  </section>
+
+  <section id="testimonials">
+
+    <h2 class="section-title">Customer Testimonials</h2>
+
+    <div class="testimonials">
+
+      <div class="testimonial-card">
+        <p>
+          “Amazing atmosphere and incredible flavors. The seafood and burgers
+          were absolutely perfect!”
+        </p>
+        <strong>— Sarah M.</strong>
+      </div>
+
+      <div class="testimonial-card">
+        <p>
+          “One of the best Tex-Mex dining experiences we’ve had.
+          Great service and fantastic food.”
+        </p>
+        <strong>— James R.</strong>
+      </div>
+
+    </div>
+
+  </section>
+
+  <section id="contact">
+
+    <h2 class="section-title">Contact & Reservations</h2>
+
+    <div class="contact">
+
+      <p><strong>Address:</strong><br>
+      T4 Benine Red</p>
+
+      <p><strong>Phone:</strong> 555-1234</p>
+
+      <p><strong>Website:</strong> www.thechromeplate</p>
+
+      <p><strong>Opening Hours:</strong><br>
+      Monday – Friday • 7:00 AM – 10:00 PM</p>
+
+      <a class="booking-btn" href="https://wa.me/8894518950" target="_blank">
+        Book on WhatsApp
+      </a>
+
+    </div>
+
+  </section>
+
+  <footer>
+    <p>© 2026 THE CHROME PLATE • Premium Dining Experience</p>
+  </footer>
+
+</body>
+</html>

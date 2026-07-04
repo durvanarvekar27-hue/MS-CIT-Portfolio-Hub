@@ -239,13 +239,13 @@ const projects = {
       }
     ],
 
-    ppt: [
-      {
-        title: "Presentation 1",
-        path: "uploads/102/pptx/pptx102.pdf",
-        type: "pdf"
-      }
-    ],
+    // ppt: [
+    //   {
+    //     title: "Presentation 1",
+    //     path: "uploads/102/pptx/pptx102_1.pdf",
+    //     type: "pdf"
+    //   }
+    // ],
 
     webpage: [
       {

@@ -309,24 +309,51 @@ nextBtn?.addEventListener("click", () => { });
 closeBtn?.addEventListener("clik", () => { });
 
 function openProject(category, index) {
-    if (typeof studentProjects === 'undefined') return;
+
+    if (typeof studentProjects === "undefined") return;
+
     const list = studentProjects[category] || [];
-const project = list[index];
-if (!project) return;
+    const project = list[index];
+
+    if (!project) return;
+
+    // Mobile → Open directly
+    if (window.innerWidth <= 768) {
+        window.open(project.path, "_blank");
+        return;
+    }
 
     viewer.innerHTML = "";
+
     switch (project.type) {
+
         case "image":
-            viewer.innerHTML = `<img src="${project.path}" style="max-width:100%; max-height:80vh; border-radius:8px;">`;
+            viewer.innerHTML = `
+                <img src="${project.path}"
+                     style="max-width:100%;
+                            max-height:85vh;
+                            object-fit:contain;
+                            border-radius:10px;">
+            `;
             break;
+
         case "pdf":
         case "website":
-            viewer.innerHTML = `<iframe src="${project.path}" style="width:100%; height:75vh; border:none; border-radius:8px;"></iframe>`;
+            viewer.innerHTML = `
+                <iframe src="${project.path}"
+                        style="width:100%;
+                               height:85vh;
+                               border:none;
+                               border-radius:10px;">
+                </iframe>
+            `;
             break;
+
         default:
-            viewer.innerHTML = `<h3>Preview not available</h3>`;
+            viewer.innerHTML = "<h3>Preview not available</h3>";
     }
-    if (modal) modal.style.display = "flex";
+
+    modal.style.display = "flex";
 }
 
 if (closeBtn) closeBtn.addEventListener("click", () => { if (modal) modal.style.display = "none"; });

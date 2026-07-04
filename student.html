@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Portfolio | MS-CIT Portfolio Hub</title>
+    <title>Student Portfolio | MAAYA MS-CIT Portfolio Hub</title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
@@ -23,7 +23,7 @@
         <nav class="navbar">
             <div class="logo">
                 <img src="images/students/logo.png" alt="Logo">
-                <h2>MS-CIT Portfolio Hub</h2>
+                <h2>MAAYA MS-CIT Portfolio Hub</h2>
             </div>
             <ul class="nav-links" id="navLinks">
                 <li><a href="index.html">Home</a></li>
@@ -40,7 +40,7 @@
     <!-- COVER SECTION -->
     <section class="page-banner">
         <div class="container">
-            <h1>MS-CIT Students Portfolio Hub</h1>
+            <h1>MAAYA MS-CIT Students Portfolio Hub</h1>
             <p>Practical skills, digital achievements & portfolios of MS-CIT students.</p>
         </div>
     </section>
@@ -87,63 +87,150 @@
         </div>
     </section>
 
-    <!-- PROJECT CATEGORIES GRID -->
-    <section class="project-categories">
-        <div class="container">
-            <div class="section-title">
-                <h2>My Projects</h2>
-                <p>Select a project category to view all projects.</p>
-            </div>
+<!-- ==========================================
+        MY PROJECTS
+========================================== -->
 
-            <div class="interactive-dashboard" id="dashboard">
-                <div class="dashboard-card" data-category="word">
-                    <div class="card-icon"><i class="fa-solid fa-file-word"></i></div>
+<section class="project-categories">
+
+    <div class="container">
+
+        <div class="section-title">
+            <h2>My Projects</h2>
+            <p>Select a project category to view projects.</p>
+        </div>
+
+        <div id="dashboard" class="interactive-dashboard">
+
+            <!-- WORD -->
+            <div class="dashboard-card" data-category="word">
+
+                <div class="card-icon">
+                    <i class="fa-solid fa-file-word"></i>
+                </div>
+
+                <div class="card-content">
+
                     <h3>MS Word</h3>
+
                     <p>Projects</p>
+
                 </div>
 
-                <div class="dashboard-card" data-category="canva">
-                    <div class="card-icon"><i class="fa-solid fa-palette"></i></div>
+            </div>
+
+            <!-- CANVA -->
+            <div class="dashboard-card" data-category="canva">
+
+                <div class="card-icon">
+                    <i class="fa-solid fa-palette"></i>
+                </div>
+
+                <div class="card-content">
+
                     <h3>Canva</h3>
+
                     <p>Projects</p>
+
                 </div>
 
-                <div class="dashboard-card" data-category="webpage">
-                    <div class="card-icon"><i class="fa-solid fa-code"></i></div>
-                    <h3>Web Dev</h3>
-                    <p>Projects</p>
+            </div>
+
+            <!-- WEB -->
+            <div class="dashboard-card" data-category="webpage">
+
+                <div class="card-icon">
+                    <i class="fa-solid fa-code"></i>
                 </div>
 
-                <div class="dashboard-card" data-category="ppt">
-                    <div class="card-icon"><i class="fa-solid fa-file-powerpoint"></i></div>
+                <div class="card-content">
+
+                    <h3>Web Development</h3>
+
+                    <p>Projects</p>
+
+                </div>
+
+            </div>
+
+            <!-- PPT -->
+            <div class="dashboard-card" data-category="ppt">
+
+                <div class="card-icon">
+                    <i class="fa-solid fa-file-powerpoint"></i>
+                </div>
+
+                <div class="card-content">
+
                     <h3>PowerPoint</h3>
+
                     <p>Projects</p>
+
                 </div>
 
-                <div class="dashboard-card" data-category="excel">
-                    <div class="card-icon"><i class="fa-solid fa-file-excel"></i></div>
+            </div>
+
+            <!-- EXCEL -->
+            <div class="dashboard-card" data-category="excel">
+
+                <div class="card-icon">
+                    <i class="fa-solid fa-file-excel"></i>
+                </div>
+
+                <div class="card-content">
+
                     <h3>MS Excel</h3>
+
                     <p>Projects</p>
+
                 </div>
 
-                <div class="dashboard-card" data-category="photoshop">
-                    <div class="card-icon"><i class="fa-solid fa-image"></i></div>
+            </div>
+
+            <!-- PHOTOSHOP -->
+            <div class="dashboard-card" data-category="photoshop">
+
+                <div class="card-icon">
+                    <i class="fa-solid fa-image"></i>
+                </div>
+
+                <div class="card-content">
+
                     <h3>Photoshop</h3>
-                    <p>Projects</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- SKILLS -->
-    <section class="skills">
-        <div class="container">
-            <div class="section-title">
-                <h2>Skills</h2>
+                    <p>Projects</p>
+
+                </div>
+
             </div>
-            <div class="skills-grid" id="skillsContainer"></div>
+
         </div>
-    </section>
+
+    </div>
+
+</section>
+
+<!-- ==========================================
+        SKILLS
+========================================== -->
+
+<section class="skills">
+
+    <div class="container">
+
+        <div class="section-title">
+            <h2>Skills</h2>
+        </div>
+
+        <div id="skillsContainer" class="skills-grid">
+
+            <!-- student.js automatically loads skills here -->
+
+        </div>
+
+    </div>
+
+</section>
 
     <!-- RESUME -->
     <section class="resume-section">
@@ -200,8 +287,8 @@
         <div class="project-modal-content">
             <span class="close-modal">&times;</span>
             <div class="project-top">
-                <span id="projectCounter">1 / 1</span>
-                <a id="downloadProject" class="download-btn" href="#" download>Download</a>
+                <!-- <span id="projectCounter">1 / 1</span> -->
+                <!-- <a id="downloadProject" class="download-btn" href="#" download>Download</a> -->
             </div>
             <button id="prevProject" class="nav-btn prev-btn">&#10094;</button>
             <div id="projectViewer"></div>

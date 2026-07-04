@@ -1,3 +1,4 @@
+
 // ==========================================
 // STUDENT.JS
 // PART 1: INITIALIZATION & PROFILE LOAD
@@ -88,7 +89,7 @@ const summaryCards = document.querySelectorAll(".category-card");
 categories.forEach((category, index) => {
     if (!summaryCards[index]) return;
     const count = studentProjects[category] ? studentProjects[category].length : 0;
-    
+
     // Fallback: If <p> doesn't exist, create it dynamically
     let p = summaryCards[index].querySelector("p");
     if (!p) {
@@ -106,7 +107,6 @@ projectsContainer.className = "project-grid";
 
 let currentCategory = "word";
 let currentIndex = 0;
-
 // ==========================================
 // PART 2: PERFECT FLIP GRID ANIMATION 
 // ==========================================
@@ -159,7 +159,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function buildShowcase(catId) {
         const panel = document.createElement("div");
         panel.className = "dash-showcase";
-        
+
         let projects = [];
         if (typeof studentProjects !== 'undefined' && studentProjects[catId]) {
             projects = studentProjects[catId];
@@ -180,7 +180,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <h4 style="margin: 0 0 15px; font-size: 16px; color:#333;">${p.title}</h4>
                 <div class="project-actions" style="display: flex; gap: 8px;">
                     <button class="view-btn" data-category="${catId}" data-index="${index}" style="flex: 1; padding: 10px 0; border:none; border-radius: 8px; background: #5400A1; color: #fff; cursor: pointer; font-weight:600;">View</button>
-                    <a href="${p.path}" download class="download-btn" style="flex: 1; padding: 10px 0; border-radius: 8px; background: #198754; color: #fff; text-decoration: none; font-weight:600; text-align:center;">DL</a>
+                    <a href="${p.path}" download class="download-btn" style="flex: 1; padding: 10px 0; border-radius: 8px; background: #198754; color: #fff; text-decoration: none; font-weight:600; text-align:center;">Download</a>
                 </div>
             </div>
         `).join("");
@@ -197,7 +197,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function revealShowcase(card, catId) {
         showcasePanel = buildShowcase(catId);
         showcasePanel.style.order = -1; // Force panel to sit next to the active card
-        
+
         flip(() => {
             card.after(showcasePanel); // Inject directly beneath the active card in DOM
         }, 380);
@@ -226,12 +226,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // 5. Click Handler
     function activate(card) {
-        if (activeCard === card) { 
-            deactivate(); 
-            return; 
+        const catId = card.dataset.category;
+
+        currentCategory = catId;
+        currentIndex = 0;
+        if (activeCard === card) {
+            deactivate();
+            return;
         }
 
-        const catId = card.dataset.category;
+
         const prev = activeCard;
         const duration = 480;
 
@@ -257,7 +261,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 card.removeEventListener("transitionend", onEnd);
                 proceed();
             });
-            setTimeout(proceed, duration + 60); 
+            setTimeout(proceed, duration + 60);
         });
     }
 
@@ -292,12 +296,23 @@ document.addEventListener("click", (e) => {
 
 const modal = document.getElementById("projectModal");
 const viewer = document.getElementById("projectViewer");
+
 const closeBtn = document.querySelector(".close-modal");
+
+const prevBtn = document.getElementById("prevProject");
+const nextBtn = document.getElementById("nextProject");
+
+const counter = document.getElementById("projectCounter");
+// const downloadBtn = document.getElementById("downloadProject");
+prevBtn?.addEventListener("click", () => { });
+nextBtn?.addEventListener("click", () => { });
+closeBtn?.addEventListener("clik", () => { });
 
 function openProject(category, index) {
     if (typeof studentProjects === 'undefined') return;
-    const project = studentProjects[category][index];
-    if (!project || !viewer) return;
+    const list = studentProjects[category] || [];
+const project = list[index];
+if (!project) return;
 
     viewer.innerHTML = "";
     switch (project.type) {
@@ -350,6 +365,6 @@ document.addEventListener("keydown", (e) => {
 studentPhoto?.addEventListener("click", () => {
     viewer.innerHTML = `<img src="${student.photo}" class="popup-image" alt="${student.name}">`;
     if (counter) counter.textContent = "Profile Photo";
-    if (downloadBtn) downloadBtn.href = student.photo;
+    // if (downloadBtn) downloadBtn.href = student.photo;
     if (modal) modal.style.display = "flex";
 });

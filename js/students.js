@@ -29,7 +29,7 @@ const students = [
     course: "MS-CIT",
     about: "MS-CIT Student",
     photo: "images/students/ChaitanyaN.jpeg",
-    resume: "uploads/resume/101.pdf",
+    resume: "uploads/102/webpage/webpage102_1.html",
 
     skills: [
         "MS Word",
@@ -50,7 +50,7 @@ const students = [
     course: "MS-CIT",
     about: "MS-CIT Student",
     photo: "images/students/ChaitadnyaZ.jpeg",
-    resume: "uploads/resume/101.pdf",
+    resume: "uploads/103/webpage/webpage103_1.html",
 
     skills: [
         "MS Word",
@@ -71,7 +71,7 @@ const students = [
     course: "MS-CIT",
     about: "MS-CIT Student",
     photo: "images/students/DipaS.jpeg",
-    resume: "uploads/resume/101.pdf",
+    resume: "uploads/104/webpage/webpage104_1.html",
 
     skills: [
         "MS Word",
@@ -92,9 +92,9 @@ const students = [
     course: "MS-CIT",
     about: "MS-CIT Student",
     photo: "images/students/GaurangS.jpeg",
-   resume: "uploads/resume/101.pdf",
-
-    skills: [
+   resume: "uploads/105/webpage/webpage105_1.html",
+   
+   skills: [
         "MS Word",
         "MS Excel",
         "PowerPoint",
@@ -113,7 +113,7 @@ const students = [
     course: "MS-CIT",
     about: "MS-CIT Student",
     photo: "images/students/GiteshN.jpeg",
-    resume: "uploads/resume/101.pdf",
+    resume: "uploads/106/webpage/webpage106_1.html",
 
     skills: [
         "MS Word",
@@ -134,7 +134,7 @@ const students = [
     course: "MS-CIT",
     about: "MS-CIT Student",
     photo: "images/students/HimanshuV.jpeg",
-    resume: "uploads/resume/101.pdf",
+    resume: "uploads/107/webpage/webpage107_1.html",
 
     skills: [
         "MS Word",
@@ -155,7 +155,7 @@ const students = [
     course: "MS-CIT",
     about: "MS-CIT Student",
     photo: "images/students/KirtiG.jpeg",
-    resume: "uploads/resume/101.pdf",
+    resume: "uploads/108/webpage/webpage108_1.html",
 
     skills: [
         "MS Word",
@@ -176,7 +176,7 @@ const students = [
     course: "MS-CIT",
     about: "MS-CIT Student",
     photo: "images/students/LarsonD.jpeg",
-    resume: "uploads/resume/101.pdf",
+    resume: "uploads/109/webpage/webpage109_1.html",
 
     skills: [
         "MS Word",
@@ -197,7 +197,7 @@ const students = [
     course: "MS-CIT",
     about: "MS-CIT Student",
     photo: "images/students/MahekS.jpeg",
-    resume: "uploads/resume/101.pdf",
+    resume: "uploads/110/webpage/webpage110_1.html",
 
     skills: [
         "MS Word",
@@ -218,7 +218,7 @@ const students = [
     course: "MS-CIT",
     about: "MS-CIT Student",
     photo: "images/students/MaitrayiS.jpeg",
-    resume: "uploads/resume/101.pdf",
+    resume: "uploads/111/webpage/webpage111_2.html",
 
     skills: [
         "MS Word",
@@ -239,7 +239,7 @@ const students = [
     course: "MS-CIT",
     about: "MS-CIT Student",
     photo: "images/students/ManishN.jpeg",
-    resume: "uploads/resume/101.pdf",
+    resume: "uploads/112/webpage/webpage112_1.html",
 
     skills: [
         "MS Word",
@@ -260,7 +260,7 @@ const students = [
   course: "MS-CIT",
   about: "MS-CIT Student",
   photo: "images/students/Nakshatra.jpeg",
-  resume: "uploads/resume/101.pdf",
+  resume: "uploads/113/webpage/webpage113_1.html",
 
     skills: [
         "MS Word",
@@ -281,7 +281,7 @@ const students = [
   course: "MS-CIT",
   about: "MS-CIT Student",
   photo: "images/students/NeelB.jpeg",
-  resume: "uploads/resume/101.pdf",
+  resume: "uploads/114/webpage/webpage114_1.html",
 
     skills: [
         "MS Word",
@@ -302,7 +302,7 @@ const students = [
   course: "MS-CIT",
   about: "MS-CIT Student",
   photo: "images/students/NidhiP.jpeg",
-  resume: "uploads/resume/101.pdf",
+  resume: "uploads/115/webpage/webpage115_1.html",
 
     skills: [
         "MS Word",
@@ -323,7 +323,7 @@ const students = [
   course: "MS-CIT",
   about: "MS-CIT Student",
   photo: "images/students/PriyaD.jpeg",
-  resume: "uploads/resume/101.pdf",
+  resume: "uploads/116/webpage/webpage116_1.html",
 
     skills: [
         "MS Word",
@@ -344,7 +344,7 @@ const students = [
   course: "MS-CIT",
   about: "MS-CIT Student",
   photo: "images/students/SaishriP.jpeg",
-  resume: "uploads/resume/101.pdf",
+  resume: "uploads/117/webpage/webpage117_2.html",
 
     skills: [
         "MS Word",
@@ -365,7 +365,7 @@ const students = [
   course: "MS-CIT",
   about: "MS-CIT Student",
   photo: "images/students/ShlokS.jpeg",
-  resume: "uploads/resume/101.pdf",
+  resume: "uploads/118/webpage/webpage118_2.html",
 
     skills: [
         "MS Word",
@@ -386,7 +386,7 @@ const students = [
   course: "MS-CIT",
   about: "MS-CIT Student",
   photo: "images/students/ShreyasG.jpeg",
-  resume: "uploads/resume/101.pdf",
+  resume: "uploads/119/webpage/webpage119_2.html",
 
     skills: [
         "MS Word",
@@ -407,7 +407,7 @@ const students = [
   course: "MS-CIT",
   about: "MS-CIT Student",
   photo: "images/students/SiddhiG.jpeg",
-  resume: "uploads/resume/101.pdf",
+  resume: "uploads/120/webpage/webpage120_2.html",
 
     skills: [
         "MS Word",
@@ -428,7 +428,7 @@ const students = [
   course: "MS-CIT",
   about: "MS-CIT Student",
   photo: "images/students/SnehaG.jpeg",
-  resume: "uploads/resume/101.pdf",
+  resume: "uploads/121/webpage/webpage121_1.html",
 
     skills: [
         "MS Word",
@@ -449,7 +449,7 @@ const students = [
   course: "MS-CIT",
   about: "MS-CIT Student",
   photo: "images/students/SrishtiK.jpeg",
-  resume: "uploads/resume/101.pdf",
+  resume: "uploads/122/webpage/webpage122_1.html",
 
     skills: [
         "MS Word",
@@ -470,7 +470,7 @@ const students = [
   course: "MS-CIT",
   about: "MS-CIT Student",
   photo: "images/students/SrushtiG.jpeg",
-  resume: "uploads/resume/101.pdf",
+  resume: "uploads/123/webpage/webpage123_2.html",
 
     skills: [
         "MS Word",
@@ -491,7 +491,7 @@ const students = [
   course: "MS-CIT",
   about: "MS-CIT Student",
   photo: "images/students/SwaraS.jpeg",
-  resume: "uploads/resume/101.pdf",
+  resume: "uploads/124/webpage/webpage124_2.html",
 
     skills: [
         "MS Word",
@@ -512,7 +512,7 @@ const students = [
   course: "MS-CIT",
   about: "MS-CIT Student",
   photo: "images/students/SwarangiG.jpeg",
-  resume: "uploads/resume/101.pdf",
+  resume: "uploads/125/webpage/webpage125_1.html",
 
     skills: [
         "MS Word",
@@ -533,7 +533,7 @@ const students = [
   course: "MS-CIT",
   about: "MS-CIT Student",
   photo: "images/students/VaidhaviS.png",
-  resume: "uploads/resume/101.pdf",
+  resume: "uploads/126/webpage/webpage126_1.html",
 
     skills: [
         "MS Word",
@@ -554,7 +554,7 @@ const students = [
   course: "MS-CIT",
   about: "MS-CIT Student",
   photo: "images/students/VaishanaviG.jpeg",
-  resume: "uploads/resume/101.pdf",
+  resume: "uploads/127/webpage/webpage127_1.html",
 
     skills: [
         "MS Word",
@@ -575,7 +575,7 @@ const students = [
   course: "MS-CIT",
   about: "MS-CIT Student",
   photo: "images/students/VaishanaviP.jpeg",
-  resume: "uploads/resume/101.pdf",
+  resume: "uploads/128/webpage/webpage128_2.html",
 
     skills: [
         "MS Word",
@@ -596,7 +596,7 @@ const students = [
   course: "MS-CIT",
   about: "MS-CIT Student",
   photo: "images/students/VaishanaviR.jpeg",
- resume: "uploads/resume/101.pdf",
+ resume: "uploads/129/webpage/webpage129_1.html",
 
     skills: [
         "MS Word",

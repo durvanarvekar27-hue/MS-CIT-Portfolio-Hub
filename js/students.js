@@ -213,7 +213,7 @@ const students = [
 
   {
     id: 111,
-    name: "Maitreyi Bangelkar",
+    name: "Maitreyi Sangelkar",
     phone: "9421635011",
     course: "MS-CIT",
     about: "MS-CIT Student",
